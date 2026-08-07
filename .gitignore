@@ -1,0 +1,5 @@
+dist
+.env
+plan
+docs
+node_modules
