@@ -1,6 +1,20 @@
 import '../css/style.css';
 
 // ============================================
+// PRELOADER — Wait for all assets to load
+// ============================================
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('loaded');
+        // Remove from DOM after fade-out transition
+        preloader.addEventListener('transitionend', () => {
+            preloader.remove();
+        });
+    }
+});
+
+// ============================================
 // HAMBURGER MENU TOGGLE
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close menu on resize to desktop
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 900) {
                 hamburger.classList.remove('open');
                 mobileMenu.classList.remove('open');
                 hamburger.setAttribute('aria-expanded', 'false');
