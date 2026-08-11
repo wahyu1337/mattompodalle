@@ -46,6 +46,17 @@ module.exports = {
             template: './src/gallery/index.html',
             filename: 'gallery/index.html',
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/assets'),
+                    to: path.resolve(__dirname, 'dist/assets'),
+                    globOptions: {
+                        ignore: ['**/js/**', '**/css/**'],
+                    },
+                },
+            ],
+        }),
     ],
     devServer: {
         static: {
