@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Profil Lurah Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
     <title>Profil Lurah — Kelurahan Mattompodalle</title>
     <style>
-        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#f8f9fc;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s ease,visibility .5s ease}
-        .preloader.loaded{opacity:0;visibility:hidden;pointer-events:none}
-        .preloader__content{display:flex;flex-direction:column;align-items:center;gap:1.25rem}
-        .preloader__spinner{width:36px;height:36px;border:3px solid #e2e5ef;border-top-color:#0d6e6e;border-radius:50%;animation:pspin .8s linear infinite}
-        @keyframes pspin{to{transform:rotate(360deg)}}
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f8f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity .5s ease, visibility .5s ease
+        }
+
+        .preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none
+        }
+
+        .preloader__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem
+        }
+
+        .preloader__spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid #e2e5ef;
+            border-top-color: #0d6e6e;
+            border-radius: 50%;
+            animation: pspin .8s linear infinite
+        }
+
+        @keyframes pspin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- ========== PRELOADER ========== -->
@@ -27,9 +65,10 @@
         <div class="container header__inner">
             <!-- Home Button (Beranda) -->
             <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
-                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
+                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
             </a>
 
@@ -47,7 +86,8 @@
                     <li><a href="/kontak/" class="nav__link">Kontak</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
+                aria-controls="mobile-menu">
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
@@ -76,13 +116,27 @@
                     <p class="page-section__subtitle">Informasi profil dan biodata Lurah Kelurahan Mattompodalle</p>
                 </div>
 
-                <div class="content-placeholder animate-fade-in-up delay-2">
-                    <svg class="content-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                        <circle cx="12" cy="7" r="4"/>
-                    </svg>
-                    <span class="content-placeholder__label">Profil Lurah</span>
-                    <p class="content-placeholder__desc">Detail profil lurah, foto, biodata, dan informasi lainnya akan ditampilkan di sini.</p>
+                <div class="profile-card animate-fade-in-up delay-2">
+                    <div class="profile-card__image-container">
+                        <!-- Anda bisa mengubah nilai translateY (contoh: 20px, 30px, 40px, dst.) untuk menggeser foto ke bawah/atas sesuai keinginan -->
+                        <img src="/assets/pak lurah.svg" alt="Foto Lurah Mattompodalle" class="profile-card__image"
+                            style="transform: translateY(25px);">
+                    </div>
+                    <div class="profile-card__info">
+                        <h2 class="profile-card__name">Indra Jaya, S.Sos</h2>
+                        <span class="profile-card__title">Lurah Mattompodalle</span>
+
+                        <div class="profile-card__details">
+                            <div class="profile-card__detail-item">
+                                <span class="profile-card__detail-label">TTL</span>
+                                <span class="profile-card__detail-value">Ujung Pandang, 24-November-1971</span>
+                            </div>
+                            <div class="profile-card__detail-item">
+                                <span class="profile-card__detail-label">Pendidikan Terakhir</span>
+                                <span class="profile-card__detail-value">S1 Sosial Politik</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -93,9 +147,10 @@
     <footer class="footer">
         <div class="container footer__inner">
             <div class="footer__brand">
-                <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
+                <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
                 <span class="footer__title">Mattompodalle</span>
             </div>
@@ -112,4 +167,5 @@
     </footer>
 
 </body>
+
 </html>
