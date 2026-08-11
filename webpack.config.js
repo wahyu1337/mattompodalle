@@ -46,6 +46,10 @@ module.exports = {
             template: './src/gallery/index.html',
             filename: 'gallery/index.html',
         }),
+        new HtmlWebpackPlugin({
+            template: './src/kontak/index.html',
+            filename: 'kontak/index.html',
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {

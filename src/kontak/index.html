@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontak Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
+    <title>Kontak — Kelurahan Mattompodalle</title>
+    <style>
+        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#f8f9fc;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s ease,visibility .5s ease}
+        .preloader.loaded{opacity:0;visibility:hidden;pointer-events:none}
+        .preloader__content{display:flex;flex-direction:column;align-items:center;gap:1.25rem}
+        .preloader__spinner{width:36px;height:36px;border:3px solid #e2e5ef;border-top-color:#0d6e6e;border-radius:50%;animation:pspin .8s linear infinite}
+        @keyframes pspin{to{transform:rotate(360deg)}}
+    </style>
+</head>
+<body>
+
+    <!-- ========== PRELOADER ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__content">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <!-- Home Button (Beranda) -->
+            <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
+                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+            </a>
+
+            <!-- Brand / Center -->
+            <div class="header__brand">
+                <img src="/assets/takalar.png" alt="Logo Kelurahan" class="header__logo-img" title="Logo Kelurahan">
+                <span class="header__title">Kelurahan Mattompodalle</span>
+            </div>
+            <nav class="nav" aria-label="Navigasi utama">
+                <ul class="nav__list">
+                    <li><a href="/lurah/" class="nav__link">Lurah</a></li>
+                    <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
+                    <li><a href="/informasi/" class="nav__link">Info</a></li>
+                    <li><a href="/gallery/" class="nav__link">Gallery</a></li>
+                    <li><a href="/kontak/" class="nav__link active">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+        <ul class="mobile-menu__list">
+            <li><a href="/lurah/" class="mobile-menu__link">Lurah</a></li>
+            <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
+            <li><a href="/informasi/" class="mobile-menu__link">Info</a></li>
+            <li><a href="/gallery/" class="mobile-menu__link">Gallery</a></li>
+            <li><a href="/kontak/" class="mobile-menu__link active">Kontak</a></li>
+        </ul>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main">
+        <section class="page-section">
+            <div class="container">
+
+                <div class="page-section__header animate-fade-in-up">
+                    <span class="page-section__badge">Hubungi Kami</span>
+                    <h1 class="page-section__title">Kontak Kelurahan</h1>
+                    <p class="page-section__subtitle">Alamat, nomor telepon, dan media sosial Kelurahan Mattompodalle</p>
+                </div>
+
+                <div class="content-placeholder animate-fade-in-up delay-2">
+                    <svg class="content-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span class="content-placeholder__label">Informasi Kontak</span>
+                    <p class="content-placeholder__desc">Informasi kontak, lokasi Google Maps, dan form pengaduan akan ditampilkan di sini.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span class="footer__title">Mattompodalle</span>
+            </div>
+            <nav class="footer__nav" aria-label="Footer navigasi">
+                <a href="/lurah/" class="footer__link">Lurah</a>
+                <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
+                <a href="/informasi/" class="footer__link">Info</a>
+                <a href="/gallery/" class="footer__link">Gallery</a>
+                <a href="/kontak/" class="footer__link">Kontak</a>
+            </nav>
+            <div class="footer__divider"></div>
+            <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle — KKN 26 Posko 4. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
