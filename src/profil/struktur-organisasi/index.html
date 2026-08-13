@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Struktur Organisasi Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
+    <title>Struktur Organisasi — Kelurahan Mattompodalle</title>
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f8f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity .5s ease, visibility .5s ease
+        }
+
+        .preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none
+        }
+
+        .preloader__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem
+        }
+
+        .preloader__spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid #e2e5ef;
+            border-top-color: #0d6e6e;
+            border-radius: 50%;
+            animation: pspin .8s linear infinite
+        }
+
+        @keyframes pspin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        /* Member Grid Styles */
+        .org-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .member-card__image-wrapper {
+            background: linear-gradient(135deg, #0d6e6e, #14a3a3);
+            height: 120px;
+            position: relative;
+            margin-bottom: 3.5rem;
+        }
+
+        .member-card__image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f1f5f9;
+        }
+
+        .member-card__info {
+            padding: 0 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .member-card__name {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .member-card__role {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #0d6e6e;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .member-card__desc {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .member-card__social {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+
+        .member-card__social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            color: #64748b;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .member-card__social-link:hover {
+            background: #0d6e6e;
+            color: #ffffff;
+        }
+
+        .member-card__social-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .org-section-title {
+            text-align: center;
+            margin: 3rem 0 1.5rem;
+            font-size: 1.5rem;
+            color: #1e293b;
+            position: relative;
+        }
+
+        .org-section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #d4a843;
+            margin: 0.5rem auto 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========== PRELOADER ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__content">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <!-- Home Button (Beranda) -->
+            <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
+                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+            </a>
+
+            <!-- Brand / Center -->
+            <div class="header__brand">
+                <img src="/assets/takalar.png" alt="Logo Kelurahan" class="header__logo-img" title="Logo Kelurahan">
+                <span class="header__title">Kelurahan Mattompodalle</span>
+            </div>
+            <nav class="nav" aria-label="Navigasi utama">
+                <ul class="nav__list">
+                    <li class="dropdown">
+                        <a href="#" class="nav__link dropdown__toggle active">
+                            Profil
+                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a>
+                            </li>
+                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/"
+                                    class="dropdown__link active">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
+                    <li><a href="/informasi/" class="nav__link">Info</a></li>
+                    <li><a href="/gallery/" class="nav__link">Gallery</a></li>
+                    <li><a href="/kontak/" class="nav__link">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+        <ul class="mobile-menu__list">
+            <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
+                <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle active">
+                    Profil
+                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+                <ul class="mobile-dropdown__menu">
+                    <li><a href="/profil/lurah/" class="mobile-menu__link"
+                            style="padding-left: 0; font-size: 0.95rem; border: none; padding-top: 0.25rem; padding-bottom: 0.25rem;">Profil
+                            Lurah</a></li>
+                    <li><a href="/profil/struktur-organisasi/" class="mobile-menu__link active"
+                            style="padding-left: 0; font-size: 0.95rem; border: none; padding-top: 0.25rem; padding-bottom: 0.25rem;">Struktur
+                            Organisasi</a></li>
+                </ul>
+            </li>
+            <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
+            <li><a href="/informasi/" class="mobile-menu__link">Info</a></li>
+            <li><a href="/gallery/" class="mobile-menu__link">Gallery</a></li>
+            <li><a href="/kontak/" class="mobile-menu__link">Kontak</a></li>
+        </ul>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main">
+        <section class="page-section">
+            <div class="container">
+
+                <div class="page-section__header animate-fade-in-up">
+                    <span class="page-section__badge">Struktur Organisasi</span>
+                    <h1 class="page-section__title">Struktur Pemerintahan</h1>
+                    <p class="page-section__subtitle">Susunan perangkat kelurahan Mattompodalle yang siap melayani
+                        masyarakat</p>
+                </div>
+
+                <h2 class="org-section-title animate-fade-in-up delay-1">Pimpinan Kelurahan</h2>
+
+                <div class="org-grid animate-fade-in-up delay-2">
+                    <!-- Lurah -->
+                    <div class="member-card">
+                        <div class="member-card__image-wrapper">
+                            <img src="/assets/pak lurah.svg" alt="Lurah" class="member-card__image"
+                                style="object-position: center 0px;">
+                        </div>
+                        <div class="member-card__info">
+                            <h3 class="member-card__name">Indra Jaya, S.Sos</h3>
+                            <span class="member-card__role">Lurah Mattompodalle</span>
+                            <p class="member-card__desc">Memimpin jalannya pemerintahan, pembangunan, dan pelayanan
+                                masyarakat di Kelurahan Mattompodalle.</p>
+                            <div class="member-card__social">
+                                <!-- Placeholder for social media or contact -->
+                                <a href="#" class="member-card__social-link" aria-label="Email">
+                                    <svg class="member-card__social-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="org-section-title animate-fade-in-up delay-3">Struktur Organisasi</h2>
+
+                <div class="org-grid animate-fade-in-up delay-4">
+                    <!-- Sekretaris -->
+                    <div class="member-card">
+                        <div class="member-card__image-wrapper">
+                            <!-- Placeholder image SVG -->
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23cbd5e1'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>"
+                                alt="Sekretaris" class="member-card__image">
+                        </div>
+                        <div class="member-card__info">
+                            <h3 class="member-card__name">[Nama Sekretaris]</h3>
+                            <span class="member-card__role">Sekretaris Lurah</span>
+                            <p class="member-card__desc">Bertanggung jawab atas administrasi, urusan umum, kepegawaian,
+                                dan keuangan kelurahan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kasi Pemerintahan -->
+                    <div class="member-card">
+                        <div class="member-card__image-wrapper">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23cbd5e1'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>"
+                                alt="Kasi Pemerintahan" class="member-card__image">
+                        </div>
+                        <div class="member-card__info">
+                            <h3 class="member-card__name">[Nama Kasi Pemerintahan]</h3>
+                            <span class="member-card__role">Kepala Seksi Pemerintahan</span>
+                            <p class="member-card__desc">Menangani urusan ketentraman, ketertiban umum, serta pembinaan
+                                wilayah pemerintahan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kasi Pelayanan -->
+                    <div class="member-card">
+                        <div class="member-card__image-wrapper">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23cbd5e1'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>"
+                                alt="Kasi Pelayanan" class="member-card__image">
+                        </div>
+                        <div class="member-card__info">
+                            <h3 class="member-card__name">[Nama Kasi Pelayanan]</h3>
+                            <span class="member-card__role">Kasi Pelayanan & Kesejahteraan</span>
+                            <p class="member-card__desc">Melaksanakan urusan pelayanan masyarakat, pembangunan, dan
+                                kesejahteraan sosial.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                <span class="footer__title">Mattompodalle</span>
+            </div>
+            <nav class="footer__nav" aria-label="Footer navigasi">
+                <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
+                <a href="/profil/struktur-organisasi/" class="footer__link active">Struktur Organisasi</a>
+                <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
+                <a href="/informasi/" class="footer__link">Info</a>
+                <a href="/gallery/" class="footer__link">Gallery</a>
+                <a href="/kontak/" class="footer__link">Kontak</a>
+            </nav>
+            <div class="footer__divider"></div>
+            <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle — KKN 26 Posko 4. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
