@@ -31,8 +31,12 @@ module.exports = {
             filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
-            template: './src/lurah/index.html',
-            filename: 'lurah/index.html',
+            template: './src/profil/lurah/index.html',
+            filename: 'profil/lurah/index.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/profil/struktur-organisasi/index.html',
+            filename: 'profil/struktur-organisasi/index.html',
         }),
         new HtmlWebpackPlugin({
             template: './src/visi-misi/index.html',

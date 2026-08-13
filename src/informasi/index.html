@@ -170,7 +170,18 @@
             </div>
             <nav class="nav" aria-label="Navigasi utama">
                 <ul class="nav__list">
-                    <li><a href="/lurah/" class="nav__link">Lurah</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav__link dropdown__toggle">
+                            Profil
+                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
+                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
                     <li><a href="/informasi/" class="nav__link active">Info</a></li>
                     <li><a href="/gallery/" class="nav__link">Gallery</a></li>
@@ -188,7 +199,18 @@
 
     <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
         <ul class="mobile-menu__list">
-            <li><a href="/lurah/" class="mobile-menu__link">Lurah</a></li>
+            <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
+                <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
+                    Profil
+                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+                <ul class="mobile-dropdown__menu">
+                    <li><a href="/profil/lurah/" class="mobile-menu__link" style="padding-left: 0; font-size: 0.95rem; border: none; padding-top: 0.25rem; padding-bottom: 0.25rem;">Profil Lurah</a></li>
+                    <li><a href="/profil/struktur-organisasi/" class="mobile-menu__link" style="padding-left: 0; font-size: 0.95rem; border: none; padding-top: 0.25rem; padding-bottom: 0.25rem;">Struktur Organisasi</a></li>
+                </ul>
+            </li>
             <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
             <li><a href="/informasi/" class="mobile-menu__link active">Info</a></li>
             <li><a href="/gallery/" class="mobile-menu__link">Gallery</a></li>
@@ -312,7 +334,8 @@
                 <span class="footer__title">Mattompodalle</span>
             </div>
             <nav class="footer__nav" aria-label="Footer navigasi">
-                <a href="/lurah/" class="footer__link">Lurah</a>
+                <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
+                <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
                 <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
                 <a href="/informasi/" class="footer__link">Info</a>
                 <a href="/gallery/" class="footer__link">Gallery</a>
