@@ -686,32 +686,9 @@ h6 {
 }
 
 /* ============================================
-   RESPONSIVE — Tablet Landscape (≤ 1024px)
+   RESPONSIVE — Tablet & Smaller (≤ 1150px)
    ============================================ */
-@media (max-width: 1024px) {
-    .nav__link {
-        padding: var(--sp-2) var(--sp-2);
-        font-size: 0.7rem;
-    }
-
-    .nav__list {
-        gap: 0;
-    }
-
-    .header__brand {
-        max-width: 50%;
-    }
-
-    .header__logo-img {
-        width: 38px;
-        height: 38px;
-    }
-}
-
-/* ============================================
-   RESPONSIVE — Tablet (≤ 900px)
-   ============================================ */
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
     :root {
         --header-height: 60px;
         --content-padding: var(--sp-4);

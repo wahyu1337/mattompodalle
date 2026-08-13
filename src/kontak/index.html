@@ -52,7 +52,7 @@
         /* Contact Cards CSS */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
@@ -60,10 +60,10 @@
         .contact-card {
             background: #ffffff;
             border-radius: 1rem;
-            padding: 1.5rem;
+            padding: 1.25rem;
             display: flex;
             align-items: center;
-            gap: 1.25rem;
+            gap: 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
@@ -114,6 +114,8 @@
             display: flex;
             flex-direction: column;
             z-index: 1;
+            overflow: hidden;
+            width: 100%;
         }
 
         .contact-label {
@@ -126,9 +128,11 @@
         }
 
         .contact-value {
-            font-size: 1.125rem;
+            font-size: clamp(0.95rem, 3vw, 1.125rem);
             font-weight: 700;
             color: #0f172a;
+            word-break: break-word;
+            overflow-wrap: anywhere;
         }
 
         .icon-wa {
@@ -141,6 +145,41 @@
 
         .icon-email {
             background: linear-gradient(135deg, #EA4335, #C5221F);
+        }
+
+        /* Responsive Adjustments for Mobile/Tablet */
+        @media (max-width: 940px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 1rem;
+                gap: 0.75rem;
+                border-radius: 0.75rem;
+            }
+
+            .contact-icon-wrapper {
+                width: 48px;
+                height: 48px;
+                border-radius: 0.75rem;
+            }
+
+            .contact-icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            .contact-label {
+                font-size: 0.75rem;
+                margin-bottom: 0.15rem;
+            }
+
+            .contact-grid {
+                gap: 1rem;
+            }
         }
     </style>
 </head>
