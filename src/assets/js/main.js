@@ -35,9 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Close menu when clicking a link
-        const mobileLinks = mobileMenu.querySelectorAll('.mobile-menu__link');
+        const mobileLinks = mobileMenu.querySelectorAll('.mobile-menu__link, .mobile-menu__sublink');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
+                // Jangan tutup menu jika yang diklik adalah tombol toggle dropdown
+                if (link.classList.contains('dropdown__toggle')) {
+                    return;
+                }
+                
                 hamburger.classList.remove('open');
                 mobileMenu.classList.remove('open');
                 hamburger.setAttribute('aria-expanded', 'false');
@@ -47,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close menu on resize to desktop
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 900) {
+            if (window.innerWidth > 1150) {
                 hamburger.classList.remove('open');
                 mobileMenu.classList.remove('open');
                 hamburger.setAttribute('aria-expanded', 'false');
