@@ -1,18 +1,147 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Informasi Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar. Data kependudukan, layanan, dan fasilitas.">
+    <meta name="description"
+        content="Informasi Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar. Data kependudukan, layanan, dan fasilitas.">
     <title>Informasi — Kelurahan Mattompodalle</title>
     <style>
-        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#f8f9fc;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s ease,visibility .5s ease}
-        .preloader.loaded{opacity:0;visibility:hidden;pointer-events:none}
-        .preloader__content{display:flex;flex-direction:column;align-items:center;gap:1.25rem}
-        .preloader__spinner{width:36px;height:36px;border:3px solid #e2e5ef;border-top-color:#0d6e6e;border-radius:50%;animation:pspin .8s linear infinite}
-        @keyframes pspin{to{transform:rotate(360deg)}}
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f8f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity .5s ease, visibility .5s ease
+        }
+
+        .preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none
+        }
+
+        .preloader__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem
+        }
+
+        .preloader__spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid #e2e5ef;
+            border-top-color: #0d6e6e;
+            border-radius: 50%;
+            animation: pspin .8s linear infinite
+        }
+
+        @keyframes pspin {}
+        }
+
+        /* Info Page Styles */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card__header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f4f6fb;
+            padding-bottom: 0.75rem;
+        }
+
+        .info-card__icon {
+            width: 48px;
+            height: 48px;
+            background: #e9f5f5;
+            color: #0d6e6e;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-card__icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .info-card__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .info-card__body p {
+            margin: 0.5rem 0;
+            color: #4a5568;
+            line-height: 1.6;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.35rem 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .info-card__body p:last-child {
+            border-bottom: none;
+        }
+
+        .info-card__body span {
+            flex: 1;
+            text-align: left;
+        }
+
+        .info-card__body strong {
+            color: #2d3748;
+            font-weight: 600;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .highlight-stat {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0d6e6e;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- ========== PRELOADER ========== -->
@@ -27,9 +156,10 @@
         <div class="container header__inner">
             <!-- Home Button (Beranda) -->
             <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
-                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
+                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
             </a>
 
@@ -47,7 +177,8 @@
                     <li><a href="/kontak/" class="nav__link">Kontak</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
+                aria-controls="mobile-menu">
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
@@ -73,19 +204,96 @@
                 <div class="page-section__header animate-fade-in-up">
                     <span class="page-section__badge">Informasi</span>
                     <h1 class="page-section__title">Informasi Kelurahan</h1>
-                    <p class="page-section__subtitle">Data kependudukan, fasilitas, layanan, dan informasi umum Kelurahan Mattompodalle</p>
+                    <p class="page-section__subtitle">Data kependudukan, fasilitas, layanan, dan informasi umum
+                        Kelurahan Mattompodalle</p>
                 </div>
 
-                <div class="content-placeholder animate-fade-in-up delay-2">
-                    <svg class="content-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10 9 9 9 8 9"/>
-                    </svg>
-                    <span class="content-placeholder__label">Informasi Kelurahan</span>
-                    <p class="content-placeholder__desc">Data penduduk, fasilitas, UMKM, organisasi, dan informasi kelurahan lainnya akan ditampilkan di sini.</p>
+                <div class="info-grid animate-fade-in-up delay-2">
+                    <!-- Demografi & Kependudukan -->
+                    <div class="info-card">
+                        <div class="info-card__header">
+                            <div class="info-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h2 class="info-card__title">Demografi</h2>
+                        </div>
+                        <div class="info-card__body">
+                            <span class="highlight-stat">3.299 Jiwa</span>
+                            <p><span>Laki-laki</span> <strong>1.659</strong></p>
+                            <p><span>Perempuan</span> <strong>1.640</strong></p>
+                            <p><span>Total Kepala Keluarga</span> <strong>791 KK</strong></p>
+                            <p><span>Jumlah Lingkungan</span> <strong>5</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Profesi & Ekonomi -->
+                    <div class="info-card">
+                        <div class="info-card__header">
+                            <div class="info-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h2 class="info-card__title">Ekonomi & Profesi</h2>
+                        </div>
+                        <div class="info-card__body">
+                            <span class="highlight-stat">80% Petani</span>
+                            <p><span>Profesi Dominan</span> <strong>Petani</strong></p>
+                            <p><span>Profesi Lainnya</span> <strong>ASN, Pengusaha, Guru</strong></p>
+                            <p><span>Pemasaran UMKM</span> <strong>Sekitar Lingkungan</strong></p>
+                            <p><span>Digital Marketing</span> <strong>Ada</strong></p>
+                            <p><span>Kendala UMKM</span> <strong>Modal</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Fasilitas & Pendidikan -->
+                    <div class="info-card">
+                        <div class="info-card__header">
+                            <div class="info-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <h2 class="info-card__title">Fasilitas Umum</h2>
+                        </div>
+                        <div class="info-card__body">
+                            <p><span>Sekolah Dasar (SD)</span> <strong>2 Unit</strong></p>
+                            <p><span>Taman Kanak-Kanak (TK)</span> <strong>1 Unit</strong></p>
+                            <p><span>Posyandu</span> <strong>5 Unit (1/Lingk.)</strong></p>
+                            <p><span>Puskesmas Pembantu</span> <strong>1 Unit</strong></p>
+                            <p><span>Akses Air Bersih</span> <strong>PDAM & Sumur</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Organisasi & Sosial -->
+                    <div class="info-card">
+                        <div class="info-card__header">
+                            <div class="info-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h2 class="info-card__title">Organisasi Sosial</h2>
+                        </div>
+                        <div class="info-card__body">
+                            <p><span>Karang Taruna</span> <strong>Aktif</strong></p>
+                            <p><span>Remaja Mesjid</span> <strong>Aktif</strong></p>
+                            <p><span>PKK</span> <strong>Aktif</strong></p>
+                            <p><span>Majelis Taklim</span> <strong>Ada</strong></p>
+                            <p><span>Kelompok Tani</span> <strong>Ada</strong></p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -96,9 +304,10 @@
     <footer class="footer">
         <div class="container footer__inner">
             <div class="footer__brand">
-                <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
+                <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
                 <span class="footer__title">Mattompodalle</span>
             </div>
@@ -115,4 +324,5 @@
     </footer>
 
 </body>
+
 </html>
