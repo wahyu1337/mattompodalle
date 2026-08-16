@@ -321,8 +321,25 @@
             }
 
             .org-lingkungan-grid {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
                 max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .org-lingkungan-pair {
+                width: 100%;
+                position: relative;
+            }
+
+            .org-lingkungan-pair + .org-lingkungan-pair::before {
+                content: '';
+                display: block;
+                width: 2px;
+                height: 24px;
+                background: #0d6e6e;
                 margin: 0 auto;
             }
 
