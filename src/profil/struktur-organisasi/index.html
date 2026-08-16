@@ -126,8 +126,9 @@
             display: flex;
             justify-content: center;
             gap: 1.25rem;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             position: relative;
+            padding-top: 28px;
         }
 
         /* --- Branch: a card + optional child below --- */
@@ -135,6 +136,40 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+        }
+
+        /* Vertical drop line: bracket → card */
+        .org-branch::before {
+            content: '';
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            width: 2px;
+            height: 28px;
+            background: #0d6e6e;
+            transform: translateX(-1px);
+        }
+
+        /* Horizontal bracket segment (each branch covers its portion + half gap) */
+        .org-branch::after {
+            content: '';
+            position: absolute;
+            top: -28px;
+            left: -0.625rem;
+            right: -0.625rem;
+            height: 2px;
+            background: #0d6e6e;
+        }
+
+        /* First child: horizontal line starts at center */
+        .org-branch:first-child::after {
+            left: 50%;
+        }
+
+        /* Last child: horizontal line ends at center */
+        .org-branch:last-child::after {
+            right: 50%;
         }
 
         .org-branch .org-card {
@@ -235,25 +270,43 @@
         }
 
         /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .org-row {
                 flex-direction: column;
                 align-items: center;
                 gap: 0;
+                padding-top: 0;
             }
 
-            .org-row > .org-branch {
+            .org-row>.org-branch {
                 width: 100%;
                 max-width: 320px;
             }
 
-            .org-row > .org-branch + .org-branch::before {
+            /* Hide desktop bracket connectors */
+            .org-branch::before,
+            .org-branch::after {
+                display: none;
+            }
+
+            /* Vertical connector between stacked branches */
+            .org-row>.org-branch+.org-branch {
+                margin-top: 0;
+            }
+
+            .org-row>.org-branch+.org-branch .org-card:first-child::before {
                 content: '';
-                display: block;
+                position: absolute;
+                top: -20px;
+                left: 50%;
                 width: 2px;
                 height: 20px;
                 background: #cbd5e1;
-                margin: 0 auto;
+                transform: translateX(-1px);
+            }
+
+            .org-row>.org-branch+.org-branch .org-card:first-child {
+                margin-top: 20px;
             }
 
             .org-branch .org-card {
@@ -394,7 +447,7 @@
 
                     <div class="org-connector"></div>
 
-                    <!-- ====== TIER 2: SEKRETARIS + 3 KASI + KETUA LPM ====== -->
+                    <!-- ====== TIER 2: SEKRETARIS + KASI + KETUA LPM ====== -->
                     <div class="org-row">
                         <!-- Sekretaris Lurah -->
                         <div class="org-branch">
@@ -409,32 +462,6 @@
                             </div>
                         </div>
 
-                        <!-- Kasi Pemerintahan & Trantib -->
-                        <div class="org-branch">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Rusnada, S.Sos</h3>
-                                <p class="org-card__role">Kasi. Pemerintahan &amp; Trantib</p>
-                            </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">&mdash;</h3>
-                                <p class="org-card__role">Staf Pemerintahan &amp; Trantib</p>
-                            </div>
-                        </div>
-
-                        <!-- Kasi Ekonomi & Kesejahteraan Rakyat -->
-                        <div class="org-branch">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Hussnaidi, S.Sos</h3>
-                                <p class="org-card__role">Kasi. Ekonomi &amp; Kesra</p>
-                            </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Harapin, SM</h3>
-                                <p class="org-card__role">Staf Ekonomi &amp; Kesra</p>
-                            </div>
-                        </div>
-
                         <!-- Kasi Pembangunan -->
                         <div class="org-branch">
                             <div class="org-card">
@@ -445,6 +472,19 @@
                             <div class="org-card org-card--staf">
                                 <h3 class="org-card__name">Najamuddin, SM</h3>
                                 <p class="org-card__role">Staf Pembangunan</p>
+                            </div>
+                        </div>
+
+                        <!-- Kasi Ekonomi dan Kesejahteraan Rakyat -->
+                        <div class="org-branch">
+                            <div class="org-card">
+                                <h3 class="org-card__name">Husnaidi, S.sos</h3>
+                                <p class="org-card__role">Kasi. Ekonomi dan Kesejahteraan Rakyat</p>
+                            </div>
+                            <div class="org-connector"></div>
+                            <div class="org-card org-card--staf">
+                                <h3 class="org-card__name">Harapin, SM</h3>
+                                <p class="org-card__role">Staf Ekonomi dan Kesejahteraan Rakyat</p>
                             </div>
                         </div>
 
@@ -465,12 +505,12 @@
                         <div class="org-lingkungan-pair">
                             <div class="org-card">
                                 <h3 class="org-card__name">Suardi. S</h3>
-                                <p class="org-card__role">Kaplingk. Lembang Selatan</p>
+                                <p class="org-card__role">Kepala Lingkungan Lembang Selatan</p>
                             </div>
                             <div class="org-connector"></div>
                             <div class="org-card org-card--staf">
                                 <h3 class="org-card__name">Mustar DG Rala</h3>
-                                <p class="org-card__role">Imam Lingk. Lembang Selatan</p>
+                                <p class="org-card__role">Imam Lingkungan Lembang Selatan</p>
                             </div>
                         </div>
 
@@ -478,12 +518,12 @@
                         <div class="org-lingkungan-pair">
                             <div class="org-card">
                                 <h3 class="org-card__name">Muh. Saleh DG Nuntung</h3>
-                                <p class="org-card__role">Kaplingk. Lembang Utara</p>
+                                <p class="org-card__role">Kepala Lingkungan Lembang Utara</p>
                             </div>
                             <div class="org-connector"></div>
                             <div class="org-card org-card--staf">
                                 <h3 class="org-card__name">Drs. Syamsudding DG Bella</h3>
-                                <p class="org-card__role">Imam Lingk. Lembang Utara</p>
+                                <p class="org-card__role">Imam Lingkungan Lembang Utara</p>
                             </div>
                         </div>
 
@@ -491,12 +531,12 @@
                         <div class="org-lingkungan-pair">
                             <div class="org-card">
                                 <h3 class="org-card__name">H. Muh. Nasir DG Naba</h3>
-                                <p class="org-card__role">Kaplingk. Manuju Selatan</p>
+                                <p class="org-card__role">Kepala Lingkungan Manuju Selatan</p>
                             </div>
                             <div class="org-connector"></div>
                             <div class="org-card org-card--staf">
                                 <h3 class="org-card__name">H. Hamzah, S.Ag DG Ngerang</h3>
-                                <p class="org-card__role">Imam Lingk. Manuju Selatan</p>
+                                <p class="org-card__role">Imam Lingkungan Manuju Selatan</p>
                             </div>
                         </div>
 
@@ -504,12 +544,12 @@
                         <div class="org-lingkungan-pair">
                             <div class="org-card">
                                 <h3 class="org-card__name">Muh. Yusuf DG Tarra</h3>
-                                <p class="org-card__role">Kaplingk. Manuju Utara</p>
+                                <p class="org-card__role">Kepala Lingkungan Manuju Utara</p>
                             </div>
                             <div class="org-connector"></div>
                             <div class="org-card org-card--staf">
                                 <h3 class="org-card__name">Syamsuddin DG Sija</h3>
-                                <p class="org-card__role">Imam Lingk. Manuju Utara</p>
+                                <p class="org-card__role">Imam Lingkungan Manuju Utara</p>
                             </div>
                         </div>
 
@@ -517,12 +557,12 @@
                         <div class="org-lingkungan-pair">
                             <div class="org-card">
                                 <h3 class="org-card__name">ABD. Bakri DG Bombong</h3>
-                                <p class="org-card__role">Kaplingk. Romangtangngaya</p>
+                                <p class="org-card__role">Kepala Lingkungan Romangtangngaya</p>
                             </div>
                             <div class="org-connector"></div>
                             <div class="org-card org-card--staf">
                                 <h3 class="org-card__name">Ruslan, S.Pd DG Lau</h3>
-                                <p class="org-card__role">Imam Lingk. Romangtangngaya</p>
+                                <p class="org-card__role">Imam Lingkungan Romangtangngaya</p>
                             </div>
                         </div>
                     </div>
