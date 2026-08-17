@@ -111,27 +111,64 @@
             </div>
         </section>
     </main>
-
-    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container footer__inner">
-            <div class="footer__brand">
-                <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
-                <span class="footer__title">Mattompodalle</span>
+
+            <div class="footer__top">
+
+                <!-- Map Column -->
+                <div class="footer__map-col">
+                    <span class="footer__map-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Lokasi Kantor Lurah
+                    </span>
+                    <div class="footer__map-container">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Lokasi Kantor Lurah Mattompodalle">
+                        </iframe>
+                    </div>
+                    <p class="footer__map-address">Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>Kab. Takalar, Sulawesi Selatan 92221</p>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer__links-col">
+                    <h4 class="footer__col-heading">Menu</h4>
+                    <nav class="footer__nav" aria-label="Footer navigasi">
+                        <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
+                        <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
+                        <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
+                        <a href="/informasi/" class="footer__link">Info</a>
+                        <a href="/gallery/" class="footer__link">Gallery</a>
+                        <a href="/kontak/" class="footer__link">Kontak</a>
+                    </nav>
+                </div>
+
+                <!-- Brand Column -->
+                <div class="footer__brand-col">
+                    <div class="footer__brand">
+                        <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        <span class="footer__title">Mattompodalle</span>
+                    </div>
+                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan.</p>
+                </div>
+
             </div>
-            <nav class="footer__nav" aria-label="Footer navigasi">
-                <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
-                <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
-                <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
-                <a href="/informasi/" class="footer__link">Info</a>
-                <a href="/gallery/" class="footer__link">Gallery</a>
-                <a href="/kontak/" class="footer__link">Kontak</a>
-            </nav>
-            <div class="footer__divider"></div>
-            <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle — KKN 26 Posko 4. All rights reserved.</p>
+
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle &mdash; KKN 26 Posko 4. All rights reserved.</p>
+            </div>
+
         </div>
     </footer>
 
