@@ -891,17 +891,46 @@ h6 {
 
     .footer__top {
         grid-template-columns: 1fr;
-        gap: var(--sp-6);
+        gap: var(--sp-8);
+        padding-bottom: var(--sp-4);
+    }
+
+    .footer__map-col,
+    .footer__links-col,
+    .footer__brand-col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__map-label {
+        justify-content: center;
+    }
+
+    .footer__map-address {
+        text-align: center;
     }
 
     .footer__map-container {
-        height: 160px;
+        height: 180px;
     }
 
     .footer__nav {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: var(--sp-3);
+        width: 100%;
+    }
+
+    .footer__brand {
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--sp-2);
+    }
+
+    .footer__desc {
+        text-align: center;
+        margin-top: var(--sp-2);
     }
 
     .footer__link:hover {
