@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galeri foto dan dokumentasi kegiatan Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
+    <meta name="description"
+        content="Galeri foto dan dokumentasi kegiatan Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
     <title>Gallery — Kelurahan Mattompodalle</title>
     <style>
-        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#f8f9fc;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s ease,visibility .5s ease}
-        .preloader.loaded{opacity:0;visibility:hidden;pointer-events:none}
-        .preloader__content{display:flex;flex-direction:column;align-items:center;gap:1.25rem}
-        .preloader__spinner{width:36px;height:36px;border:3px solid #e2e5ef;border-top-color:#0d6e6e;border-radius:50%;animation:pspin .8s linear infinite}
-        @keyframes pspin{to{transform:rotate(360deg)}}
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f8f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity .5s ease, visibility .5s ease
+        }
+
+        .preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none
+        }
+
+        .preloader__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem
+        }
+
+        .preloader__spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid #e2e5ef;
+            border-top-color: #0d6e6e;
+            border-radius: 50%;
+            animation: pspin .8s linear infinite
+        }
+
+        @keyframes pspin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- ========== PRELOADER ========== -->
@@ -27,9 +66,10 @@
         <div class="container header__inner">
             <!-- Home Button (Beranda) -->
             <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
-                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
+                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
             </a>
 
@@ -43,13 +83,16 @@
                     <li class="dropdown">
                         <a href="#" class="nav__link dropdown__toggle">
                             Profil
-                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </a>
                         <ul class="dropdown__menu">
-                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
-                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
+                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a>
+                            </li>
+                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/"
+                                    class="dropdown__link">Struktur Organisasi</a></li>
                         </ul>
                     </li>
                     <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
@@ -58,7 +101,8 @@
                     <li><a href="/kontak/" class="nav__link">Kontak</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
+                aria-controls="mobile-menu">
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
@@ -71,7 +115,8 @@
             <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
                 <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
                     Profil
-                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
+                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </a>
@@ -99,13 +144,14 @@
                 </div>
 
                 <div class="content-placeholder animate-fade-in-up delay-2">
-                    <svg class="content-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                        <polyline points="21 15 16 10 5 21"/>
+                    <svg class="content-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <polyline points="21 15 16 10 5 21" />
                     </svg>
                     <span class="content-placeholder__label">Gallery Foto</span>
-                    <p class="content-placeholder__desc">Koleksi foto dan dokumentasi kegiatan kelurahan akan ditampilkan di sini.</p>
+                    <p class="content-placeholder__desc">Koleksi Foto Kantor Kelurahan.</p>
                 </div>
 
             </div>
@@ -119,22 +165,22 @@
                 <!-- Map Column -->
                 <div class="footer__map-col">
                     <span class="footer__map-label">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
                         </svg>
                         Lokasi Kantor Lurah
                     </span>
                     <div class="footer__map-container">
                         <iframe
                             src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Lokasi Kantor Lurah Mattompodalle">
                         </iframe>
                     </div>
-                    <p class="footer__map-address">Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>Kab. Takalar, Sulawesi Selatan 92221</p>
+                    <p class="footer__map-address">Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>Kab. Takalar,
+                        Sulawesi Selatan 92221</p>
                 </div>
 
                 <!-- Links Column -->
@@ -153,14 +199,15 @@
                 <!-- Brand Column -->
                 <div class="footer__brand-col">
                     <div class="footer__brand">
-                        <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                             <polyline points="9 22 9 12 15 12 15 22" />
                         </svg>
                         <span class="footer__title">Mattompodalle</span>
                     </div>
-                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan.</p>
+                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara,
+                        Kabupaten Takalar, Sulawesi Selatan.</p>
                 </div>
 
             </div>
@@ -173,4 +220,5 @@
     </footer>
 
 </body>
+
 </html>
