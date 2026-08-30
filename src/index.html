@@ -8,7 +8,6 @@
         content="Portal Resmi Kelurahan Mattompodalle - Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan. Informasi layanan administrasi, kependudukan, profil, dan potensi wilayah.">
     <title>Portal Resmi Kelurahan Mattompodalle — Kabupaten Takalar</title>
     <style>
-        /* Critical preloader styles */
         .preloader {
             position: fixed;
             top: 0;
@@ -62,106 +61,107 @@
         </div>
     </div>
 
-    <!-- ========== TOP ANNOUNCEMENT TICKER ========== -->
-    <div class="ticker-bar" id="ticker-bar">
-        <div class="container ticker-inner">
-            <div class="ticker-content">
-                <span class="ticker-badge">PENGUMUMAN</span>
-                <span class="ticker-text">Jam Pelayanan Kantor Lurah: Senin – Jumat 08.00 - 15.30 WITA | Layanan Administrasi Surat Pengantar &amp; Informasi Kependudukan Aktif</span>
-            </div>
-            <div class="ticker-meta">
-                <span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    Kec. Polut, Kab. Takalar
-                </span>
-                <span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    0813-5567-9147
-                </span>
+    <!-- ========== UNIFIED FIXED HEADER ========== -->
+    <header class="header-fixed-wrap" id="header-fixed-wrap">
+        <!-- Top Announcement Ticker -->
+        <div class="ticker-bar" id="ticker-bar">
+            <div class="container ticker-inner">
+                <div class="ticker-content">
+                    <span class="ticker-badge">PENGUMUMAN</span>
+                    <span class="ticker-text">Jam Pelayanan Kantor Lurah: Senin – Jumat 08.00 - 15.30 WITA | Pelayanan Administrasi &amp; Informasi Kependudukan</span>
+                </div>
+                <div class="ticker-meta">
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Kec. Polut, Kab. Takalar
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        0813-5567-9147
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
-        <div class="container header__inner">
+        <!-- Main Navigation Bar -->
+        <div class="header-main" id="header-main">
+            <div class="container header__inner">
+                <!-- Brand Logo & Title -->
+                <a href="/" class="header__brand" title="Beranda Kelurahan Mattompodalle">
+                    <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="header__logo-img">
+                    <div class="header__brand-text">
+                        <span class="header__title">Kelurahan Mattompodalle</span>
+                        <span class="header__subtitle">Kec. Polongbangkeng Utara, Kab. Takalar</span>
+                    </div>
+                </a>
 
-            <!-- Brand Logo & Title -->
-            <a href="/" class="header__brand" title="Beranda Kelurahan Mattompodalle">
-                <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="header__logo-img">
-                <div class="header__brand-text">
-                    <span class="header__title">Kelurahan Mattompodalle</span>
-                    <span class="header__subtitle">Kec. Polongbangkeng Utara, Kab. Takalar</span>
-                </div>
-            </a>
+                <!-- Desktop Navigation -->
+                <nav class="nav" aria-label="Navigasi utama">
+                    <ul class="nav__list">
+                        <li><a href="/" class="nav__link active">Beranda</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="nav__link dropdown__toggle">
+                                Profil
+                                <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </a>
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
+                                <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
+                        <li><a href="/informasi/" class="nav__link">Info &amp; Data</a></li>
+                        <li><a href="/gallery/" class="nav__link">Galeri</a></li>
+                        <li><a href="/kontak/" class="nav__link">Kontak</a></li>
+                        <li><a href="/#layanan" class="nav__cta-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            Layanan Mandiri
+                        </a></li>
+                    </ul>
+                </nav>
 
-            <!-- Desktop Navigation -->
-            <nav class="nav" aria-label="Navigasi utama">
-                <ul class="nav__list">
-                    <li><a href="/" class="nav__link active">Beranda</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="nav__link dropdown__toggle">
+                <!-- Hamburger Button (Mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Drawer (Flushed beneath header-main) -->
+            <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+                <ul class="mobile-menu__list">
+                    <li><a href="/" class="mobile-menu__link active">Beranda</a></li>
+                    <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
+                        <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
                             Profil
                             <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </a>
-                        <ul class="dropdown__menu">
-                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
-                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
+                        <ul class="mobile-dropdown__menu">
+                            <li><a href="/profil/lurah/" class="mobile-menu__sublink">Profil Lurah</a></li>
+                            <li><a href="/profil/struktur-organisasi/" class="mobile-menu__sublink">Struktur Organisasi</a></li>
                         </ul>
                     </li>
-                    <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
-                    <li><a href="/informasi/" class="nav__link">Info &amp; Data</a></li>
-                    <li><a href="/gallery/" class="nav__link">Galeri</a></li>
-                    <li><a href="/kontak/" class="nav__link">Kontak</a></li>
-                    <li><a href="#layanan" class="nav__cta-btn">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                        Layanan Mandiri
-                    </a></li>
+                    <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
+                    <li><a href="/informasi/" class="mobile-menu__link">Info &amp; Data Kelurahan</a></li>
+                    <li><a href="/gallery/" class="mobile-menu__link">Galeri Foto</a></li>
+                    <li><a href="/kontak/" class="mobile-menu__link">Kontak &amp; Pengaduan</a></li>
+                    <li style="margin-top: 1rem;">
+                        <a href="/#layanan" class="btn-hero-primary" style="display:flex; justify-content:center; width:100%;">
+                            Urus Surat Layanan
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-
-            <!-- Hamburger Button (Mobile) -->
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
-                aria-controls="mobile-menu">
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-            </button>
-
+            </div>
         </div>
     </header>
-
-    <!-- Mobile Menu Drawer -->
-    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
-        <ul class="mobile-menu__list">
-            <li><a href="/" class="mobile-menu__link active">Beranda</a></li>
-            <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
-                <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
-                    Profil
-                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </a>
-                <ul class="mobile-dropdown__menu">
-                    <li><a href="/profil/lurah/" class="mobile-menu__sublink">Profil Lurah</a></li>
-                    <li><a href="/profil/struktur-organisasi/" class="mobile-menu__sublink">Struktur Organisasi</a></li>
-                </ul>
-            </li>
-            <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
-            <li><a href="/informasi/" class="mobile-menu__link">Info &amp; Data Kelurahan</a></li>
-            <li><a href="/gallery/" class="mobile-menu__link">Galeri Foto</a></li>
-            <li><a href="/kontak/" class="mobile-menu__link">Kontak &amp; Pengaduan</a></li>
-            <li style="margin-top: 1rem;">
-                <a href="#layanan" class="btn-hero-primary" style="display:flex; justify-content:center; width:100%;">
-                    Urus Surat Layanan
-                </a>
-            </li>
-        </ul>
-    </div>
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="main">
@@ -374,7 +374,7 @@
                         <div>
                             <div class="service-card__head">
                                 <div class="service-card__icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
                                 </div>
                                 <span class="service-card__badge">Ekonomi &amp; UMKM</span>
                             </div>

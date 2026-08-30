@@ -164,16 +164,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = '';
             });
         });
+
+        // Close on desktop resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1080) {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
-    // 3. Header Scroll Shadow
-    const header = document.querySelector('.header');
-    if (header) {
+    // 3. Fixed Header Scroll Shadow
+    const headerFixedWrap = document.getElementById('header-fixed-wrap') || document.querySelector('.header-fixed-wrap') || document.querySelector('.header');
+    if (headerFixedWrap) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                header.classList.add('scrolled');
+            if (window.scrollY > 15) {
+                headerFixedWrap.classList.add('scrolled');
             } else {
-                header.classList.remove('scrolled');
+                headerFixedWrap.classList.remove('scrolled');
             }
         });
     }
@@ -203,6 +213,7 @@ function initServiceModals() {
         backdrop = document.createElement('div');
         backdrop.id = 'service-modal-backdrop';
         backdrop.className = 'modal-backdrop';
+        backdrop.style.display = 'none';
         backdrop.innerHTML = `
             <div class="modal-dialog" role="dialog" aria-modal="true">
                 <div class="modal-header">
@@ -252,6 +263,11 @@ function initServiceModals() {
 
     const closeModal = () => {
         backdrop.classList.remove('open');
+        setTimeout(() => {
+            if (!backdrop.classList.contains('open')) {
+                backdrop.style.display = 'none';
+            }
+        }, 250);
         document.body.style.overflow = '';
     };
 
@@ -294,6 +310,9 @@ function initServiceModals() {
             const encodedMsg = encodeURIComponent(data.waMessage);
             waBtn.href = `https://wa.me/6281355679147?text=${encodedMsg}`;
 
+            backdrop.style.display = 'flex';
+            // force reflow
+            void backdrop.offsetWidth;
             backdrop.classList.add('open');
             document.body.style.overflow = 'hidden';
         });
@@ -316,7 +335,6 @@ function initCounterAnimation() {
         const update = (currentTime) => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease-out expo
             const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
             const currentVal = Math.floor(target * easeProgress);
 
@@ -442,7 +460,7 @@ function initFloatingWhatsApp() {
     waButton.setAttribute('aria-label', 'Hubungi Layanan Kelurahan via WhatsApp');
     waButton.title = 'Layanan WhatsApp Kantor Lurah';
     waButton.innerHTML = `
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;max-width:28px;max-height:28px;display:block;">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
         </svg>
     `;

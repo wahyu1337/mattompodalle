@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Galeri Foto dan Dokumentasi Kegiatan Kelurahan Mattompodalle - Kecamatan Polongbangkeng Utara, Kabupaten Takalar.">
-    <title>Galeri Dokumentasi — Kelurahan Mattompodalle</title>
+    <meta name="description" content="Galeri Foto Kegiatan dan Dokumentasi Pelayanan Kelurahan Mattompodalle, Kab. Takalar.">
+    <title>Galeri Foto — Kelurahan Mattompodalle</title>
     <style>
         .preloader {
             position: fixed;
@@ -61,80 +60,101 @@
         </div>
     </div>
 
-    <!-- ========== TOP ANNOUNCEMENT TICKER ========== -->
-    <div class="ticker-bar" id="ticker-bar">
-        <div class="container ticker-inner">
-            <div class="ticker-content">
-                <span class="ticker-badge">PENGUMUMAN</span>
-                <span class="ticker-text">Dokumentasi resmi aktivitas pelayanan, pembangunan, dan kegiatan sosial warga Kelurahan Mattompodalle.</span>
-            </div>
-            <div class="ticker-meta">
-                <span>📍 Kec. Polut, Kab. Takalar</span>
-                <span>📞 WA: 0813-5567-9147</span>
+    <!-- ========== UNIFIED FIXED HEADER ========== -->
+    <header class="header-fixed-wrap" id="header-fixed-wrap">
+        <!-- Top Announcement Ticker -->
+        <div class="ticker-bar" id="ticker-bar">
+            <div class="container ticker-inner">
+                <div class="ticker-content">
+                    <span class="ticker-badge">DOKUMENTASI</span>
+                    <span class="ticker-text">Galeri Foto Resmi Kegiatan Pemerintahan &amp; Kemasyarakatan Kelurahan Mattompodalle</span>
+                </div>
+                <div class="ticker-meta">
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Kec. Polut, Kab. Takalar
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        0813-5567-9147
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
-        <div class="container header__inner">
-            <a href="/" class="header__brand" title="Beranda Kelurahan Mattompodalle">
-                <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="header__logo-img">
-                <div class="header__brand-text">
-                    <span class="header__title">Kelurahan Mattompodalle</span>
-                    <span class="header__subtitle">Kec. Polongbangkeng Utara, Kab. Takalar</span>
-                </div>
-            </a>
-            <nav class="nav" aria-label="Navigasi utama">
-                <ul class="nav__list">
-                    <li><a href="/" class="nav__link">Beranda</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="nav__link dropdown__toggle">
+        <!-- Main Navigation Bar -->
+        <div class="header-main" id="header-main">
+            <div class="container header__inner">
+                <a href="/" class="header__brand" title="Beranda Kelurahan Mattompodalle">
+                    <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="header__logo-img">
+                    <div class="header__brand-text">
+                        <span class="header__title">Kelurahan Mattompodalle</span>
+                        <span class="header__subtitle">Kec. Polongbangkeng Utara, Kab. Takalar</span>
+                    </div>
+                </a>
+                <nav class="nav" aria-label="Navigasi utama">
+                    <ul class="nav__list">
+                        <li><a href="/" class="nav__link">Beranda</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="nav__link dropdown__toggle">
+                                Profil
+                                <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </a>
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
+                                <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
+                        <li><a href="/informasi/" class="nav__link">Info &amp; Data</a></li>
+                        <li><a href="/gallery/" class="nav__link active">Galeri</a></li>
+                        <li><a href="/kontak/" class="nav__link">Kontak</a></li>
+                        <li><a href="/#layanan" class="nav__cta-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            Layanan Mandiri
+                        </a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Drawer -->
+            <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+                <ul class="mobile-menu__list">
+                    <li><a href="/" class="mobile-menu__link">Beranda</a></li>
+                    <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
+                        <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
                             Profil
-                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </a>
-                        <ul class="dropdown__menu">
-                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
-                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
+                        <ul class="mobile-dropdown__menu">
+                            <li><a href="/profil/lurah/" class="mobile-menu__sublink">Profil Lurah</a></li>
+                            <li><a href="/profil/struktur-organisasi/" class="mobile-menu__sublink">Struktur Organisasi</a></li>
                         </ul>
                     </li>
-                    <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
-                    <li><a href="/informasi/" class="nav__link">Info &amp; Data</a></li>
-                    <li><a href="/gallery/" class="nav__link active">Galeri</a></li>
-                    <li><a href="/kontak/" class="nav__link">Kontak</a></li>
+                    <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
+                    <li><a href="/informasi/" class="mobile-menu__link">Info &amp; Data Kelurahan</a></li>
+                    <li><a href="/gallery/" class="mobile-menu__link active">Galeri Foto</a></li>
+                    <li><a href="/kontak/" class="mobile-menu__link">Kontak &amp; Pengaduan</a></li>
+                    <li style="margin-top: 1rem;">
+                        <a href="/#layanan" class="btn-hero-primary" style="display:flex; justify-content:center; width:100%;">
+                            Urus Surat Layanan
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-            </button>
+            </div>
         </div>
     </header>
-
-    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
-        <ul class="mobile-menu__list">
-            <li><a href="/" class="mobile-menu__link">Beranda</a></li>
-            <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
-                <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
-                    Profil
-                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </a>
-                <ul class="mobile-dropdown__menu">
-                    <li><a href="/profil/lurah/" class="mobile-menu__sublink">Profil Lurah</a></li>
-                    <li><a href="/profil/struktur-organisasi/" class="mobile-menu__sublink">Struktur Organisasi</a></li>
-                </ul>
-            </li>
-            <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
-            <li><a href="/informasi/" class="mobile-menu__link">Info &amp; Data Kelurahan</a></li>
-            <li><a href="/gallery/" class="mobile-menu__link active">Galeri Foto</a></li>
-            <li><a href="/kontak/" class="mobile-menu__link">Kontak &amp; Pengaduan</a></li>
-        </ul>
-    </div>
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="main">
@@ -143,63 +163,48 @@
 
                 <div class="page-section__header">
                     <span class="page-section__badge">Dokumentasi</span>
-                    <h1 class="page-section__title">Galeri Foto Kegiatan</h1>
-                    <p class="page-section__subtitle">Kumpulan dokumentasi aktivitas pelayanan publik, musyawarah warga, kegiatan posyandu, dan kebersamaan di Kelurahan Mattompodalle</p>
+                    <h1 class="page-section__title">Galeri Kegiatan</h1>
+                    <p class="page-section__subtitle">Dokumentasi visual pelayanan, pembangunan wilayah, dan kebersamaan warga Kelurahan Mattompodalle</p>
                 </div>
 
-                <!-- Category Filters -->
+                <!-- Filters -->
                 <div class="gallery-filters">
-                    <button type="button" class="gallery-filter-btn active" data-filter="all">Semua Foto</button>
-                    <button type="button" class="gallery-filter-btn" data-filter="pemerintahan">Pemerintahan</button>
-                    <button type="button" class="gallery-filter-btn" data-filter="pelayanan">Pelayanan Warga</button>
-                    <button type="button" class="gallery-filter-btn" data-filter="kesehatan">Kesehatan &amp; Posyandu</button>
-                    <button type="button" class="gallery-filter-btn" data-filter="kkn">Kegiatan KKN 26</button>
+                    <button class="gallery-filter-btn active" data-filter="all">Semua Foto</button>
+                    <button class="gallery-filter-btn" data-filter="pelayanan">Pelayanan Kantor</button>
+                    <button class="gallery-filter-btn" data-filter="posyandu">Posyandu &amp; Kesehatan</button>
+                    <button class="gallery-filter-btn" data-filter="masyarakat">Kegiatan Warga</button>
                 </div>
 
                 <!-- Gallery Grid -->
                 <div class="gallery-grid">
 
-                    <!-- Item 1 -->
-                    <div class="gallery-item" data-category="pemerintahan">
-                        <div class="gallery-item__img-wrap">
-                            <img src="/assets/pak lurah.svg" alt="Pelayanan Kantor Kelurahan" class="gallery-item__img">
-                        </div>
-                        <div class="gallery-item__caption">
-                            <span class="gallery-item__tag">Pemerintahan</span>
-                            <h3 class="gallery-item__title">Pimpinan &amp; Perangkat Kelurahan Mattompodalle</h3>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
                     <div class="gallery-item" data-category="pelayanan">
-                        <div class="gallery-item__img-wrap" style="background: linear-gradient(135deg, #0d6e6e, #14a3a3); display:flex; align-items:center; justify-content:center; color:#ffffff;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><line x1="15" y1="8" x2="17" y2="8"></line><line x1="15" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="17" y2="16"></line></svg>
+                        <div class="gallery-item__img-wrap">
+                            <img src="/assets/pak lurah.svg" alt="Pelayanan Administrasi Kantor Lurah" class="gallery-item__img">
                         </div>
                         <div class="gallery-item__caption">
-                            <span class="gallery-item__tag">Pelayanan Warga</span>
-                            <h3 class="gallery-item__title">Pelayanan Administrasi Kependudukan Terpadu</h3>
+                            <span class="gallery-item__tag">Pelayanan</span>
+                            <h3 class="gallery-item__title">Pelayanan Administrasi Terpadu</h3>
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
-                    <div class="gallery-item" data-category="kesehatan">
-                        <div class="gallery-item__img-wrap" style="background: linear-gradient(135deg, #0284c7, #38bdf8); display:flex; align-items:center; justify-content:center; color:#ffffff;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    <div class="gallery-item" data-category="posyandu">
+                        <div class="gallery-item__img-wrap">
+                            <img src="/assets/pak lurah.svg" alt="Pemeriksaan Rutin Posyandu Lingkungan" class="gallery-item__img">
                         </div>
                         <div class="gallery-item__caption">
-                            <span class="gallery-item__tag">Kesehatan &amp; Posyandu</span>
-                            <h3 class="gallery-item__title">Pelayanan Rutin Posyandu Balita &amp; Lansia</h3>
+                            <span class="gallery-item__tag">Posyandu</span>
+                            <h3 class="gallery-item__title">Kegiatan Posyandu Balita &amp; Ibu Hamil</h3>
                         </div>
                     </div>
 
-                    <!-- Item 4 -->
-                    <div class="gallery-item" data-category="kkn">
-                        <div class="gallery-item__img-wrap" style="background: linear-gradient(135deg, #d4a843, #f59e0b); display:flex; align-items:center; justify-content:center; color:#ffffff;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <div class="gallery-item" data-category="masyarakat">
+                        <div class="gallery-item__img-wrap">
+                            <img src="/assets/pak lurah.svg" alt="Musrenbang Kelurahan" class="gallery-item__img">
                         </div>
                         <div class="gallery-item__caption">
-                            <span class="gallery-item__tag">Kegiatan KKN 26</span>
-                            <h3 class="gallery-item__title">Digitalisasi &amp; Pengabdian Masyarakat KKN Posko 4 UHM</h3>
+                            <span class="gallery-item__tag">Masyarakat</span>
+                            <h3 class="gallery-item__title">Musyawarah Perencanaan Pembangunan</h3>
                         </div>
                     </div>
 
@@ -212,37 +217,72 @@
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container footer__inner">
+
             <div class="footer__top">
+
+                <!-- Map Column -->
                 <div class="footer__map-col">
-                    <span class="footer__map-label">Lokasi Kantor Lurah</span>
+                    <span class="footer__map-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Lokasi Kantor Lurah Mattompodalle
+                    </span>
                     <div class="footer__map-container">
-                        <iframe src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Kantor Lurah Mattompodalle"></iframe>
+                        <iframe
+                            src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Lokasi Kantor Lurah Mattompodalle">
+                        </iframe>
                     </div>
-                    <p class="footer__map-address">Jl. Lahere Dg. Nandre No. 1, Kel. Mattompodalle, Kec. Polongbangkeng Utara, Kab. Takalar 92221</p>
+                    <p class="footer__map-address">
+                        Jl. Lahere Dg. Nandre No. 1, Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>
+                        Kab. Takalar, Sulawesi Selatan 92221
+                    </p>
                 </div>
+
+                <!-- Links Column -->
                 <div class="footer__links-col">
-                    <h4 class="footer__col-heading">Navigasi</h4>
+                    <h4 class="footer__col-heading">Navigasi Utama</h4>
                     <nav class="footer__nav" aria-label="Footer navigasi">
-                        <a href="/" class="footer__link">Beranda</a>
+                        <a href="/" class="footer__link">Beranda Portal</a>
                         <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
                         <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
                         <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
                         <a href="/informasi/" class="footer__link">Data &amp; Statistik</a>
-                        <a href="/gallery/" class="footer__link">Galeri</a>
-                        <a href="/kontak/" class="footer__link">Kontak</a>
+                        <a href="/gallery/" class="footer__link">Galeri Foto</a>
+                        <a href="/kontak/" class="footer__link">Kontak &amp; Layanan WA</a>
                     </nav>
                 </div>
+
+                <!-- Brand & Contact Column -->
                 <div class="footer__brand-col">
                     <div class="footer__brand">
-                        <img src="/assets/takalar.png" alt="Logo Takalar" class="footer__logo-img">
-                        <span class="footer__title">Mattompodalle</span>
+                        <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="footer__logo-img">
+                        <div>
+                            <span class="footer__title">Kelurahan Mattompodalle</span>
+                            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">Pemerintah Kabupaten Takalar</p>
+                        </div>
                     </div>
-                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan.</p>
+                    <p class="footer__desc">
+                        Portal resmi pelayanan publik dan pusat informasi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar.
+                    </p>
+                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.75); display: flex; flex-direction: column; gap: 0.35rem;">
+                        <span>📱 WhatsApp: <strong>0813-5567-9147</strong></span>
+                        <span>✉️ Email: <strong>klurah608@gmail.com</strong></span>
+                        <span>⏰ Jam Pelayanan: <strong>Senin - Jumat 08:00 - 15:30 WITA</strong></span>
+                    </div>
                 </div>
+
             </div>
+
             <div class="footer__bottom">
-                <p class="footer__copy">&copy; 2026 Pemerintah Kelurahan Mattompodalle</p>
+                <p class="footer__copy">&copy; 2026 Pemerintah Kelurahan Mattompodalle, Kab. Takalar. Hak Cipta Dilindungi.</p>
+                <span class="footer__kkn-tag">Pengembangan Digitalisasi oleh KKN 26 Posko 4 Univ. Handayani Makassar</span>
             </div>
+
         </div>
     </footer>
 
