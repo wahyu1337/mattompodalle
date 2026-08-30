@@ -1040,7 +1040,7 @@ h6 {
 }
 
 /* ============================================
-   LURAH GREETING SECTION
+   LURAH GREETING & EXECUTIVE PROFILE SECTION
    ============================================ */
 .greeting-section {
     background: linear-gradient(135deg, #ffffff 0%, #f1f8f8 100%);
@@ -1161,6 +1161,245 @@ h6 {
     font-size: 0.85rem;
     color: var(--clr-text-muted);
     font-weight: 600;
+}
+
+/* ============================================
+   DEDICATED EXECUTIVE PROFILE (PROFIL LURAH PAGE)
+   ============================================ */
+.executive-profile-wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.executive-card {
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--shadow-xl);
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+.executive-photo-col {
+    background: linear-gradient(160deg, #074747 0%, #0d6e6e 60%, #148f8f 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 360px;
+}
+
+.executive-photo-col::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 168, 67, 0.3) 0%, transparent 70%);
+}
+
+.executive-photo-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.executive-badge {
+    position: relative;
+    top: auto;
+    left: auto;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    z-index: 5;
+    flex-shrink: 0;
+}
+
+.executive-photo {
+    width: 100%;
+    max-width: 235px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+    transform: translateY(12px);
+    transition: transform var(--transition-base);
+    display: block;
+    margin-top: auto;
+}
+
+.executive-card:hover .executive-photo {
+    transform: translateY(6px) scale(1.02);
+}
+
+.executive-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 8px #10b981;
+}
+
+.executive-info-col {
+    padding: 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.executive-name {
+    font-size: 2.15rem;
+    font-weight: 800;
+    color: var(--clr-primary-dark);
+    line-height: 1.15;
+    margin: 0.35rem 0 0.2rem;
+}
+
+.executive-nip {
+    color: var(--clr-text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.executive-bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--clr-surface-alt);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--clr-border);
+}
+
+.bio-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.bio-tile__label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--clr-text-muted);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.bio-tile__val {
+    font-weight: 700;
+    color: var(--clr-text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.executive-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+/* Priority Programs Grid */
+.executive-section-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--clr-text);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.priority-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.priority-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.priority-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--clr-primary);
+}
+
+.priority-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.priority-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.priority-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    line-height: 1.3;
+}
+
+.priority-card p {
+    font-size: 0.88rem;
+    color: var(--clr-text-secondary);
+    line-height: 1.55;
 }
 
 /* ============================================
@@ -2212,11 +2451,13 @@ h6 {
         gap: var(--sp-8);
     }
 
-    .greeting-card {
+    .greeting-card,
+    .executive-card {
         grid-template-columns: 1fr;
     }
 
-    .greeting-photo-wrap {
+    .greeting-photo-wrap,
+    .executive-photo-col {
         padding-top: var(--sp-8);
     }
 
@@ -2290,6 +2531,18 @@ h6 {
 
     .stat-card__label {
         font-size: 0.68rem;
+    }
+
+    .executive-bio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .executive-info-col {
+        padding: 1.5rem;
+    }
+
+    .executive-name {
+        font-size: 1.65rem;
     }
 
     .footer__top {
