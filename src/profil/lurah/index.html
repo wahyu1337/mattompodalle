@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profil Lurah Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
+    <meta name="description" content="Profil Lurah Kelurahan Mattompodalle - Indra Jaya, S.Sos. Informasi kepemimpinan, biodata, dan visi pembangunan wilayah.">
     <title>Profil Lurah — Kelurahan Mattompodalle</title>
     <style>
         .preloader {
@@ -13,39 +13,39 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #f8f9fc;
+            background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
-            transition: opacity .5s ease, visibility .5s ease
+            transition: opacity .5s ease, visibility .5s ease;
         }
 
         .preloader.loaded {
             opacity: 0;
             visibility: hidden;
-            pointer-events: none
+            pointer-events: none;
         }
 
         .preloader__content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.25rem
+            gap: 1.25rem;
         }
 
         .preloader__spinner {
-            width: 36px;
-            height: 36px;
-            border: 3px solid #e2e5ef;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e2e8f0;
             border-top-color: #0d6e6e;
             border-radius: 50%;
-            animation: pspin .8s linear infinite
+            animation: pspin .8s linear infinite;
         }
 
         @keyframes pspin {
             to {
-                transform: rotate(360deg)
+                transform: rotate(360deg);
             }
         }
     </style>
@@ -60,48 +60,52 @@
         </div>
     </div>
 
+    <!-- ========== TOP ANNOUNCEMENT TICKER ========== -->
+    <div class="ticker-bar" id="ticker-bar">
+        <div class="container ticker-inner">
+            <div class="ticker-content">
+                <span class="ticker-badge">PENGUMUMAN</span>
+                <span class="ticker-text">Pemerintah Kelurahan Mattompodalle siap melayani masyarakat dengan integritas dan profesionalisme.</span>
+            </div>
+            <div class="ticker-meta">
+                <span>📍 Kec. Polut, Kab. Takalar</span>
+                <span>📞 WA: 0813-5567-9147</span>
+            </div>
+        </div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
         <div class="container header__inner">
-            <!-- Home Button (Beranda) -->
-            <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
-                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                    <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
+            <a href="/" class="header__brand" title="Beranda Kelurahan Mattompodalle">
+                <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="header__logo-img">
+                <div class="header__brand-text">
+                    <span class="header__title">Kelurahan Mattompodalle</span>
+                    <span class="header__subtitle">Kec. Polongbangkeng Utara, Kab. Takalar</span>
+                </div>
             </a>
-
-            <!-- Brand / Center -->
-            <div class="header__brand">
-                <img src="/assets/takalar.png" alt="Logo Kelurahan" class="header__logo-img" title="Logo Kelurahan">
-                <span class="header__title">Kelurahan Mattompodalle</span>
-            </div>
             <nav class="nav" aria-label="Navigasi utama">
                 <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Beranda</a></li>
                     <li class="dropdown">
-                        <a href="#" class="nav__link dropdown__toggle active">
+                        <a href="javascript:void(0)" class="nav__link dropdown__toggle active">
                             Profil
-                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </a>
                         <ul class="dropdown__menu">
-                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link active">Profil
-                                    Lurah</a></li>
-                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/"
-                                    class="dropdown__link">Struktur Organisasi</a></li>
+                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link active">Profil Lurah</a></li>
+                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
                         </ul>
                     </li>
                     <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
-                    <li><a href="/informasi/" class="nav__link">Info</a></li>
-                    <li><a href="/gallery/" class="nav__link">Gallery</a></li>
+                    <li><a href="/informasi/" class="nav__link">Info &amp; Data</a></li>
+                    <li><a href="/gallery/" class="nav__link">Galeri</a></li>
                     <li><a href="/kontak/" class="nav__link">Kontak</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
-                aria-controls="mobile-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
@@ -111,11 +115,11 @@
 
     <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
         <ul class="mobile-menu__list">
-            <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
+            <li><a href="/" class="mobile-menu__link">Beranda</a></li>
+            <li class="mobile-dropdown active" onclick="this.classList.toggle('active')">
                 <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle active">
                     Profil
-                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
+                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </a>
@@ -125,9 +129,9 @@
                 </ul>
             </li>
             <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
-            <li><a href="/informasi/" class="mobile-menu__link">Info</a></li>
-            <li><a href="/gallery/" class="mobile-menu__link">Gallery</a></li>
-            <li><a href="/kontak/" class="mobile-menu__link">Kontak</a></li>
+            <li><a href="/informasi/" class="mobile-menu__link">Info &amp; Data Kelurahan</a></li>
+            <li><a href="/gallery/" class="mobile-menu__link">Galeri Foto</a></li>
+            <li><a href="/kontak/" class="mobile-menu__link">Kontak &amp; Pengaduan</a></li>
         </ul>
     </div>
 
@@ -136,100 +140,125 @@
         <section class="page-section">
             <div class="container">
 
-                <div class="page-section__header animate-fade-in-up">
-                    <span class="page-section__badge">Profil</span>
-                    <h1 class="page-section__title">Lurah Mattompodalle</h1>
-                    <p class="page-section__subtitle">Informasi profil dan biodata Lurah Kelurahan Mattompodalle</p>
+                <div class="page-section__header">
+                    <span class="page-section__badge">Pimpinan Kelurahan</span>
+                    <h1 class="page-section__title">Profil Lurah Mattompodalle</h1>
+                    <p class="page-section__subtitle">Biodata resmi dan komitmen kepemimpinan Lurah dalam mewujudkan pelayanan prima bagi warga</p>
                 </div>
 
-                <div class="profile-card animate-fade-in-up delay-2">
-                    <div class="profile-card__image-container">
-                        <!-- Anda bisa mengubah nilai translateY (contoh: 20px, 30px, 40px, dst.) untuk menggeser foto ke bawah/atas sesuai keinginan -->
-                        <img src="/assets/pak lurah.svg" alt="Foto Lurah Mattompodalle" class="profile-card__image"
-                            style="transform: translateY(25px);">
+                <!-- Executive Card -->
+                <div class="greeting-card" style="max-width: 960px; margin: 0 auto; box-shadow: var(--shadow-xl); border-radius: var(--radius-xl);">
+                    <div class="greeting-photo-wrap" style="padding-top: 3rem;">
+                        <span class="greeting-photo-badge">Lurah Mattompodalle</span>
+                        <img src="/assets/pak lurah.svg" alt="Foto Resmi Lurah Mattompodalle" class="greeting-photo" style="transform: translateY(20px);">
                     </div>
-                    <div class="profile-card__info">
-                        <h2 class="profile-card__name">Indra Jaya, S.Sos</h2>
-                        <span class="profile-card__title">Lurah Mattompodalle</span>
-                        <div class="profile-card__details">
-                            <div class="profile-card__detail-item">
-                                <span class="profile-card__detail-label">TTL</span>
-                                <span class="profile-card__detail-value">Ujung Pandang, 24-November-1971</span>
+
+                    <div class="greeting-body" style="padding: 2.5rem;">
+                        <div>
+                            <span class="section-tag" style="margin-bottom: 0.5rem;">Kepala Kelurahan</span>
+                            <h2 style="font-size: 2rem; font-weight: 800; color: var(--clr-primary-dark); margin-bottom: 0.25rem;">
+                                Indra Jaya, S.Sos
+                            </h2>
+                            <p style="color: var(--clr-text-muted); font-size: 0.95rem; font-weight: 600;">
+                                NIP. 197111241991031002
+                            </p>
+                        </div>
+
+                        <!-- Biodata Grid -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.25rem 0; padding: 1.25rem; background: var(--clr-surface-alt); border-radius: var(--radius-lg); border: 1px solid var(--clr-border);">
+                            <div>
+                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--clr-text-muted); font-weight: 700;">Tempat, Tanggal Lahir</span>
+                                <p style="font-weight: 700; color: var(--clr-text); font-size: 0.95rem; margin-top: 0.2rem;">Ujung Pandang, 24 Nov 1971</p>
                             </div>
-                            <div class="profile-card__detail-item">
-                                <span class="profile-card__detail-label">Pendidikan Terakhir</span>
-                                <span class="profile-card__detail-value">S1 Sosial Politik</span>
+                            <div>
+                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--clr-text-muted); font-weight: 700;">Pendidikan Terakhir</span>
+                                <p style="font-weight: 700; color: var(--clr-text); font-size: 0.95rem; margin-top: 0.2rem;">S1 Ilmu Sosial &amp; Politik, UPRI</p>
                             </div>
-                            <div class="profile-card__detail-item">
-                                <span class="profile-card__detail-label">NIP</span>
-                                <span class="profile-card__detail-value">197111241991031002</span>
+                            <div>
+                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--clr-text-muted); font-weight: 700;">Alamat Kantor</span>
+                                <p style="font-weight: 700; color: var(--clr-text); font-size: 0.95rem; margin-top: 0.2rem;">Jl. Lahere Dg. Nandre No. 1</p>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--clr-text-muted); font-weight: 700;">Kontak Layanan</span>
+                                <p style="font-weight: 700; color: var(--clr-primary); font-size: 0.95rem; margin-top: 0.2rem;">0852-4029-1397</p>
                             </div>
                         </div>
+
+                        <!-- Program Prioritas & Fokus -->
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--clr-text); margin-bottom: 0.6rem;">
+                                🎯 Fokus &amp; Prioritas Pembangunan:
+                            </h3>
+                            <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: var(--clr-text-secondary);">
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--clr-primary); font-weight: bold;">✔</span>
+                                    <span>Pembangunan &amp; Perbaikan Infrastruktur Saluran &amp; Fasilitas Pelayanan Publik.</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--clr-primary); font-weight: bold;">✔</span>
+                                    <span>Program Bantuan Bedah Rumah Tidak Layak Huni (RTLH) bagi Warga Prasejahtera.</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--clr-primary); font-weight: bold;">✔</span>
+                                    <span>Mendorong Kesejahteraan Petani yang mencakup 80% populasi mata pencaharian warga.</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--clr-primary); font-weight: bold;">✔</span>
+                                    <span>Digitalisasi sistem surat menyurat terpadu untuk percepatan birokrasi warga.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                            <a href="https://wa.me/6285240291397?text=Halo%20Pak%20Lurah%20Indra%20Jaya,%20saya%20warga%20Kelurahan%20Mattompodalle%20ingin%20berkonsultasi." target="_blank" class="btn-hero-primary" style="padding: 0.65rem 1.35rem; font-size: 0.9rem;">
+                                💬 Hubungi via WhatsApp
+                            </a>
+                            <a href="/profil/struktur-organisasi/" class="btn-service-detail" style="padding: 0.65rem 1.35rem; font-size: 0.9rem;">
+                                👥 Lihat Struktur Organisasi
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
         </section>
     </main>
+
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container footer__inner">
-
             <div class="footer__top">
-
-                <!-- Map Column -->
                 <div class="footer__map-col">
-                    <span class="footer__map-label">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                            <circle cx="12" cy="10" r="3" />
-                        </svg>
-                        Lokasi Kantor Lurah
-                    </span>
+                    <span class="footer__map-label">Lokasi Kantor Lurah</span>
                     <div class="footer__map-container">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Lokasi Kantor Lurah Mattompodalle">
-                        </iframe>
+                        <iframe src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Kantor Lurah Mattompodalle"></iframe>
                     </div>
-                    <p class="footer__map-address">Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>Kab. Takalar,
-                        Sulawesi Selatan 92221</p>
+                    <p class="footer__map-address">Jl. Lahere Dg. Nandre No. 1, Kel. Mattompodalle, Kec. Polongbangkeng Utara, Kab. Takalar 92221</p>
                 </div>
-
-                <!-- Links Column -->
                 <div class="footer__links-col">
-                    <h4 class="footer__col-heading">Menu</h4>
+                    <h4 class="footer__col-heading">Navigasi</h4>
                     <nav class="footer__nav" aria-label="Footer navigasi">
+                        <a href="/" class="footer__link">Beranda</a>
                         <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
                         <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
                         <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
-                        <a href="/informasi/" class="footer__link">Info</a>
-                        <a href="/gallery/" class="footer__link">Gallery</a>
+                        <a href="/informasi/" class="footer__link">Data &amp; Statistik</a>
+                        <a href="/gallery/" class="footer__link">Galeri</a>
                         <a href="/kontak/" class="footer__link">Kontak</a>
                     </nav>
                 </div>
-
-                <!-- Brand Column -->
                 <div class="footer__brand-col">
                     <div class="footer__brand">
-                        <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
+                        <img src="/assets/takalar.png" alt="Logo Takalar" class="footer__logo-img">
                         <span class="footer__title">Mattompodalle</span>
                     </div>
-                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara,
-                        Kabupaten Takalar, Sulawesi Selatan.</p>
+                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan.</p>
                 </div>
-
             </div>
-
             <div class="footer__bottom">
-                <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle</p>
+                <p class="footer__copy">&copy; 2026 Pemerintah Kelurahan Mattompodalle</p>
             </div>
-
         </div>
     </footer>
 

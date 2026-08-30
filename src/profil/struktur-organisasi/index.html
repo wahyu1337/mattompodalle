@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Struktur Organisasi Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
+    <meta name="description" content="Struktur Organisasi dan Tata Kerja Pemerintahan Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar.">
     <title>Struktur Organisasi — Kelurahan Mattompodalle</title>
     <style>
         .preloader {
@@ -14,50 +13,49 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #f8f9fc;
+            background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
-            transition: opacity .5s ease, visibility .5s ease
+            transition: opacity .5s ease, visibility .5s ease;
         }
 
         .preloader.loaded {
             opacity: 0;
             visibility: hidden;
-            pointer-events: none
+            pointer-events: none;
         }
 
         .preloader__content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.25rem
+            gap: 1.25rem;
         }
 
         .preloader__spinner {
-            width: 36px;
-            height: 36px;
-            border: 3px solid #e2e5ef;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e2e8f0;
             border-top-color: #0d6e6e;
             border-radius: 50%;
-            animation: pspin .8s linear infinite
+            animation: pspin .8s linear infinite;
         }
 
         @keyframes pspin {
             to {
-                transform: rotate(360deg)
+                transform: rotate(360deg);
             }
         }
 
-        /* ===== ORG CHART STYLES ===== */
-        .org-chart {
-            max-width: 1100px;
+        /* ===== ORG CHART CUSTOM STYLES ===== */
+        .org-chart-wrapper {
+            max-width: 1160px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 1rem 0;
         }
 
-        /* --- Tier: top-level wrapper --- */
         .org-tier {
             display: flex;
             flex-direction: column;
@@ -65,293 +63,106 @@
             position: relative;
         }
 
-        /* Vertical connector line between tiers */
         .org-connector {
             width: 2px;
             height: 32px;
-            background: #0d6e6e;
+            background: var(--clr-primary);
             margin: 0 auto;
         }
 
-        /* --- Card base --- */
-        .org-card {
+        .org-card-modern {
             background: #ffffff;
-            border: 2px solid #e2e8f0;
-            border-radius: 0.875rem;
+            border: 1px solid var(--clr-border);
+            border-radius: var(--radius-lg);
             padding: 1.25rem 1.5rem;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
             position: relative;
         }
 
-        .org-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            border-color: #0d6e6e;
+        .org-card-modern:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--clr-primary);
         }
 
-        .org-card__name {
-            font-size: 1.05rem;
+        .org-card--leader {
+            border: 2px solid var(--clr-primary);
+            background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+            min-width: 280px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .org-card-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--clr-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .org-card-role {
+            font-size: 0.82rem;
             font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 0.35rem 0;
-            line-height: 1.35;
-        }
-
-        .org-card__role {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #0d6e6e;
+            color: var(--clr-primary);
             text-transform: uppercase;
             letter-spacing: 0.04em;
-            margin: 0;
-            line-height: 1.4;
         }
 
-        /* --- Lurah (highlight) --- */
-        .org-card--lurah {
-            border-color: #0d6e6e;
-            border-width: 3px;
-            background: linear-gradient(135deg, #f0fdfa, #ffffff);
-            min-width: 260px;
+        .org-card-nip {
+            font-size: 0.75rem;
+            color: var(--clr-text-muted);
+            font-weight: 600;
+            margin-top: 0.2rem;
         }
 
-        .org-card--lurah .org-card__name {
-            font-size: 1.2rem;
+        .org-row-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            margin-top: 1rem;
         }
 
-        /* --- Horizontal row of cards --- */
-        .org-row {
-            display: flex;
-            justify-content: center;
-            gap: 1.25rem;
-            flex-wrap: nowrap;
-            position: relative;
-            padding-top: 28px;
-        }
-
-        /* --- Branch: a card + optional child below --- */
-        .org-branch {
+        .org-branch-modern {
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
+            gap: 0.75rem;
         }
 
-        /* Vertical drop line: bracket → card */
-        .org-branch::before {
-            content: '';
-            position: absolute;
-            top: -28px;
-            left: 50%;
-            width: 2px;
-            height: 28px;
-            background: #0d6e6e;
-            transform: translateX(-1px);
-        }
-
-        /* Horizontal bracket segment (each branch covers its portion + half gap) */
-        .org-branch::after {
-            content: '';
-            position: absolute;
-            top: -28px;
-            left: -0.625rem;
-            right: -0.625rem;
-            height: 2px;
-            background: #0d6e6e;
-        }
-
-        /* First child: horizontal line starts at center */
-        .org-branch:first-child::after {
-            left: 50%;
-        }
-
-        /* Last child: horizontal line ends at center */
-        .org-branch:last-child::after {
-            right: 50%;
-        }
-
-        .org-branch .org-card {
-            min-width: 200px;
-            max-width: 240px;
+        .org-branch-modern .org-card-modern {
             width: 100%;
         }
 
-        .org-branch .org-connector {
-            height: 24px;
-        }
-
-        /* --- Staf card (smaller, lighter) --- */
-        .org-card--staf {
-            background: #f8fafc;
-            border-color: #e2e8f0;
-            border-width: 1px;
-            padding: 0.875rem 1rem;
-        }
-
-        .org-card--staf .org-card__name {
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        .org-card--staf .org-card__role {
-            font-size: 0.75rem;
-            color: #64748b;
-        }
-
-        /* --- Section Divider --- */
-        .org-section-label {
+        .org-staf-card {
+            background: var(--clr-surface-alt);
+            border: 1px dashed var(--clr-border);
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius-md);
+            width: 100%;
             text-align: center;
-            margin: 2.5rem 0 1.25rem;
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: #1e293b;
-            position: relative;
+        }
+
+        .org-section-divider {
+            text-align: center;
+            margin: 3.5rem 0 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--clr-text);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 1rem;
         }
 
-        .org-section-label::before,
-        .org-section-label::after {
+        .org-section-divider::before,
+        .org-section-divider::after {
             content: '';
             flex: 1;
-            max-width: 80px;
+            max-width: 100px;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #d4a843);
-            border-radius: 2px;
-        }
-
-        .org-section-label::after {
-            background: linear-gradient(90deg, #d4a843, transparent);
-        }
-
-        /* --- Horizontal bracket (connects row to single parent) --- */
-        .org-bracket {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            position: relative;
-            margin-bottom: 0;
-        }
-
-        .org-bracket::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: calc(50% - var(--bracket-half, 40%));
-            right: calc(50% - var(--bracket-half, 40%));
-            height: 2px;
-            background: #0d6e6e;
-        }
-
-        /* --- Lingkungan pair (Kepala + Imam) --- */
-        .org-lingkungan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.25rem;
-            width: 100%;
-        }
-
-        .org-lingkungan-pair {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .org-lingkungan-pair .org-card {
-            width: 100%;
-        }
-
-        .org-lingkungan-pair .org-connector {
-            height: 20px;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 900px) {
-            .org-row {
-                flex-direction: column;
-                align-items: center;
-                gap: 0;
-                padding-top: 0;
-            }
-
-            .org-row>.org-branch {
-                width: 100%;
-                max-width: 320px;
-            }
-
-            /* Hide desktop bracket connectors */
-            .org-branch::before,
-            .org-branch::after {
-                display: none;
-            }
-
-            /* Vertical connector between stacked branches */
-            .org-row>.org-branch+.org-branch {
-                margin-top: 0;
-            }
-
-            .org-row>.org-branch+.org-branch .org-card:first-child::before {
-                content: '';
-                position: absolute;
-                top: -20px;
-                left: 50%;
-                width: 2px;
-                height: 20px;
-                background: #cbd5e1;
-                transform: translateX(-1px);
-            }
-
-            .org-row>.org-branch+.org-branch .org-card:first-child {
-                margin-top: 20px;
-            }
-
-            .org-branch .org-card {
-                max-width: 100%;
-                min-width: 0;
-            }
-
-            .org-card--lurah {
-                min-width: 0;
-                width: 100%;
-                max-width: 320px;
-            }
-
-            .org-lingkungan-grid {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0;
-                max-width: 320px;
-                margin: 0 auto;
-            }
-
-            .org-lingkungan-pair {
-                width: 100%;
-                position: relative;
-            }
-
-            .org-lingkungan-pair+.org-lingkungan-pair::before {
-                content: '';
-                display: block;
-                width: 2px;
-                height: 24px;
-                background: #0d6e6e;
-                margin: 0 auto;
-            }
-
-            .org-bracket::before {
-                display: none;
-            }
-        }
-
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .org-lingkungan-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            background: var(--clr-accent);
         }
     </style>
 </head>
@@ -365,48 +176,52 @@
         </div>
     </div>
 
+    <!-- ========== TOP ANNOUNCEMENT TICKER ========== -->
+    <div class="ticker-bar" id="ticker-bar">
+        <div class="container ticker-inner">
+            <div class="ticker-content">
+                <span class="ticker-badge">PENGUMUMAN</span>
+                <span class="ticker-text">Struktur Pemerintahan Kelurahan Mattompodalle berdedikasi melayani seluruh kebutuhan masyarakat.</span>
+            </div>
+            <div class="ticker-meta">
+                <span>📍 Kec. Polut, Kab. Takalar</span>
+                <span>📞 WA: 0813-5567-9147</span>
+            </div>
+        </div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
         <div class="container header__inner">
-            <!-- Home Button (Beranda) -->
-            <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
-                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                    <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
+            <a href="/" class="header__brand" title="Beranda Kelurahan Mattompodalle">
+                <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="header__logo-img">
+                <div class="header__brand-text">
+                    <span class="header__title">Kelurahan Mattompodalle</span>
+                    <span class="header__subtitle">Kec. Polongbangkeng Utara, Kab. Takalar</span>
+                </div>
             </a>
-
-            <!-- Brand / Center -->
-            <div class="header__brand">
-                <img src="/assets/takalar.png" alt="Logo Kelurahan" class="header__logo-img" title="Logo Kelurahan">
-                <span class="header__title">Kelurahan Mattompodalle</span>
-            </div>
             <nav class="nav" aria-label="Navigasi utama">
                 <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Beranda</a></li>
                     <li class="dropdown">
-                        <a href="#" class="nav__link dropdown__toggle active">
+                        <a href="javascript:void(0)" class="nav__link dropdown__toggle active">
                             Profil
-                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </a>
                         <ul class="dropdown__menu">
-                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a>
-                            </li>
-                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/"
-                                    class="dropdown__link active">Struktur Organisasi</a></li>
+                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
+                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link active">Struktur Organisasi</a></li>
                         </ul>
                     </li>
                     <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
-                    <li><a href="/informasi/" class="nav__link">Info</a></li>
-                    <li><a href="/gallery/" class="nav__link">Gallery</a></li>
+                    <li><a href="/informasi/" class="nav__link">Info &amp; Data</a></li>
+                    <li><a href="/gallery/" class="nav__link">Galeri</a></li>
                     <li><a href="/kontak/" class="nav__link">Kontak</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
-                aria-controls="mobile-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
@@ -416,11 +231,11 @@
 
     <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
         <ul class="mobile-menu__list">
-            <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
+            <li><a href="/" class="mobile-menu__link">Beranda</a></li>
+            <li class="mobile-dropdown active" onclick="this.classList.toggle('active')">
                 <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle active">
                     Profil
-                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
+                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </a>
@@ -430,9 +245,9 @@
                 </ul>
             </li>
             <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
-            <li><a href="/informasi/" class="mobile-menu__link">Info</a></li>
-            <li><a href="/gallery/" class="mobile-menu__link">Gallery</a></li>
-            <li><a href="/kontak/" class="mobile-menu__link">Kontak</a></li>
+            <li><a href="/informasi/" class="mobile-menu__link">Info &amp; Data Kelurahan</a></li>
+            <li><a href="/gallery/" class="mobile-menu__link">Galeri Foto</a></li>
+            <li><a href="/kontak/" class="mobile-menu__link">Kontak &amp; Pengaduan</a></li>
         </ul>
     </div>
 
@@ -441,227 +256,177 @@
         <section class="page-section">
             <div class="container">
 
-                <div class="page-section__header animate-fade-in-up">
-                    <span class="page-section__badge">Struktur Organisasi</span>
-                    <h1 class="page-section__title">Struktur Pemerintahan</h1>
-                    <p class="page-section__subtitle">Susunan perangkat Kelurahan Mattompodalle yang siap melayani
-                        masyarakat</p>
+                <div class="page-section__header">
+                    <span class="page-section__badge">Tata Kelola Pemerintahan</span>
+                    <h1 class="page-section__title">Struktur Organisasi Kelurahan</h1>
+                    <p class="page-section__subtitle">Susunan kelembagaan dan perangkat Kelurahan Mattompodalle yang mengabdi dan siap melayani kebutuhan warga</p>
                 </div>
 
-                <div class="org-chart animate-fade-in-up delay-1">
+                <div class="org-chart-wrapper">
 
                     <!-- ====== TIER 1: LURAH ====== -->
                     <div class="org-tier">
-                        <div class="org-card org-card--lurah">
-                            <h3 class="org-card__name">Indra Jaya, S.Sos</h3>
-                            <p class="org-card__role">Lurah Mattompodalle</p>
-                            <p
-                                style="font-size: 0.75rem; font-weight: 600; color: #475569; margin: 4px 0 0 0; letter-spacing: 0.02em;">
-                                NIP. 197111241991031002</p>
+                        <div class="org-card-modern org-card--leader">
+                            <span class="section-tag" style="margin-bottom: 0.35rem; font-size: 0.7rem;">Pimpinan Tertinggi</span>
+                            <h2 class="org-card-name" style="font-size: 1.35rem; color: var(--clr-primary-dark);">Indra Jaya, S.Sos</h2>
+                            <p class="org-card-role">Lurah Mattompodalle</p>
+                            <p class="org-card-nip">NIP. 197111241991031002</p>
                         </div>
                     </div>
 
                     <div class="org-connector"></div>
 
-                    <!-- ====== TIER 2: SEKRETARIS + KASI + KETUA LPM ====== -->
-                    <div class="org-row">
-                        <!-- Sekretaris Lurah -->
-                        <div class="org-branch">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Sapri, S.Sos</h3>
-                                <p class="org-card__role">Sekretaris Lurah</p>
-                                <p
-                                    style="font-size: 0.75rem; font-weight: 600; color: #475569; margin: 4px 0 0 0; letter-spacing: 0.02em;">
-                                    NIP. 197805022007011020</p>
+                    <!-- ====== TIER 2: SEKRETARIAT & SEKSI-SEKSI ====== -->
+                    <div class="org-row-modern">
 
+                        <!-- 1. Sekretaris Lurah -->
+                        <div class="org-branch-modern">
+                            <div class="org-card-modern">
+                                <h3 class="org-card-name">Sapri, S.Sos</h3>
+                                <p class="org-card-role">Sekretaris Lurah</p>
+                                <p class="org-card-nip">NIP. 197805022007011020</p>
                             </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Hj. Nasdiar &amp; Salmawati</h3>
-                                <p class="org-card__role">Staf Sekretaris Lurah</p>
+                            <div class="org-staf-card">
+                                <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--clr-text);">Hj. Nasdiar &amp; Salmawati</h4>
+                                <p style="font-size: 0.78rem; color: var(--clr-text-muted); font-weight: 600;">Staf Sekretaris Lurah</p>
                             </div>
                         </div>
 
-                        <!-- Kasi Pembangunan -->
-                        <div class="org-branch">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Ismail, S.Pdi</h3>
-                                <p class="org-card__role">Kasi. Pembangunan</p>
-                                <p
-                                    style="font-size: 0.75rem; font-weight: 600; color: #475569; margin: 4px 0 0 0; letter-spacing: 0.02em;">
-                                    NIP. 198608162015041001</p>
+                        <!-- 2. Kasi Pembangunan -->
+                        <div class="org-branch-modern">
+                            <div class="org-card-modern">
+                                <h3 class="org-card-name">Ismail, S.Pdi</h3>
+                                <p class="org-card-role">Kasi. Pembangunan</p>
+                                <p class="org-card-nip">NIP. 198608162015041001</p>
                             </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Najamuddin, SM</h3>
-                                <p class="org-card__role">Staf Pembangunan</p>
-                                <p
-                                    style="font-size: 0.75rem; font-weight: 600; color: #475569; margin: 4px 0 0 0; letter-spacing: 0.02em;">
-                                    NIP. 197805022007011020</p>
-
+                            <div class="org-staf-card">
+                                <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--clr-text);">Najamuddin, SM</h4>
+                                <p style="font-size: 0.78rem; color: var(--clr-text-muted); font-weight: 600;">Staf Pembangunan</p>
+                                <p class="org-card-nip">NIP. 197805022007011020</p>
                             </div>
                         </div>
 
-                        <!-- Kasi Ekonomi dan Kesejahteraan Rakyat -->
-                        <div class="org-branch">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Husnaidi, S.sos</h3>
-                                <p class="org-card__role">Kasi. Ekonomi dan Kesejahteraan Rakyat</p>
-
+                        <!-- 3. Kasi Ekonomi & Kesra -->
+                        <div class="org-branch-modern">
+                            <div class="org-card-modern">
+                                <h3 class="org-card-name">Husnaidi, S.Sos</h3>
+                                <p class="org-card-role">Kasi. Ekonomi &amp; Kesra</p>
                             </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Harapin, SM</h3>
-                                <p class="org-card__role">Staf Ekonomi dan Kesejahteraan Rakyat</p>
-                                <p
-                                    style="font-size: 0.75rem; font-weight: 600; color: #475569; margin: 4px 0 0 0; letter-spacing: 0.02em;">
-                                    NIP. 197805022007011020</p>
+                            <div class="org-staf-card">
+                                <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--clr-text);">Harapin, SM</h4>
+                                <p style="font-size: 0.78rem; color: var(--clr-text-muted); font-weight: 600;">Staf Ekonomi &amp; Kesra</p>
+                                <p class="org-card-nip">NIP. 197805022007011020</p>
                             </div>
                         </div>
 
-                        <!-- Ketua LPM -->
-                        <div class="org-branch">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Andi Rukman Karma</h3>
-                                <p class="org-card__role">Ketua LPM</p>
+                        <!-- 4. Ketua LPM -->
+                        <div class="org-branch-modern">
+                            <div class="org-card-modern">
+                                <h3 class="org-card-name">Andi Rukman Karma</h3>
+                                <p class="org-card-role">Ketua LPM</p>
+                                <p style="font-size: 0.78rem; color: var(--clr-text-muted); margin-top: 0.2rem;">Lembaga Pemberdayaan Masyarakat</p>
                             </div>
                         </div>
+
                     </div>
 
-                    <!-- ====== TIER 3: KEPALA LINGKUNGAN ====== -->
-                    <div class="org-section-label">Kepala Lingkungan</div>
+                    <!-- ====== TIER 3: KEPALA & IMAM LINGKUNGAN ====== -->
+                    <div class="org-section-divider">Kepala &amp; Imam Lingkungan</div>
 
-                    <div class="org-lingkungan-grid">
+                    <div class="lingkungan-grid">
+
                         <!-- Lembang Selatan -->
-                        <div class="org-lingkungan-pair">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Suardi. S</h3>
-                                <p class="org-card__role">Kepala Lingkungan Lembang Selatan</p>
-                            </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Mustar DG Rala</h3>
-                                <p class="org-card__role">Imam Lingkungan Lembang Selatan</p>
+                        <div class="lingkungan-card">
+                            <span class="lingkungan-card__badge">Lingkungan 1</span>
+                            <h3 class="lingkungan-card__name">Lembang Selatan</h3>
+                            <div class="lingkungan-card__detail">
+                                <span>Kepala Lingkungan: <strong>Suardi. S</strong></span>
+                                <span>Imam Lingkungan: <strong>Mustar DG Rala</strong></span>
                             </div>
                         </div>
 
                         <!-- Lembang Utara -->
-                        <div class="org-lingkungan-pair">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Muh. Saleh DG Nuntung</h3>
-                                <p class="org-card__role">Kepala Lingkungan Lembang Utara</p>
-                            </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Drs. Syamsudding DG Bella</h3>
-                                <p class="org-card__role">Imam Lingkungan Lembang Utara</p>
+                        <div class="lingkungan-card">
+                            <span class="lingkungan-card__badge">Lingkungan 2</span>
+                            <h3 class="lingkungan-card__name">Lembang Utara</h3>
+                            <div class="lingkungan-card__detail">
+                                <span>Kepala Lingkungan: <strong>Muh. Saleh DG Nuntung</strong></span>
+                                <span>Imam Lingkungan: <strong>Drs. Syamsudding DG Bella</strong></span>
                             </div>
                         </div>
 
                         <!-- Manuju Selatan -->
-                        <div class="org-lingkungan-pair">
-                            <div class="org-card">
-                                <h3 class="org-card__name">H. Muh. Nasir DG Naba</h3>
-                                <p class="org-card__role">Kepala Lingkungan Manuju Selatan</p>
-                            </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">H. Hamzah, S.Ag DG Ngerang</h3>
-                                <p class="org-card__role">Imam Lingkungan Manuju Selatan</p>
+                        <div class="lingkungan-card">
+                            <span class="lingkungan-card__badge">Lingkungan 3</span>
+                            <h3 class="lingkungan-card__name">Manuju Selatan</h3>
+                            <div class="lingkungan-card__detail">
+                                <span>Kepala Lingkungan: <strong>H. Muh. Nasir DG Naba</strong></span>
+                                <span>Imam Lingkungan: <strong>H. Hamzah, S.Ag DG Ngerang</strong></span>
                             </div>
                         </div>
 
                         <!-- Manuju Utara -->
-                        <div class="org-lingkungan-pair">
-                            <div class="org-card">
-                                <h3 class="org-card__name">Muh. Yusuf DG Tarra</h3>
-                                <p class="org-card__role">Kepala Lingkungan Manuju Utara</p>
-                            </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Syamsuddin DG Sija</h3>
-                                <p class="org-card__role">Imam Lingkungan Manuju Utara</p>
+                        <div class="lingkungan-card">
+                            <span class="lingkungan-card__badge">Lingkungan 4</span>
+                            <h3 class="lingkungan-card__name">Manuju Utara</h3>
+                            <div class="lingkungan-card__detail">
+                                <span>Kepala Lingkungan: <strong>Muh. Yusuf DG Tarra</strong></span>
+                                <span>Imam Lingkungan: <strong>Syamsuddin DG Sija</strong></span>
                             </div>
                         </div>
 
                         <!-- Romangtangngaya -->
-                        <div class="org-lingkungan-pair">
-                            <div class="org-card">
-                                <h3 class="org-card__name">ABD. Bakri DG Bombong</h3>
-                                <p class="org-card__role">Kepala Lingkungan Romangtangngaya</p>
-                            </div>
-                            <div class="org-connector"></div>
-                            <div class="org-card org-card--staf">
-                                <h3 class="org-card__name">Ruslan, S.Pd DG Lau</h3>
-                                <p class="org-card__role">Imam Lingkungan Romangtangngaya</p>
+                        <div class="lingkungan-card">
+                            <span class="lingkungan-card__badge">Lingkungan 5</span>
+                            <h3 class="lingkungan-card__name">Romangtangngaya</h3>
+                            <div class="lingkungan-card__detail">
+                                <span>Kepala Lingkungan: <strong>ABD. Bakri DG Bombong</strong></span>
+                                <span>Imam Lingkungan: <strong>Ruslan, S.Pd DG Lau</strong></span>
                             </div>
                         </div>
+
                     </div>
 
-                </div><!-- /.org-chart -->
+                </div>
 
             </div>
         </section>
     </main>
+
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container footer__inner">
-
             <div class="footer__top">
-
-                <!-- Map Column -->
                 <div class="footer__map-col">
-                    <span class="footer__map-label">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                            <circle cx="12" cy="10" r="3" />
-                        </svg>
-                        Lokasi Kantor Lurah
-                    </span>
+                    <span class="footer__map-label">Lokasi Kantor Lurah</span>
                     <div class="footer__map-container">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Lokasi Kantor Lurah Mattompodalle">
-                        </iframe>
+                        <iframe src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Kantor Lurah Mattompodalle"></iframe>
                     </div>
-                    <p class="footer__map-address">Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>Kab. Takalar,
-                        Sulawesi Selatan 92221</p>
+                    <p class="footer__map-address">Jl. Lahere Dg. Nandre No. 1, Kel. Mattompodalle, Kec. Polongbangkeng Utara, Kab. Takalar 92221</p>
                 </div>
-
-                <!-- Links Column -->
                 <div class="footer__links-col">
-                    <h4 class="footer__col-heading">Menu</h4>
+                    <h4 class="footer__col-heading">Navigasi</h4>
                     <nav class="footer__nav" aria-label="Footer navigasi">
+                        <a href="/" class="footer__link">Beranda</a>
                         <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
                         <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
                         <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
-                        <a href="/informasi/" class="footer__link">Info</a>
-                        <a href="/gallery/" class="footer__link">Gallery</a>
+                        <a href="/informasi/" class="footer__link">Data &amp; Statistik</a>
+                        <a href="/gallery/" class="footer__link">Galeri</a>
                         <a href="/kontak/" class="footer__link">Kontak</a>
                     </nav>
                 </div>
-
-                <!-- Brand Column -->
                 <div class="footer__brand-col">
                     <div class="footer__brand">
-                        <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
+                        <img src="/assets/takalar.png" alt="Logo Takalar" class="footer__logo-img">
                         <span class="footer__title">Mattompodalle</span>
                     </div>
-                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara,
-                        Kabupaten Takalar, Sulawesi Selatan.</p>
+                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan.</p>
                 </div>
-
             </div>
-
             <div class="footer__bottom">
-                <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle</p>
+                <p class="footer__copy">&copy; 2026 Pemerintah Kelurahan Mattompodalle</p>
             </div>
-
         </div>
     </footer>
 

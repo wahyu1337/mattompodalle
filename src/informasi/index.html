@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Informasi Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar. Data kependudukan, layanan, dan fasilitas.">
-    <title>Informasi — Kelurahan Mattompodalle</title>
+        content="Informasi Lengkap dan Data Statistik Kelurahan Mattompodalle - Demografi kependudukan, fasilitas pendidikan & kesehatan, potensi pertanian dan UMKM.">
+    <title>Data &amp; Informasi — Kelurahan Mattompodalle</title>
     <style>
         .preloader {
             position: fixed;
@@ -14,130 +14,164 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #f8f9fc;
+            background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
-            transition: opacity .5s ease, visibility .5s ease
+            transition: opacity .5s ease, visibility .5s ease;
         }
 
         .preloader.loaded {
             opacity: 0;
             visibility: hidden;
-            pointer-events: none
+            pointer-events: none;
         }
 
         .preloader__content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.25rem
+            gap: 1.25rem;
         }
 
         .preloader__spinner {
-            width: 36px;
-            height: 36px;
-            border: 3px solid #e2e5ef;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e2e8f0;
             border-top-color: #0d6e6e;
             border-radius: 50%;
-            animation: pspin .8s linear infinite
+            animation: pspin .8s linear infinite;
         }
 
-        @keyframes pspin {}
-
-
-        /* Info Page Styles */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+        @keyframes pspin {
+            to {
+                transform: rotate(360deg);
+            }
         }
 
-        .info-card {
+        /* Dashboard Styles */
+        .info-tabs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .info-tab-btn {
+            padding: 0.6rem 1.25rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: var(--radius-full);
             background: #ffffff;
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f0f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: var(--clr-text-secondary);
+            border: 1px solid var(--clr-border);
+            transition: all var(--transition-fast);
         }
 
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .info-tab-btn:hover,
+        .info-tab-btn.active {
+            background: var(--clr-primary);
+            color: #ffffff;
+            border-color: var(--clr-primary);
+            box-shadow: 0 4px 12px rgba(13, 110, 110, 0.25);
         }
 
-        .info-card__header {
+        .info-tab-panel {
+            display: none;
+        }
+
+        .info-tab-panel.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .dash-card {
+            background: #ffffff;
+            border-radius: var(--radius-xl);
+            padding: 1.75rem;
+            border: 1px solid var(--clr-border);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .dash-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--clr-primary-light);
+        }
+
+        .dash-card-header {
             display: flex;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #f4f6fb;
-            padding-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.85rem;
+            border-bottom: 2px solid var(--clr-border-light);
         }
 
-        .info-card__icon {
+        .dash-card-icon {
             width: 48px;
             height: 48px;
-            background: #e9f5f5;
-            color: #0d6e6e;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
+            background: var(--clr-primary-subtle);
+            color: var(--clr-primary);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
         }
 
-        .info-card__icon svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        .info-card__title {
+        .dash-card-title {
             font-size: 1.25rem;
-            font-weight: 700;
-            color: #2d3748;
-            margin: 0;
-            line-height: 1.3;
+            font-weight: 800;
+            color: var(--clr-text);
+            line-height: 1.2;
         }
 
-        .info-card__body p {
-            margin: 0.5rem 0;
-            color: #4a5568;
-            line-height: 1.6;
+        .dash-row {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            gap: 0.75rem;
-            padding: 0.35rem 0;
-            border-bottom: 1px dashed #e2e8f0;
-            font-size: 0.95rem;
+            align-items: center;
+            padding: 0.65rem 0;
+            border-bottom: 1px dashed var(--clr-border);
+            font-size: 0.92rem;
         }
 
-        .info-card__body p:last-child {
+        .dash-row:last-child {
             border-bottom: none;
         }
 
-        .info-card__body span {
-            flex: 1;
-            text-align: left;
+        .dash-row span {
+            color: var(--clr-text-secondary);
         }
 
-        .info-card__body strong {
-            color: #2d3748;
-            font-weight: 600;
-            text-align: right;
-            flex-shrink: 0;
+        .dash-row strong {
+            color: var(--clr-text);
+            font-weight: 700;
         }
 
-        .highlight-stat {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #0d6e6e;
-            display: block;
-            margin-bottom: 0.75rem;
+        .progress-bar-wrap {
+            width: 100%;
+            height: 8px;
+            background: var(--clr-surface-alt);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            margin: 0.4rem 0 1rem;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: var(--radius-full);
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
         }
     </style>
 </head>
@@ -151,27 +185,35 @@
         </div>
     </div>
 
+    <!-- ========== TOP ANNOUNCEMENT TICKER ========== -->
+    <div class="ticker-bar" id="ticker-bar">
+        <div class="container ticker-inner">
+            <div class="ticker-content">
+                <span class="ticker-badge">PENGUMUMAN</span>
+                <span class="ticker-text">Data Kependudukan, Fasilitas, dan Potensi Wilayah diperbarui secara berkala untuk transparansi publik.</span>
+            </div>
+            <div class="ticker-meta">
+                <span>📍 Kec. Polut, Kab. Takalar</span>
+                <span>📞 WA: 0813-5567-9147</span>
+            </div>
+        </div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
         <div class="container header__inner">
-            <!-- Home Button (Beranda) -->
-            <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
-                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                    <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
+            <a href="/" class="header__brand" title="Beranda Kelurahan Mattompodalle">
+                <img src="/assets/takalar.png" alt="Logo Kabupaten Takalar" class="header__logo-img">
+                <div class="header__brand-text">
+                    <span class="header__title">Kelurahan Mattompodalle</span>
+                    <span class="header__subtitle">Kec. Polongbangkeng Utara, Kab. Takalar</span>
+                </div>
             </a>
-
-            <!-- Brand / Center -->
-            <div class="header__brand">
-                <img src="/assets/takalar.png" alt="Logo Kelurahan" class="header__logo-img" title="Logo Kelurahan">
-                <span class="header__title">Kelurahan Mattompodalle</span>
-            </div>
             <nav class="nav" aria-label="Navigasi utama">
                 <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Beranda</a></li>
                     <li class="dropdown">
-                        <a href="#" class="nav__link dropdown__toggle">
+                        <a href="javascript:void(0)" class="nav__link dropdown__toggle">
                             Profil
                             <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
@@ -183,13 +225,12 @@
                         </ul>
                     </li>
                     <li><a href="/visi-misi/" class="nav__link">Visi &amp; Misi</a></li>
-                    <li><a href="/informasi/" class="nav__link active">Info</a></li>
-                    <li><a href="/gallery/" class="nav__link">Gallery</a></li>
+                    <li><a href="/informasi/" class="nav__link active">Info &amp; Data</a></li>
+                    <li><a href="/gallery/" class="nav__link">Galeri</a></li>
                     <li><a href="/kontak/" class="nav__link">Kontak</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false"
-                aria-controls="mobile-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
@@ -199,6 +240,7 @@
 
     <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
         <ul class="mobile-menu__list">
+            <li><a href="/" class="mobile-menu__link">Beranda</a></li>
             <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
                 <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
                     Profil
@@ -212,9 +254,9 @@
                 </ul>
             </li>
             <li><a href="/visi-misi/" class="mobile-menu__link">Visi &amp; Misi</a></li>
-            <li><a href="/informasi/" class="mobile-menu__link active">Info</a></li>
-            <li><a href="/gallery/" class="mobile-menu__link">Gallery</a></li>
-            <li><a href="/kontak/" class="mobile-menu__link">Kontak</a></li>
+            <li><a href="/informasi/" class="mobile-menu__link active">Info &amp; Data Kelurahan</a></li>
+            <li><a href="/gallery/" class="mobile-menu__link">Galeri Foto</a></li>
+            <li><a href="/kontak/" class="mobile-menu__link">Kontak &amp; Pengaduan</a></li>
         </ul>
     </div>
 
@@ -223,162 +265,208 @@
         <section class="page-section">
             <div class="container">
 
-                <div class="page-section__header animate-fade-in-up">
-                    <span class="page-section__badge">Informasi</span>
-                    <h1 class="page-section__title">Informasi Kelurahan</h1>
-                    <p class="page-section__subtitle">Data kependudukan, fasilitas, layanan, dan informasi umum
-                        Kelurahan Mattompodalle</p>
+                <div class="page-section__header">
+                    <span class="page-section__badge">Keterbukaan Data Publik</span>
+                    <h1 class="page-section__title">Dashboard Informasi Kelurahan</h1>
+                    <p class="page-section__subtitle">Pusat data statistik demografi, fasilitas pendidikan &amp; kesehatan, potensi ekonomi pertanian, dan kelembagaan masyarakat</p>
                 </div>
 
-                <div class="info-grid animate-fade-in-up delay-2">
-                    <!-- Demografi & Kependudukan -->
-                    <div class="info-card">
-                        <div class="info-card__header">
-                            <div class="info-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <h2 class="info-card__title">Demografi</h2>
-                        </div>
-                        <div class="info-card__body">
-                            <span class="highlight-stat">3.299 Jiwa</span>
-                            <p><span>Laki-laki</span> <strong>1.659</strong></p>
-                            <p><span>Perempuan</span> <strong>1.640</strong></p>
-                            <p><span>Total Kepala Keluarga</span> <strong>791 KK</strong></p>
-                            <p><span>Jumlah Lingkungan</span> <strong>5</strong></p>
-                        </div>
-                    </div>
+                <!-- Tabs Filter -->
+                <div class="info-tabs">
+                    <button type="button" class="info-tab-btn active" data-tab-target="tab-semua">Semua Data</button>
+                    <button type="button" class="info-tab-btn" data-tab-target="tab-demografi">Demografi &amp; Penduduk</button>
+                    <button type="button" class="info-tab-btn" data-tab-target="tab-ekonomi">Ekonomi &amp; Pertanian</button>
+                    <button type="button" class="info-tab-btn" data-tab-target="tab-fasilitas">Fasilitas Umum</button>
+                    <button type="button" class="info-tab-btn" data-tab-target="tab-sosial">Organisasi Sosial</button>
+                </div>
 
-                    <!-- Profesi & Ekonomi -->
-                    <div class="info-card">
-                        <div class="info-card__header">
-                            <div class="info-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                                </svg>
-                            </div>
-                            <h2 class="info-card__title">Ekonomi & Profesi</h2>
-                        </div>
-                        <div class="info-card__body">
-                            <span class="highlight-stat">80% Petani</span>
-                            <p><span>Profesi Dominan</span> <strong>Petani</strong></p>
-                            <p><span>Profesi Lainnya</span> <strong>ASN, Pengusaha, Guru</strong></p>
-                            <p><span>Pemasaran UMKM</span> <strong>Sekitar Lingkungan</strong></p>
-                            <p><span>Digital Marketing</span> <strong>Ada</strong></p>
-                            <p><span>Kendala UMKM</span> <strong>Modal</strong></p>
-                        </div>
-                    </div>
+                <!-- Tab Panels -->
+                <div id="tab-semua" class="info-tab-panel active">
+                    <div class="dashboard-grid">
 
-                    <!-- Fasilitas & Pendidikan -->
-                    <div class="info-card">
-                        <div class="info-card__header">
-                            <div class="info-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                                </svg>
+                        <!-- Card 1: Demografi -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <div class="dash-card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                </div>
+                                <div>
+                                    <h2 class="dash-card-title">Demografi &amp; KK</h2>
+                                    <span style="font-size: 0.8rem; color: var(--clr-text-muted);">Data Kependudukan Resmi</span>
+                                </div>
                             </div>
-                            <h2 class="info-card__title">Fasilitas Umum</h2>
+                            <div>
+                                <span style="font-size: 2rem; font-weight: 800; color: var(--clr-primary); font-family: var(--ff-heading); display: block;">3.299 Jiwa</span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar-fill" style="width: 100%;"></div>
+                                </div>
+                                <div class="dash-row"><span>Laki-laki</span> <strong>1.659 Jiwa (50.3%)</strong></div>
+                                <div class="dash-row"><span>Perempuan</span> <strong>1.640 Jiwa (49.7%)</strong></div>
+                                <div class="dash-row"><span>Total Kepala Keluarga (KK)</span> <strong>791 KK</strong></div>
+                                <div class="dash-row"><span>Jumlah Lingkungan</span> <strong>5 Lingkungan</strong></div>
+                            </div>
                         </div>
-                        <div class="info-card__body">
-                            <p><span>Sekolah Dasar (SD)</span> <strong>2 Unit</strong></p>
-                            <p><span>Taman Kanak-Kanak (TK)</span> <strong>1 Unit</strong></p>
-                            <p><span>Posyandu</span> <strong>5 Unit (1/Lingk.)</strong></p>
-                            <p><span>Puskesmas Pembantu</span> <strong>1 Unit</strong></p>
-                            <p><span>Akses Air Bersih</span> <strong>PDAM & Sumur</strong></p>
-                        </div>
-                    </div>
 
-                    <!-- Organisasi & Sosial -->
-                    <div class="info-card">
-                        <div class="info-card__header">
-                            <div class="info-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
+                        <!-- Card 2: Ekonomi & Pertanian -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <div class="dash-card-icon" style="color: #198754; background: #e8f5e9;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"></path><path d="M4.93 10.93l1.41 1.41"></path><path d="M2 18h2"></path><path d="M20 18h2"></path><path d="M17.66 12.34l1.41-1.41"></path><path d="M16 18a4 4 0 0 0-8 0"></path></svg>
+                                </div>
+                                <div>
+                                    <h2 class="dash-card-title">Ekonomi &amp; Profesi</h2>
+                                    <span style="font-size: 0.8rem; color: var(--clr-text-muted);">Potensi Mata Pencaharian</span>
+                                </div>
                             </div>
-                            <h2 class="info-card__title">Organisasi Sosial</h2>
+                            <div>
+                                <span style="font-size: 2rem; font-weight: 800; color: #198754; font-family: var(--ff-heading); display: block;">80% Petani</span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar-fill" style="width: 80%; background: #198754;"></div>
+                                </div>
+                                <div class="dash-row"><span>Profesi Utama</span> <strong>Petani (Padi &amp; Jagung)</strong></div>
+                                <div class="dash-row"><span>Profesi Lainnya</span> <strong>ASN, Guru, Pedagang, Wiraswasta</strong></div>
+                                <div class="dash-row"><span>Sektor UMKM</span> <strong>Kios, Olahan Makanan, Jasa</strong></div>
+                                <div class="dash-row"><span>Pemasaran Produk</span> <strong>Pasar Lokal &amp; Online</strong></div>
+                            </div>
                         </div>
-                        <div class="info-card__body">
-                            <p><span>Karang Taruna</span> <strong>Aktif</strong></p>
-                            <p><span>Remaja Mesjid</span> <strong>Aktif</strong></p>
-                            <p><span>PKK</span> <strong>Aktif</strong></p>
-                            <p><span>Majelis Taklim</span> <strong>Ada</strong></p>
-                            <p><span>Kelompok Tani</span> <strong>Ada</strong></p>
+
+                        <!-- Card 3: Fasilitas Pendidikan & Kesehatan -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <div class="dash-card-icon" style="color: #0284c7; background: #e0f2fe;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                                </div>
+                                <div>
+                                    <h2 class="dash-card-title">Fasilitas Umum</h2>
+                                    <span style="font-size: 0.8rem; color: var(--clr-text-muted);">Pendidikan &amp; Kesehatan</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dash-row"><span>Sekolah Dasar (SD)</span> <strong>2 Unit (SDN 34 &amp; 131)</strong></div>
+                                <div class="dash-row"><span>Taman Kanak-Kanak (TK)</span> <strong>1 Unit</strong></div>
+                                <div class="dash-row"><span>Pos Pelayanan Terpadu (Posyandu)</span> <strong>5 Unit (1/Lingkungan)</strong></div>
+                                <div class="dash-row"><span>Puskesmas Pembantu (Pustu)</span> <strong>1 Unit Aktif</strong></div>
+                                <div class="dash-row"><span>TPA / Pengajian Al-Qur'an</span> <strong>5 Unit</strong></div>
+                                <div class="dash-row"><span>Akses Air Bersih</span> <strong>PDAM &amp; Sumur Galian</strong></div>
+                            </div>
                         </div>
+
+                        <!-- Card 4: Organisasi Kemasyarakatan -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <div class="dash-card-icon" style="color: #d4a843; background: #fdf8ec;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                </div>
+                                <div>
+                                    <h2 class="dash-card-title">Organisasi Sosial</h2>
+                                    <span style="font-size: 0.8rem; color: var(--clr-text-muted);">Lembaga Kemasyarakatan</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dash-row"><span>Karang Taruna</span> <strong style="color: #198754;">Aktif</strong></div>
+                                <div class="dash-row"><span>Tim Penggerak PKK</span> <strong style="color: #198754;">Aktif</strong></div>
+                                <div class="dash-row"><span>Remaja Mesjid</span> <strong style="color: #198754;">Aktif</strong></div>
+                                <div class="dash-row"><span>Majelis Taklim</span> <strong style="color: #198754;">Ada &amp; Berjalan</strong></div>
+                                <div class="dash-row"><span>Kelompok Tani</span> <strong style="color: #198754;">5 Kelompok Aktif</strong></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tab Demografi -->
+                <div id="tab-demografi" class="info-tab-panel">
+                    <div class="dash-card" style="max-width: 800px; margin: 0 auto;">
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--clr-primary-dark); margin-bottom: 1rem;">Rincian Kependudukan Kelurahan Mattompodalle</h3>
+                        <p style="color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                            Berdasarkan pemutakhiran data kependudukan, Kelurahan Mattompodalle memiliki 3.299 jiwa penduduk yang tersebar di 5 lingkungan.
+                        </p>
+                        <div class="dash-row"><span>Total Penduduk</span> <strong>3.299 Jiwa</strong></div>
+                        <div class="dash-row"><span>Penduduk Laki-laki</span> <strong>1.659 Jiwa</strong></div>
+                        <div class="dash-row"><span>Penduduk Perempuan</span> <strong>1.640 Jiwa</strong></div>
+                        <div class="dash-row"><span>Rasio Jenis Kelamin</span> <strong>101 Laki-laki per 100 Perempuan</strong></div>
+                        <div class="dash-row"><span>Total Kepala Keluarga (KK)</span> <strong>791 KK</strong></div>
+                    </div>
+                </div>
+
+                <!-- Tab Ekonomi -->
+                <div id="tab-ekonomi" class="info-tab-panel">
+                    <div class="dash-card" style="max-width: 800px; margin: 0 auto;">
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: #198754; margin-bottom: 1rem;">Sektor Pertanian &amp; UMKM Warga</h3>
+                        <p style="color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                            Pertanian merupakan urat nadi kehidupan ekonomi di Kelurahan Mattompodalle dengan komoditas padi sawah dan jagung sebagai hasil utama.
+                        </p>
+                        <div class="dash-row"><span>Persentase Petani</span> <strong>80% dari total angkatan kerja</strong></div>
+                        <div class="dash-row"><span>Komoditas Unggulan</span> <strong>Padi, Jagung, Sayuran Palawija</strong></div>
+                        <div class="dash-row"><span>Kelompok Tani</span> <strong>5 Kelompok Tani aktif</strong></div>
+                        <div class="dash-row"><span>Pemberdayaan UMKM</span> <strong>Pelatihan digital marketing &amp; bantuan modal</strong></div>
+                    </div>
+                </div>
+
+                <!-- Tab Fasilitas -->
+                <div id="tab-fasilitas" class="info-tab-panel">
+                    <div class="dash-card" style="max-width: 800px; margin: 0 auto;">
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: #0284c7; margin-bottom: 1rem;">Sarana Pendidikan, Kesehatan &amp; Air Bersih</h3>
+                        <div class="dash-row"><span>Sekolah Dasar</span> <strong>2 Unit (SDN No. 34 &amp; SDN No. 131)</strong></div>
+                        <div class="dash-row"><span>Taman Kanak-Kanak</span> <strong>1 Unit</strong></div>
+                        <div class="dash-row"><span>Posyandu</span> <strong>5 Unit (Tiap lingkungan memiliki 1 Posyandu)</strong></div>
+                        <div class="dash-row"><span>Puskesmas Pembantu (Pustu)</span> <strong>1 Unit Kantor Layanan Kesehatan</strong></div>
+                        <div class="dash-row"><span>Sumber Air Bersih</span> <strong>PDAM Takalar dan Sumur Galian Warga</strong></div>
+                    </div>
+                </div>
+
+                <!-- Tab Sosial -->
+                <div id="tab-sosial" class="info-tab-panel">
+                    <div class="dash-card" style="max-width: 800px; margin: 0 auto;">
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: #d4a843; margin-bottom: 1rem;">Lembaga &amp; Organisasi Kemasyarakatan</h3>
+                        <p style="color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                            Partisipasi masyarakat dalam pembangunan didukung oleh lembaga sosial yang aktif mengadakan gotong royong, pembinaan remaja, dan keagamaan.
+                        </p>
+                        <div class="dash-row"><span>Lembaga Pemberdayaan Masyarakat (LPM)</span> <strong>Dipimpin oleh Andi Rukman Karma</strong></div>
+                        <div class="dash-row"><span>Karang Taruna</span> <strong>Penggerak kegiatan pemuda &amp; olahraga</strong></div>
+                        <div class="dash-row"><span>Tim Penggerak PKK</span> <strong>Program kesehatan keluarga &amp; sanitasi</strong></div>
+                        <div class="dash-row"><span>Remaja Mesjid &amp; Majelis Taklim</span> <strong>Kajian rutin dan pembinaan akhlak</strong></div>
                     </div>
                 </div>
 
             </div>
         </section>
     </main>
+
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container footer__inner">
-
             <div class="footer__top">
-
-                <!-- Map Column -->
                 <div class="footer__map-col">
-                    <span class="footer__map-label">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Lokasi Kantor Lurah
-                    </span>
+                    <span class="footer__map-label">Lokasi Kantor Lurah</span>
                     <div class="footer__map-container">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Lokasi Kantor Lurah Mattompodalle">
-                        </iframe>
+                        <iframe src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Kantor Lurah Mattompodalle"></iframe>
                     </div>
-                    <p class="footer__map-address">Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>Kab. Takalar, Sulawesi Selatan 92221</p>
+                    <p class="footer__map-address">Jl. Lahere Dg. Nandre No. 1, Kel. Mattompodalle, Kec. Polongbangkeng Utara, Kab. Takalar 92221</p>
                 </div>
-
-                <!-- Links Column -->
                 <div class="footer__links-col">
-                    <h4 class="footer__col-heading">Menu</h4>
+                    <h4 class="footer__col-heading">Navigasi</h4>
                     <nav class="footer__nav" aria-label="Footer navigasi">
+                        <a href="/" class="footer__link">Beranda</a>
                         <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
                         <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
                         <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
-                        <a href="/informasi/" class="footer__link">Info</a>
-                        <a href="/gallery/" class="footer__link">Gallery</a>
+                        <a href="/informasi/" class="footer__link">Data &amp; Statistik</a>
+                        <a href="/gallery/" class="footer__link">Galeri</a>
                         <a href="/kontak/" class="footer__link">Kontak</a>
                     </nav>
                 </div>
-
-                <!-- Brand Column -->
                 <div class="footer__brand-col">
                     <div class="footer__brand">
-                        <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
+                        <img src="/assets/takalar.png" alt="Logo Takalar" class="footer__logo-img">
                         <span class="footer__title">Mattompodalle</span>
                     </div>
                     <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan.</p>
                 </div>
-
             </div>
-
             <div class="footer__bottom">
-                <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle</p>
+                <p class="footer__copy">&copy; 2026 Pemerintah Kelurahan Mattompodalle</p>
             </div>
-
         </div>
     </footer>
 
