@@ -922,7 +922,7 @@ h6 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--sp-6);
 }
 
@@ -1001,6 +1001,7 @@ h6 {
     padding-top: var(--sp-4);
     border-top: 1px solid var(--clr-border-light);
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .btn-service-detail {
@@ -1407,7 +1408,7 @@ h6 {
    ============================================ */
 .lingkungan-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: var(--sp-5);
 }
 
@@ -1590,6 +1591,7 @@ h6 {
     align-items: center;
     justify-content: flex-end;
     gap: var(--sp-3);
+    flex-wrap: wrap;
 }
 
 /* ============================================
@@ -1620,7 +1622,7 @@ h6 {
 }
 
 .page-section__title {
-    font-size: var(--fs-3xl);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     color: var(--clr-text);
     margin-bottom: var(--sp-3);
 }
@@ -1639,7 +1641,7 @@ h6 {
     background: linear-gradient(145deg, #074747 0%, #0d6e6e 60%, #148f8f 100%);
     color: #ffffff;
     border-radius: var(--radius-xl);
-    padding: 3.5rem 2.5rem;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
     text-align: center;
     box-shadow: var(--shadow-xl);
     position: relative;
@@ -1673,7 +1675,7 @@ h6 {
 }
 
 .vision-text {
-    font-size: clamp(1.25rem, 2.5vw, 1.85rem);
+    font-size: clamp(1.15rem, 2.5vw, 1.85rem);
     font-weight: 700;
     line-height: 1.5;
     color: #ffffff;
@@ -1683,7 +1685,7 @@ h6 {
 
 .mission-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 1.5rem;
 }
 
@@ -1777,6 +1779,7 @@ h6 {
     border: 2px solid var(--clr-primary);
     background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
     min-width: 280px;
+    max-width: 100%;
     box-shadow: var(--shadow-md);
 }
 
@@ -1872,6 +1875,7 @@ h6 {
     color: var(--clr-text-secondary);
     border: 1px solid var(--clr-border);
     transition: all var(--transition-fast);
+    white-space: nowrap;
 }
 
 .info-tab-btn:hover,
@@ -1892,7 +1896,7 @@ h6 {
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 1.5rem;
 }
 
@@ -1946,6 +1950,7 @@ h6 {
     padding: 0.65rem 0;
     border-bottom: 1px dashed var(--clr-border);
     font-size: 0.92rem;
+    gap: 0.5rem;
 }
 
 .dash-row:last-child {
@@ -1959,6 +1964,7 @@ h6 {
 .dash-row strong {
     color: var(--clr-text);
     font-weight: 700;
+    text-align: right;
 }
 
 .progress-bar-wrap {
@@ -1997,6 +2003,7 @@ h6 {
     color: var(--clr-text-secondary);
     border: 1px solid var(--clr-border);
     transition: all var(--transition-fast);
+    white-space: nowrap;
 }
 
 .gallery-filter-btn:hover,
@@ -2425,8 +2432,10 @@ h6 {
 }
 
 /* ============================================
-   RESPONSIVE (TABLET & MOBILE)
+   DYNAMIC RESPONSIVE MEDIA QUERIES (BREAKPOINTS)
    ============================================ */
+
+/* ---------- 1. Large Tablet / Laptop (max-width: 1080px) ---------- */
 @media (max-width: 1080px) {
     .nav {
         display: none;
@@ -2446,9 +2455,26 @@ h6 {
         grid-template-columns: 1fr;
     }
 
-    .greeting-photo-wrap,
+    .greeting-photo-wrap {
+        padding-top: var(--sp-6);
+        max-height: 300px;
+    }
+
+    .greeting-photo {
+        max-width: 240px;
+    }
+
     .executive-photo-col {
-        padding-top: var(--sp-8);
+        min-height: 300px;
+        padding-top: 1.5rem;
+    }
+
+    .executive-photo {
+        max-width: 220px;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
     }
 
     .footer__top {
@@ -2458,29 +2484,187 @@ h6 {
     .footer__map-col {
         grid-column: 1 / -1;
     }
+}
 
-    .contact-layout {
+/* ---------- 2. Medium Tablet (max-width: 900px) ---------- */
+@media (max-width: 900px) {
+    :root {
+        --content-padding: var(--sp-5);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .org-row-modern {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .dashboard-grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 640px) {
+/* ---------- 3. Mobile Landscape & Small Tablet (max-width: 768px) ---------- */
+@media (max-width: 768px) {
     :root {
         --header-height: 60px;
         --ticker-height: 36px;
-        --content-padding: var(--sp-4);
+        --content-padding: 1.15rem;
+    }
+
+    .page-section {
+        padding: var(--sp-8) 0;
+    }
+
+    .hero-gov {
+        padding: 2.75rem 0 4.5rem;
+    }
+
+    .hero-gov__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .stats-section {
+        margin-top: -2.75rem;
+        padding-bottom: var(--sp-8);
+    }
+
+    .section-header {
+        margin-bottom: var(--sp-6);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: var(--sp-5);
+    }
+
+    .service-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-service-detail,
+    .btn-service-wa {
+        justify-content: center;
+        width: 100%;
+        padding: 0.65rem 1rem;
+    }
+
+    .greeting-body {
+        padding: var(--sp-6);
+    }
+
+    .executive-info-col {
+        padding: 1.75rem;
+    }
+
+    .executive-name {
+        font-size: 1.75rem;
+    }
+
+    .executive-bio-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .executive-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .executive-actions a {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .priority-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Horizontal scrollable tab chips on mobile */
+    .info-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.75rem;
+        scrollbar-width: none;
+    }
+
+    .info-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .info-tab-btn {
+        flex-shrink: 0;
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Horizontal scrollable gallery filters */
+    .gallery-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
+        scrollbar-width: none;
+    }
+
+    .gallery-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery-filter-btn {
+        flex-shrink: 0;
+        font-size: 0.82rem;
+        padding: 0.45rem 0.95rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card-modern,
+    .contact-map-card {
+        padding: 1.5rem;
+    }
+
+    .contact-map-frame {
+        height: 280px;
+    }
+}
+
+/* ---------- 4. Mobile Portrait (max-width: 640px) ---------- */
+@media (max-width: 640px) {
+    :root {
+        --header-height: 58px;
+        --ticker-height: 34px;
+        --content-padding: 1rem;
     }
 
     .ticker-meta {
         display: none;
     }
 
-    .header__title {
-        font-size: 1rem;
-    }
-
-    .header__subtitle {
-        font-size: 0.65rem;
+    .ticker-content {
+        font-size: 0.72rem;
     }
 
     .header__logo-img {
@@ -2488,16 +2672,12 @@ h6 {
         height: 36px;
     }
 
-    .hero-gov {
-        padding: 3rem 0 4.5rem;
+    .header__title {
+        font-size: 0.98rem;
     }
 
-    .stats-section {
-        margin-top: -2.5rem;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
+    .header__subtitle {
+        font-size: 0.65rem;
     }
 
     .stat-card {
@@ -2506,54 +2686,115 @@ h6 {
     }
 
     .stat-card__icon-wrap {
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
     }
 
     .stat-card__icon-wrap svg {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
     }
 
     .stat-card__number {
-        font-size: 1.35rem;
+        font-size: 1.45rem;
     }
 
     .stat-card__label {
         font-size: 0.68rem;
     }
 
-    .executive-bio-grid {
-        grid-template-columns: 1fr;
+    .modal-dialog {
+        width: 95%;
+        max-height: 92vh;
+        border-radius: var(--radius-lg);
     }
 
-    .executive-info-col {
-        padding: 1.5rem;
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1.25rem;
     }
 
-    .executive-name {
-        font-size: 1.65rem;
+    .modal-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modal-footer button,
+    .modal-footer a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer {
+        padding-top: var(--sp-10);
     }
 
     .footer__top {
         grid-template-columns: 1fr;
+        gap: var(--sp-8);
+        padding-bottom: var(--sp-8);
     }
 
     .footer__bottom {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        gap: 0.75rem;
     }
 
     .floating-wa {
         bottom: 18px !important;
         right: 18px !important;
-        width: 50px !important;
-        height: 50px !important;
+        width: 48px !important;
+        height: 48px !important;
     }
 
     .floating-wa svg {
         width: 24px !important;
         height: 24px !important;
+    }
+}
+
+/* ---------- 5. Small Mobile (max-width: 380px) ---------- */
+@media (max-width: 380px) {
+    :root {
+        --content-padding: 0.75rem;
+    }
+
+    .header__title {
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: var(--sp-3);
+    }
+
+    .hero-gov__title {
+        font-size: 1.65rem;
+    }
+
+    .mission-card {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .contact-channel-item {
+        padding: 0.85rem 1rem;
+        gap: 0.85rem;
+    }
+
+    .contact-channel-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-channel-val {
+        font-size: 0.98rem;
     }
 }
