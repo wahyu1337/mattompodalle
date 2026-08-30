@@ -1046,7 +1046,7 @@ h6 {
     background: linear-gradient(135deg, #ffffff 0%, #f1f8f8 100%);
     border-top: 1px solid var(--clr-border);
     border-bottom: 1px solid var(--clr-border);
-    padding: var(--sp-16) 0;
+    padding: var(--sp-12) 0;
 }
 
 .greeting-card {
@@ -1056,8 +1056,9 @@ h6 {
     border: 1px solid var(--clr-border);
     overflow: hidden;
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns: 310px 1fr;
     gap: 0;
+    align-items: stretch;
 }
 
 .greeting-photo-wrap {
@@ -1067,44 +1068,52 @@ h6 {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding: var(--sp-8) var(--sp-6) 0;
+    padding: 2rem 1.25rem 0;
     overflow: hidden;
 }
 
 .greeting-photo-wrap::before {
     content: '';
     position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
+    top: -40px;
+    right: -40px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(212, 168, 67, 0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(212, 168, 67, 0.3) 0%, transparent 70%);
 }
 
 .greeting-photo {
-    width: 220px;
+    width: 100%;
+    max-width: 270px;
     height: auto;
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
-    transform: translateY(15px);
+    object-fit: contain;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+    transform: translateY(6px);
+    transition: transform var(--transition-base);
+}
+
+.greeting-card:hover .greeting-photo {
+    transform: translateY(0) scale(1.02);
 }
 
 .greeting-photo-badge {
     position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(8px);
     color: #ffffff;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    padding: 0.3rem 0.75rem;
+    padding: 0.25rem 0.65rem;
     border-radius: var(--radius-full);
+    z-index: 2;
 }
 
 .greeting-body {
-    padding: var(--sp-10) var(--sp-10);
+    padding: var(--sp-8) var(--sp-8);
     display: flex;
     flex-direction: column;
     justify-content: center;
