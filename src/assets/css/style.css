@@ -844,6 +844,159 @@ h6 {
     margin-top: var(--sp-8);
 }
 
+/* ============================================
+   GALLERY PAGE STYLES
+   ============================================ */
+.gallery-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: var(--sp-6);
+    margin-top: var(--sp-6);
+}
+
+.gallery-photo-item {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--clr-surface-alt);
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.gallery-photo-item:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 16px 32px rgba(13, 110, 110, 0.16);
+    border-color: rgba(13, 110, 110, 0.4);
+}
+
+.gallery-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-photo-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-photo-item__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(6, 46, 46, 0.7) 0%, rgba(6, 46, 46, 0.1) 60%, transparent 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.gallery-photo-item:hover .gallery-photo-item__overlay {
+    opacity: 1;
+}
+
+.gallery-photo-item__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transform: scale(0.7);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.gallery-photo-item:hover .gallery-photo-item__icon {
+    transform: scale(1);
+}
+
+.gallery-photo-item__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Lightbox Modal */
+.gallery-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 28, 28, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery-modal__content {
+    position: relative;
+    max-width: 900px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-modal__img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: var(--radius-md);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+    object-fit: contain;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery-modal__caption {
+    color: #ffffff;
+    margin-top: var(--sp-4);
+    text-align: center;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    max-width: 700px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-modal__close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.gallery-modal__close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
 /* --- Page Section Skeleton --- */
 .page-section {
     padding: var(--sp-10) 0; /* Dikurangi dari sp-16 (64px) ke sp-10 (40px) */

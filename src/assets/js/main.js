@@ -130,4 +130,47 @@ document.addEventListener('DOMContentLoaded', () => {
         </svg>
     `;
     document.body.appendChild(waButton);
+
+    // ============================================
+    // GALLERY LIGHTBOX MODAL
+    // ============================================
+    const galleryTriggers = document.querySelectorAll('.gallery-photo-item, .galeri__item');
+    const modal = document.getElementById('gallery-modal');
+    const modalImg = document.getElementById('gallery-modal-img');
+    const modalClose = document.getElementById('gallery-modal-close');
+
+    if (galleryTriggers.length > 0 && modal) {
+        galleryTriggers.forEach(box => {
+            box.addEventListener('click', () => {
+                const img = box.querySelector('img');
+                if (img) {
+                    modalImg.src = img.src;
+                    modalImg.alt = img.alt;
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 });
