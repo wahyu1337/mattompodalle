@@ -1,0 +1,42 @@
+{
+  "kelurahan": "Mattompodalle",
+  "kecamatan": "Polongbangkeng Utara",
+  "kabupaten": "Takalar",
+  "provinsi": "Sulawesi Selatan",
+  "kodePos": "92221",
+  "lurah": {
+    "nama": "Indra Jaya",
+    "gelar": "S.Sos",
+    "nip": "197111241991031002",
+    "ttl": "Ujung Pandang, 24 November 1971",
+    "pendidikan": "S1 Sospol, UPRI",
+    "telepon": "085240291397",
+    "alamat": "Lahere Dg. Nandre No. 1, Kel. Mattompodalle",
+    "foto": "/assets/Profil/profil.jpeg",
+    "ibuLurah": {
+      "nama": "Karlinda, S.T, M.M",
+      "ttl": "Takalar, 13 November 1977",
+      "pendidikan": "S2 Manajemen",
+      "jabatan": "Ketua Tim Penggerak PKK Kelurahan Mattompodalle"
+    },
+    "sambutan": "Selamat datang di website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar. Website ini hadir sebagai wujud transparansi, keterbukaan informasi publik, serta modernisasi layanan kelurahan untuk mempermudah masyarakat dalam mengakses informasi dan administrasi pemerintahan."
+  },
+  "visi": "Terwujudnya Kelurahan Mattompodalle yang Maju, Sejahtera, Berdaya Saing, dan Berakhlak Mulia Berbasis Pertanian dan Pelayanan Publik Prima.",
+  "misi": [
+    "Meningkatkan kualitas pelayanan administrasi dan kependudukan yang cepat, transparan, akuntabel, dan berbasis digital.",
+    "Mendorong produktivitas sektor pertanian dan penguatan UMKM lokal guna meningkatkan perekonomian dan kesejahteraan warga.",
+    "Meningkatkan pemerataan pembangunan infrastruktur dasar, saluran drainase/irigasi, dan perbaikan rumah tidak layak huni (RTLH).",
+    "Mengembangkan kebersamaan serta sinergi dengan kelembagaan masyarakat seperti Karang Taruna, PKK, Remaja Masjid, dan Kelompok Tani.",
+    "Memelihara ketertiban, keamanan, kebersihan lingkungan, serta nilai-nilai kearifan lokal masyarakat."
+  ],
+  "statistik": {
+    "jumlahPenduduk": 3299,
+    "lakiLaki": 1659,
+    "perempuan": 1640,
+    "jumlahKk": 791,
+    "jumlahLingkungan": 5,
+    "persenPetani": 80,
+    "luasWilayah": "± 4.8 km²"
+  },
+  "sejarah": "Kelurahan Mattompodalle merupakan salah satu kelurahan di Kecamatan Polongbangkeng Utara, Kabupaten Takalar. Nama Mattompodalle memiliki makna filosofis mendalam tentang limpahan berkah dan rezeki (dalle). Masyarakatnya dikenal agamis, rukun, dan memiliki etos kerja tinggi di bidang pertanian serta perdagangan lokal."
+}

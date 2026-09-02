@@ -1,225 +1,126 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Visi dan Misi Kelurahan Mattompodalle - Kecamatan Polut, Kabupaten Takalar.">
+    <meta name="description"
+        content="Visi dan Misi Pemerintah Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar. Arah kebijakan dan program pembangunan.">
     <title>Visi &amp; Misi — Kelurahan Mattompodalle</title>
-    <style>
-        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#f8f9fc;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s ease,visibility .5s ease}
-        .preloader.loaded{opacity:0;visibility:hidden;pointer-events:none}
-        .preloader__content{display:flex;flex-direction:column;align-items:center;gap:1.25rem}
-        .preloader__spinner{width:36px;height:36px;border:3px solid #e2e5ef;border-top-color:#0d6e6e;border-radius:50%;animation:pspin .8s linear infinite}
-        @keyframes pspin{to{transform:rotate(360deg)}}
-        
-        /* Visi Misi Styles */
-        .vm-container { display: flex; flex-direction: column; gap: 3rem; margin-top: 2rem; }
-        .vm-card { background: #ffffff; border-radius: 1rem; padding: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border-top: 4px solid #0d6e6e; }
-        .vm-card__title { color: #1a202c; font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; justify-content: center; }
-        .vm-card__title-icon { width: 32px; height: 32px; color: #0d6e6e; }
-        .vm-vision-text { font-size: 1.25rem; line-height: 1.8; color: #4a5568; font-weight: 500; text-align: center; font-style: italic; }
-        .vm-mission-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
-        .vm-mission-item { display: flex; align-items: flex-start; gap: 1rem; font-size: 1.1rem; line-height: 1.6; color: #4a5568; }
-        .vm-mission-number { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #e6f0f0; color: #0d6e6e; border-radius: 50%; font-weight: 700; flex-shrink: 0; margin-top: 0.125rem; }
-    </style>
 </head>
+
 <body>
+    <!-- Site Header Container (Injected by header.js) -->
+    <div id="site-header"></div>
 
-    <!-- ========== PRELOADER ========== -->
-    <div class="preloader" id="preloader">
-        <div class="preloader__content">
-            <div class="preloader__spinner"></div>
-        </div>
-    </div>
-
-    <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
-        <div class="container header__inner">
-            <!-- Home Button (Beranda) -->
-            <a href="/" class="header__home-btn" aria-label="Beranda" title="Beranda">
-                <svg class="header__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
-            </a>
-
-            <!-- Brand / Center -->
-            <div class="header__brand">
-                <img src="/assets/takalar.png" alt="Logo Kelurahan" class="header__logo-img" title="Logo Kelurahan">
-                <span class="header__title">Kelurahan Mattompodalle</span>
-            </div>
-            <nav class="nav" aria-label="Navigasi utama">
-                <ul class="nav__list">
-                    <li class="dropdown">
-                        <a href="#" class="nav__link dropdown__toggle">
-                            Profil
-                            <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </a>
-                        <ul class="dropdown__menu">
-                            <li class="dropdown__item"><a href="/profil/lurah/" class="dropdown__link">Profil Lurah</a></li>
-                            <li class="dropdown__item"><a href="/profil/struktur-organisasi/" class="dropdown__link">Struktur Organisasi</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/visi-misi/" class="nav__link active">Visi &amp; Misi</a></li>
-                    <li><a href="/informasi/" class="nav__link">Info</a></li>
-                    <li><a href="/gallery/" class="nav__link">Gallery</a></li>
-                    <li><a href="/kontak/" class="nav__link">Kontak</a></li>
-                </ul>
-            </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-            </button>
-        </div>
-    </header>
-
-    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
-        <ul class="mobile-menu__list">
-            <li class="mobile-dropdown" onclick="this.classList.toggle('active')">
-                <a href="javascript:void(0)" class="mobile-menu__link dropdown__toggle">
-                    Profil
-                    <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto;">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </a>
-                <ul class="mobile-dropdown__menu">
-                    <li><a href="/profil/lurah/" class="mobile-menu__sublink">Profil Lurah</a></li>
-                    <li><a href="/profil/struktur-organisasi/" class="mobile-menu__sublink">Struktur Organisasi</a></li>
-                </ul>
-            </li>
-            <li><a href="/visi-misi/" class="mobile-menu__link active">Visi &amp; Misi</a></li>
-            <li><a href="/informasi/" class="mobile-menu__link">Info</a></li>
-            <li><a href="/gallery/" class="mobile-menu__link">Gallery</a></li>
-            <li><a href="/kontak/" class="mobile-menu__link">Kontak</a></li>
-        </ul>
-    </div>
-
-    <!-- ========== MAIN CONTENT ========== -->
-    <main class="main">
-        <section class="page-section">
+    <main class="page-main">
+        <!-- Page Header Banner -->
+        <header class="page-header">
             <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Beranda</a>
+                    <span class="breadcrumb__separator">/</span>
+                    <span>Visi &amp; Misi</span>
+                </nav>
+                <h1 class="page-header__title">Visi &amp; Misi Kelurahan</h1>
+                <p class="page-header__subtitle">
+                    Pedoman arah pembangunan dan pelayanan bagi kesejahteraan seluruh masyarakat Kelurahan Mattompodalle.
+                </p>
+            </div>
+        </header>
 
-                <div class="page-section__header animate-fade-in-up">
-                    <span class="page-section__badge">Visi &amp; Misi</span>
-                    <h1 class="page-section__title">Visi &amp; Misi Kelurahan</h1>
-                    <p class="page-section__subtitle">Arah dan tujuan pembangunan Kelurahan Mattompodalle</p>
+        <!-- Vision Section -->
+        <section class="section section--surface">
+            <div class="container">
+                <div class="vision-card">
+                    <span class="vision-card__label">Visi Kelurahan Mattompodalle</span>
+                    <p class="vision-card__quote">
+                        "Terwujudnya Kelurahan Mattompodalle yang Maju, Sejahtera, Berdaya Saing, dan Berakhlak Mulia Berbasis Pertanian dan Pelayanan Publik Prima."
+                    </p>
                 </div>
 
-                <div class="vm-container animate-fade-in-up delay-2">
-                    <!-- Visi -->
-                    <div class="vm-card">
-                        <h2 class="vm-card__title">
-                            <svg class="vm-card__title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
-                            </svg>
-                            Visi
-                        </h2>
-                        <p class="vm-vision-text">
-                            "Mewujudkan Kelurahan Mattompodalle yang Maju, Sejahtera, Religius, dan Berbudaya melalui Tata Kelola Pemerintahan yang Baik."
+                <div class="section-header">
+                    <span class="section-badge">Misi Kelurahan</span>
+                    <h2 class="section-title">5 Misi Pembangunan</h2>
+                    <p class="section-subtitle">
+                        Langkah-langkah strategis dalam mewujudkan visi pembangunan daerah.
+                    </p>
+                </div>
+
+                <div class="mission-list" style="max-width: 860px; margin: 0 auto 4rem auto;">
+                    <div class="mission-item">
+                        <div class="mission-item__number">1</div>
+                        <p class="mission-item__text">
+                            Meningkatkan kualitas pelayanan administrasi dan kependudukan yang cepat, transparan, akuntabel, dan berbasis digital.
                         </p>
                     </div>
 
-                    <!-- Misi -->
-                    <div class="vm-card">
-                        <h2 class="vm-card__title">
-                            <svg class="vm-card__title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Misi
-                        </h2>
-                        <ul class="vm-mission-list">
-                            <li class="vm-mission-item">
-                                <span class="vm-mission-number">1</span>
-                                <span>Meningkatkan kualitas pelayanan publik yang prima, cepat, dan transparan bagi seluruh warga.</span>
-                            </li>
-                            <li class="vm-mission-item">
-                                <span class="vm-mission-number">2</span>
-                                <span>Mendorong peningkatan perekonomian masyarakat melalui pemberdayaan UMKM dan sektor pertanian lokal.</span>
-                            </li>
-                            <li class="vm-mission-item">
-                                <span class="vm-mission-number">3</span>
-                                <span>Meningkatkan kualitas sumber daya manusia melalui pendidikan, kesehatan, dan pembinaan keagamaan.</span>
-                            </li>
-                            <li class="vm-mission-item">
-                                <span class="vm-mission-number">4</span>
-                                <span>Mewujudkan lingkungan kelurahan yang bersih, aman, asri, dan tertib.</span>
-                            </li>
-                            <li class="vm-mission-item">
-                                <span class="vm-mission-number">5</span>
-                                <span>Melestarikan nilai-nilai budaya dan kearifan lokal dalam kehidupan bermasyarakat yang harmonis.</span>
-                            </li>
-                        </ul>
+                    <div class="mission-item">
+                        <div class="mission-item__number">2</div>
+                        <p class="mission-item__text">
+                            Mendorong produktivitas sektor pertanian dan penguatan UMKM lokal guna meningkatkan perekonomian dan kesejahteraan warga.
+                        </p>
+                    </div>
+
+                    <div class="mission-item">
+                        <div class="mission-item__number">3</div>
+                        <p class="mission-item__text">
+                            Meningkatkan pemerataan pembangunan infrastruktur dasar, saluran drainase/irigasi, dan perbaikan rumah tidak layak huni (RTLH).
+                        </p>
+                    </div>
+
+                    <div class="mission-item">
+                        <div class="mission-item__number">4</div>
+                        <p class="mission-item__text">
+                            Mengembangkan kebersamaan serta sinergi dengan kelembagaan masyarakat seperti Karang Taruna, PKK, Remaja Masjid, dan Kelompok Tani.
+                        </p>
+                    </div>
+
+                    <div class="mission-item">
+                        <div class="mission-item__number">5</div>
+                        <p class="mission-item__text">
+                            Memelihara ketertiban, keamanan, kebersihan lingkungan, serta nilai-nilai kearifan lokal masyarakat.
+                        </p>
                     </div>
                 </div>
 
+                <!-- Program Prioritas Grid -->
+                <div class="section-header">
+                    <span class="section-badge">Fokus Kerja</span>
+                    <h2 class="section-title">Program Prioritas Kelurahan</h2>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card" style="border-top: 4px solid var(--color-primary);">
+                        <span class="section-badge" style="align-self: flex-start;">Infrastruktur</span>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;">Bedah RTLH &amp; Drainase</h3>
+                        <p style="font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">
+                            Perbaikan rumah tidak layak huni bagi keluarga pra-sejahtera dan normalisasi saluran air pemukiman.
+                        </p>
+                    </div>
+
+                    <div class="card" style="border-top: 4px solid var(--color-accent);">
+                        <span class="section-badge" style="align-self: flex-start; background-color: var(--color-accent-light); color: var(--color-accent-dark);">Ekonomi</span>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;">Pertanian &amp; UMKM</h3>
+                        <p style="font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">
+                            Peningkatan sarana pertanian, bantuan bibit/pupuk, serta pendampingan akses permodalan usaha sekitar pasar.
+                        </p>
+                    </div>
+
+                    <div class="card" style="border-top: 4px solid var(--color-info);">
+                        <span class="section-badge" style="align-self: flex-start; background-color: #dbeafe; color: #1d4ed8;">Pelayanan</span>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;">Digitalisasi Surat Warga</h3>
+                        <p style="font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">
+                            Pemanfaatan sistem digital seperti Sirikandi dan portal website untuk mempercepat alur surat menyurat.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__inner">
 
-            <div class="footer__top">
-
-                <!-- Map Column -->
-                <div class="footer__map-col">
-                    <span class="footer__map-label">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Lokasi Kantor Lurah
-                    </span>
-                    <div class="footer__map-container">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Kantor+Lurah+Mattompodalle,+Takalar&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Lokasi Kantor Lurah Mattompodalle">
-                        </iframe>
-                    </div>
-                    <p class="footer__map-address">Kel. Mattompodalle, Kec. Polongbangkeng Utara,<br>Kab. Takalar, Sulawesi Selatan 92221</p>
-                </div>
-
-                <!-- Links Column -->
-                <div class="footer__links-col">
-                    <h4 class="footer__col-heading">Menu</h4>
-                    <nav class="footer__nav" aria-label="Footer navigasi">
-                        <a href="/profil/lurah/" class="footer__link">Profil Lurah</a>
-                        <a href="/profil/struktur-organisasi/" class="footer__link">Struktur Organisasi</a>
-                        <a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a>
-                        <a href="/informasi/" class="footer__link">Info</a>
-                        <a href="/gallery/" class="footer__link">Gallery</a>
-                        <a href="/kontak/" class="footer__link">Kontak</a>
-                    </nav>
-                </div>
-
-                <!-- Brand Column -->
-                <div class="footer__brand-col">
-                    <div class="footer__brand">
-                        <svg class="footer__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
-                        <span class="footer__title">Mattompodalle</span>
-                    </div>
-                    <p class="footer__desc">Website resmi Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan.</p>
-                </div>
-
-            </div>
-
-            <div class="footer__bottom">
-                <p class="footer__copy">&copy; 2026 Kelurahan Mattompodalle</p>
-            </div>
-
-        </div>
-    </footer>
-
+    <!-- Site Footer Container (Injected by footer.js) -->
+    <div id="site-footer"></div>
 </body>
+
 </html>

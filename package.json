@@ -1,13 +1,15 @@
 {
     "name": "kkn-26",
     "version": "1.0.0",
-    "description": "Project dan Website Dokumentasi KKN 26 POSKO 4",
-    "main": "index.js",
+    "description": "Website Resmi dan Portal Informasi Publik Kelurahan Mattompodalle",
+    "main": "src/js/index.js",
     "scripts": {
+        "dev": "webpack serve --mode development",
+        "start": "webpack serve --mode development",
         "test": "webpack serve --mode development",
         "build": "webpack --mode production"
     },
-    "author": "",
+    "author": "Kelurahan Mattompodalle",
     "license": "ISC",
     "devDependencies": {
         "copy-webpack-plugin": "^14.0.0",

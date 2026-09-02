@@ -1,0 +1,119 @@
+/* ==========================================================================
+   ORGANIZATION CHART COMPONENT
+   ========================================================================== */
+
+.org-chart-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.org-tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.org-tier:last-child {
+    margin-bottom: 0;
+}
+
+.org-connector {
+    width: 2px;
+    height: 36px;
+    background-color: var(--color-primary);
+    margin: 0 auto;
+}
+
+.org-card {
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.75rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+}
+
+.org-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+}
+
+.org-card--pimpinan {
+    border-color: var(--color-primary);
+    background: linear-gradient(to bottom, #ffffff, var(--color-primary-subtle));
+    max-width: 440px;
+}
+
+.org-card__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    background-color: #ffffff;
+    border: 1px solid var(--color-primary);
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 0.75rem;
+}
+
+.org-card--pimpinan .org-card__badge {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.org-card__avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    margin: 0 auto 0.75rem auto;
+    border: 3px solid #ffffff;
+    box-shadow: var(--shadow-sm);
+}
+
+.org-card__name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 0.25rem;
+}
+
+.org-card__role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.org-card__nip {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.org-card__desc {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--color-border);
+}
+
+/* Grid of Sub-officials */
+.org-sub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}

@@ -1,0 +1,20 @@
+/* ==========================================================================
+   MASTER STYLESHEET
+   Website Kelurahan Mattompodalle
+   ========================================================================== */
+
+/* 1. Base Layer */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* 2. Components Layer */
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/hero.css';
+@import './components/cards.css';
+@import './components/org-chart.css';
+@import './components/gallery.css';
+@import './components/forms.css';
+@import './components/preloader.css';
+@import './components/floating-wa.css';

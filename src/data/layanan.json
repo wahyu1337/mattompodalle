@@ -1,0 +1,84 @@
+[
+  {
+    "id": "sku",
+    "nama": "Surat Keterangan Usaha (SKU)",
+    "kategori": "Ekonomi & Usaha",
+    "deskripsi": "Surat keterangan untuk legalitas usaha mikro, kecil, dan menengah (UMKM) dalam pengajuan permodalan atau keperluan perbankan.",
+    "persyaratan": [
+      "Fotokopi KTP Pemohon (domisili setempat)",
+      "Fotokopi Kartu Keluarga (KK)",
+      "Surat Pengantar dari Kepala Lingkungan",
+      "Foto tempat/lokasi usaha atau bukti aktivitas usaha"
+    ],
+    "waktu": "15 - 30 Menit",
+    "biaya": "Gratis (Rp 0)"
+  },
+  {
+    "id": "domisili",
+    "nama": "Surat Keterangan Domisili",
+    "kategori": "Kependudukan",
+    "deskripsi": "Surat bukti tempat tinggal resmi bagi warga perseorangan atau tempat usaha di Kelurahan Mattompodalle.",
+    "persyaratan": [
+      "Fotokopi KTP pemohon",
+      "Fotokopi Kartu Keluarga (KK)",
+      "Surat Pengantar dari Kepala Lingkungan",
+      "Surat pernyataan domisili bermaterai (bila dari luar daerah)"
+    ],
+    "waktu": "15 Menit",
+    "biaya": "Gratis (Rp 0)"
+  },
+  {
+    "id": "sktm",
+    "nama": "Surat Keterangan Tidak Mampu (SKTM)",
+    "kategori": "Sosial & Bantuan",
+    "deskripsi": "Surat keterangan untuk keperluan beasiswa pendidikan, keringanan biaya kesehatan (BPJS/PBI), atau bantuan sosial pemerintah.",
+    "persyaratan": [
+      "Fotokopi KTP dan Kartu Keluarga (KK)",
+      "Surat Pengantar dari Kepala Lingkungan dengan keterangan kondisi ekonomi",
+      "Foto rumah atau surat pernyataan tidak mampu bermaterai"
+    ],
+    "waktu": "20 Menit",
+    "biaya": "Gratis (Rp 0)"
+  },
+  {
+    "id": "nikah",
+    "nama": "Surat Pengantar Nikah (Model N1 - N4)",
+    "kategori": "Keluarga",
+    "deskripsi": "Surat pengantar rekomendasi pernikahan untuk pendaftaran di Kantor Urusan Agama (KUA) Kecamatan Polut.",
+    "persyaratan": [
+      "Fotokopi KTP dan KK Calon Pengantin & Orang Tua",
+      "Surat Pengantar dari Kepala Lingkungan",
+      "Pas foto 2x3 dan 3x4 latar biru (4 lembar)",
+      "Fotokopi Akta Kelahiran / Ijazah Terakhir",
+      "Surat Kematian/Cerai bagi status duda/janda"
+    ],
+    "waktu": "1 Hari Kerja",
+    "biaya": "Gratis (Rp 0)"
+  },
+  {
+    "id": "belum-menikah",
+    "nama": "Surat Keterangan Belum Pernah Menikah",
+    "kategori": "Keluarga",
+    "deskripsi": "Surat keterangan status lajang/belum menikah untuk kelengkapan berkas melamar pekerjaan atau beasiswa.",
+    "persyaratan": [
+      "Fotokopi KTP dan Kartu Keluarga (KK)",
+      "Surat Pengantar dari Kepala Lingkungan",
+      "Surat Pernyataan Belum Pernah Menikah bermaterai"
+    ],
+    "waktu": "15 Menit",
+    "biaya": "Gratis (Rp 0)"
+  },
+  {
+    "id": "kematian-kelahiran",
+    "nama": "Surat Keterangan Kematian / Kelahiran",
+    "kategori": "Kependudukan",
+    "deskripsi": "Surat keterangan pencatatan sipil terkait peristiwa kelahiran atau kematian warga.",
+    "persyaratan": [
+      "Fotokopi KTP dan KK bersangkutan / pelapor",
+      "Surat Pengantar dari Kepala Lingkungan",
+      "Surat keterangan medis dari Bidan / Rumah Sakit / Pustu"
+    ],
+    "waktu": "15 Menit",
+    "biaya": "Gratis (Rp 0)"
+  }
+]

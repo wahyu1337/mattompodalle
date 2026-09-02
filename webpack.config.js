@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/assets/js/main.js',
+    entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        publicPath: '/',
         clean: true,
     },
     module: {
@@ -58,7 +59,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/assets'),
-                     to: path.resolve(__dirname, 'dist/assets'),
+                    to: path.resolve(__dirname, 'dist/assets'),
                     globOptions: {
                         ignore: ['**/js/**', '**/css/**'],
                     },
@@ -71,8 +72,11 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         },
         compress: true,
-        port: 8080,
-        open: true,
+        port: 8081,
+        open: false,
         hot: true,
+    },
+    performance: {
+        hints: false,
     },
 };

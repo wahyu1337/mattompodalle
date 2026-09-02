@@ -1,0 +1,44 @@
+[
+  {
+    "kategori": "Kesehatan",
+    "icon": "fasilitas-kesehatan",
+    "nama": "Puskesmas Pembantu (Pustu)",
+    "jumlah": "1 Unit",
+    "deskripsi": "Pelayanan kesehatan tingkat pertama, imunisasi, dan pemeriksaan kesehatan umum bagi warga kelurahan."
+  },
+  {
+    "kategori": "Kesehatan Masyarakat",
+    "icon": "fasilitas-posyandu",
+    "nama": "Pos Pelayanan Terpadu (Posyandu)",
+    "jumlah": "5 Pos",
+    "deskripsi": "Tersedia 1 unit posyandu di setiap lingkungan untuk pemantauan tumbuh kembang balita dan pemeriksaan lansia."
+  },
+  {
+    "kategori": "Pendidikan Keagamaan",
+    "icon": "fasilitas-tpa",
+    "nama": "Taman Pendidikan Al-Qur'an (TPA)",
+    "jumlah": "5 Unit",
+    "deskripsi": "Lembaga pendidikan Al-Qur'an dan pembinaan akhlak anak-anak di 5 lingkungan."
+  },
+  {
+    "kategori": "Pendidikan Dasar",
+    "icon": "fasilitas-sekolah",
+    "nama": "Sekolah Dasar & Taman Kanak-Kanak",
+    "jumlah": "2 SD, 1 TK",
+    "deskripsi": "Fasilitas pendidikan dasar formal untuk mencetak generasi cerdas dan berkarakter."
+  },
+  {
+    "kategori": "Kesehatan & Farmasi",
+    "icon": "fasilitas-apotik",
+    "nama": "Apotik & Toko Obat",
+    "jumlah": "Tersedia",
+    "deskripsi": "Penyediaan obat-obatan dan kebutuhan medis warga setempat."
+  },
+  {
+    "kategori": "Infrastruktur Dasar",
+    "icon": "fasilitas-air",
+    "nama": "Sarana Air Bersih",
+    "jumlah": "PDAM & Sumur Galian",
+    "deskripsi": "Jaringan air bersih PDAM terpadu serta sumur galian warga yang terjaga kejernihannya."
+  }
+]

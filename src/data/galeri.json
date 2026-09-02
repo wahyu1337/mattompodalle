@@ -1,0 +1,34 @@
+[
+  {
+    "id": "foto-1",
+    "judul": "Koordinasi Pelayanan Masyarakat",
+    "kategori": "Pemerintahan",
+    "tanggal": "Agustus 2026",
+    "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.34.28.jpeg",
+    "deskripsi": "Pertemuan koordinasi dan pelayanan administrasi masyarakat di Kantor Kelurahan Mattompodalle."
+  },
+  {
+    "id": "foto-2",
+    "judul": "Kegiatan Posyandu & Layanan Warga",
+    "kategori": "Kesehatan",
+    "tanggal": "Agustus 2026",
+    "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.19.jpeg",
+    "deskripsi": "Pelaksanaan program kesehatan masyarakat dan pendataan warga di lingkungan kelurahan."
+  },
+  {
+    "id": "foto-3",
+    "judul": "Gotong Royong & Kebersihan Lingkungan",
+    "kategori": "Kemasyarakatan",
+    "tanggal": "Agustus 2026",
+    "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.23.jpeg",
+    "deskripsi": "Aksi gotong royong aparatur bersama warga membersihkan sarana umum dan drainase pemukiman."
+  },
+  {
+    "id": "foto-4",
+    "judul": "Peringatan Hari Kemerdekaan RI",
+    "kategori": "Kegiatan",
+    "tanggal": "Agustus 2026",
+    "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.43.35.jpeg",
+    "deskripsi": "Semarak peringatan 17 Agustus dan kebersamaan aparat kelurahan bersama masyarakat."
+  }
+]

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   FLOATING WHATSAPP BUTTON COMPONENT
+   ========================================================================== */
+
+.floating-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 58px;
+    height: 58px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    z-index: 400;
+    transition: all var(--transition-base);
+    animation: wa-pulse 2.5s infinite;
+}
+
+.floating-wa:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
+    color: #ffffff;
+}
+
+.floating-wa svg {
+    width: 32px;
+    height: 32px;
+}
+
+@keyframes wa-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}

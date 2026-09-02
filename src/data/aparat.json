@@ -1,0 +1,61 @@
+{
+  "pimpinan": {
+    "jabatan": "Lurah Mattompodalle",
+    "nama": "Indra Jaya",
+    "nip": "197111241991031002",
+    "golongan": "Penata Tk. I / III/d",
+    "foto": "/assets/Profil/profil.jpeg",
+    "tugas": "Memimpin penyelenggaraan pemerintahan, pembangunan, pembinaan ketentraman dan ketertiban, serta pemberdayaan masyarakat di wilayah Kelurahan Mattompodalle."
+  },
+  "sekretariat": {
+    "jabatan": "Sekretaris Kelurahan",
+    "nama": "Sekretaris Kelurahan",
+    "nip": "-",
+    "foto": "/assets/pak lurah.svg",
+    "tugas": "Mengkoordinasikan perencanaan, pengelolaan administrasi umum, kepegawaian, keuangan, dan perlengkapan kelurahan."
+  },
+  "seksi": [
+    {
+      "jabatan": "Kasi Pemerintahan, Ketentraman & Ketertiban",
+      "nama": "Kepala Seksi Pemerintahan",
+      "tugas": "Melaksanakan urusan administrasi pemerintahan, administrasi kependudukan, serta ketentraman dan ketertiban umum."
+    },
+    {
+      "jabatan": "Kasi Kesejahteraan Sosial (Kesra)",
+      "nama": "Kepala Seksi Kesra",
+      "tugas": "Melaksanakan pembinaan kemasyarakatan, bantuan sosial, penanganan kemiskinan, kesehatan, pendidikan, dan keagamaan."
+    },
+    {
+      "jabatan": "Kasi Pelayanan Umum & Pemberdayaan Masyarakat",
+      "nama": "Kepala Seksi Pelayanan Umum",
+      "tugas": "Melaksanakan pelayanan administrasi umum, perizinan, surat keterangan warga, serta pembinaan UMKM dan kelompok tani."
+    }
+  ],
+  "kepalaLingkungan": [
+    {
+      "namaLingkungan": "Lingkungan 1",
+      "pejabat": "Kepala Lingkungan 1",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 1."
+    },
+    {
+      "namaLingkungan": "Lingkungan 2",
+      "pejabat": "Kepala Lingkungan 2",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 2."
+    },
+    {
+      "namaLingkungan": "Lingkungan 3",
+      "pejabat": "Kepala Lingkungan 3",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 3."
+    },
+    {
+      "namaLingkungan": "Lingkungan 4",
+      "pejabat": "Kepala Lingkungan 4",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 4."
+    },
+    {
+      "namaLingkungan": "Lingkungan 5",
+      "pejabat": "Kepala Lingkungan 5",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 5."
+    }
+  ]
+}

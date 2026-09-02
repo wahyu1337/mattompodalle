@@ -1,0 +1,14 @@
+{
+  "namaKantor": "Kantor Kelurahan Mattompodalle",
+  "alamat": "Jl. Poros Mattompodalle, Kec. Polongbangkeng Utara, Kab. Takalar, Sulawesi Selatan 92221",
+  "telepon": "085240291397",
+  "whatsapp": "6281355679147",
+  "whatsappDisplay": "0813-5567-9147",
+  "email": "kelurahan.mattompodalle@takalarkab.go.id",
+  "jamOperasional": {
+    "seninKamis": "08:00 - 16:00 WITA",
+    "jumat": "08:00 - 15:30 WITA",
+    "sabtuMinggu": "Libur (Pelayanan Darurat via WhatsApp)"
+  },
+  "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15891.139045762038!2d119.4678853!3d-5.419169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee57161b369c7%3A0x6bcfd30a07106093!2sMattompodalle%2C%20Kec.%20Polombangkeng%20Utara%2C%20Kabupaten%20Takalar%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "berita-1",
+    "judul": "Sosialisasi Digitalisasi Layanan Surat Administrasi Kelurahan",
+    "kategori": "Pelayanan Publik",
+    "tanggal": "28 Agustus 2026",
+    "ringkasan": "Pemerintah Kelurahan Mattompodalle meluncurkan portal informasi resmi guna mempermudah akses informasi persyaratan surat dan program kelurahan bagi warga.",
+    "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.34.28.jpeg"
+  },
+  {
+    "id": "berita-2",
+    "judul": "Penyaluran Bantuan Rumah Tidak Layak Huni (RTLH) & Pembangunan Saluran",
+    "kategori": "Infrastruktur",
+    "tanggal": "20 Agustus 2026",
+    "ringkasan": "Upaya perbaikan rumah warga tidak mampu serta normalisasi saluran drainase terus ditingkatkan demi kenyamanan dan kesehatan lingkungan warga.",
+    "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.23.jpeg"
+  },
+  {
+    "id": "berita-3",
+    "judul": "Pelaksanaan Program Posyandu Rutin di 5 Lingkungan",
+    "kategori": "Kesehatan",
+    "tanggal": "15 Agustus 2026",
+    "ringkasan": "Kader Posyandu dan TP-PKK Kelurahan Mattompodalle aktif mendampingi pemeriksaan gizi balita serta kesehatan lansia secara berkelanjutan.",
+    "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.19.jpeg"
+  }
+]
