@@ -48,6 +48,14 @@ module.exports = {
             filename: 'informasi/index.html',
         }),
         new HtmlWebpackPlugin({
+            template: './src/informasi/data-penduduk/index.html',
+            filename: 'informasi/data-penduduk/index.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/informasi/layanan/index.html',
+            filename: 'informasi/layanan/index.html',
+        }),
+        new HtmlWebpackPlugin({
             template: './src/gallery/index.html',
             filename: 'gallery/index.html',
         }),

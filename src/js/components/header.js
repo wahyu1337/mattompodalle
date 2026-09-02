@@ -59,8 +59,21 @@ export const renderHeader = () => {
                         <li>
                             <a href="/visi-misi/" class="nav__link ${isActive('/visi-misi/') ? 'active' : ''}">Visi &amp; Misi</a>
                         </li>
-                        <li>
-                            <a href="/informasi/" class="nav__link ${isActive('/informasi/') ? 'active' : ''}">Informasi &amp; Layanan</a>
+                        <li class="dropdown">
+                            <a href="#" class="nav__link dropdown__toggle ${isActive('/informasi/') ? 'active' : ''}">
+                                Informasi
+                                <svg class="dropdown__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </a>
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item">
+                                    <a href="/informasi/data-penduduk/" class="dropdown__link ${isActive('/informasi/data-penduduk/') ? 'active' : ''}">Data Penduduk</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="/informasi/layanan/" class="dropdown__link ${isActive('/informasi/layanan/') ? 'active' : ''}">Layanan</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="/gallery/" class="nav__link ${isActive('/gallery/') ? 'active' : ''}">Galeri</a>
@@ -97,7 +110,11 @@ export const renderHeader = () => {
                     <a href="/visi-misi/" class="mobile-menu__link ${isActive('/visi-misi/') ? 'active' : ''}">Visi &amp; Misi</a>
                 </li>
                 <li>
-                    <a href="/informasi/" class="mobile-menu__link ${isActive('/informasi/') ? 'active' : ''}">Informasi &amp; Layanan</a>
+                    <div class="mobile-menu__link">Informasi</div>
+                    <div class="mobile-menu__submenu">
+                        <a href="/informasi/data-penduduk/" class="mobile-menu__sublink ${isActive('/informasi/data-penduduk/') ? 'active' : ''}">Data Penduduk</a>
+                        <a href="/informasi/layanan/" class="mobile-menu__sublink ${isActive('/informasi/layanan/') ? 'active' : ''}">Layanan</a>
+                    </div>
                 </li>
                 <li>
                     <a href="/gallery/" class="mobile-menu__link ${isActive('/gallery/') ? 'active' : ''}">Galeri</a>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Informasi Layanan Surat, Kependudukan, dan Fasilitas Umum Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar.">
-    <title>Informasi &amp; Layanan — Kelurahan Mattompodalle</title>
+        content="Pusat Informasi dan Layanan Publik Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar. Data kependudukan dan layanan surat warga.">
+    <title>Informasi Publik — Kelurahan Mattompodalle</title>
 </head>
 
 <body>
@@ -20,100 +20,46 @@
                 <nav class="breadcrumb" aria-label="Breadcrumb">
                     <a href="/">Beranda</a>
                     <span class="breadcrumb__separator">/</span>
-                    <span>Informasi &amp; Layanan</span>
+                    <span>Informasi</span>
                 </nav>
-                <h1 class="page-header__title">Informasi &amp; Layanan Warga</h1>
+                <h1 class="page-header__title">Pusat Informasi &amp; Layanan</h1>
                 <p class="page-header__subtitle">
-                    Panduan lengkap persyaratan surat menyurat, data kependudukan, serta fasilitas publik di Kelurahan Mattompodalle.
+                    Akses data kependudukan kelurahan dan panduan lengkap pengurusan surat administrasi warga.
                 </p>
             </div>
         </header>
 
-        <!-- Layanan Administrasi Warga -->
+        <!-- Category Hub Section -->
         <section class="section section--surface">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Pelayanan Cepat</span>
-                    <h2 class="section-title">Daftar Layanan Surat Menyurat</h2>
-                    <p class="section-subtitle">
-                        Silakan lengkapi berkas persyaratan berikut sebelum datang ke Kantor Kelurahan Mattompodalle.
-                    </p>
-                </div>
-
-                <div class="grid grid-3" id="layanan-grid-container">
-                    <!-- Hydrated dynamically from src/data/layanan.json -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Alur Pelayanan Surat -->
-        <section class="section section--alt">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">SOP Pelayanan</span>
-                    <h2 class="section-title">Alur Pengurusan Surat</h2>
-                    <p class="section-subtitle">
-                        Prosedur mudah 4 langkah untuk pengurusan administrasi di kelurahan.
-                    </p>
-                </div>
-
-                <div class="grid grid-4">
-                    <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
-                        <div class="stat-card__icon-wrap" style="margin: 0 auto 1.25rem auto;">
-                            <span style="font-size: 1.25rem; font-weight: 800;">1</span>
-                        </div>
-                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Pengantar Lingkungan</h3>
-                        <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
-                            Minta surat pengantar dari Kepala Lingkungan domisili setempat.
+                <div class="grid grid-2" style="gap: 2.5rem;">
+                    <!-- Data Penduduk Hub Card -->
+                    <div class="card" style="padding: 2.5rem; border-top: 5px solid var(--color-primary); display: flex; flex-direction: column;">
+                        <span class="section-badge" style="align-self: flex-start;">Kependudukan &amp; Wilayah</span>
+                        <h2 style="font-size: 1.6rem; color: var(--color-primary-dark); margin-bottom: 0.75rem;">
+                            Data Penduduk &amp; Fasilitas
+                        </h2>
+                        <p style="font-size: 1rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+                            Informasi menyeluruh seputar demografi penduduk (3.299 jiwa, 791 KK), mata pencaharian 80% petani, serta ketersediaan sarana fasilitas publik di 5 lingkungan kelurahan.
                         </p>
+                        <a href="/informasi/data-penduduk/" class="btn btn-primary" style="align-self: flex-start;">
+                            Buka Data Penduduk &amp; Fasilitas →
+                        </a>
                     </div>
 
-                    <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
-                        <div class="stat-card__icon-wrap" style="margin: 0 auto 1.25rem auto;">
-                            <span style="font-size: 1.25rem; font-weight: 800;">2</span>
-                        </div>
-                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Verifikasi Berkas</h3>
-                        <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
-                            Bawa berkas persyaratan ke loket pelayanan Kantor Kelurahan.
+                    <!-- Layanan Hub Card -->
+                    <div class="card" style="padding: 2.5rem; border-top: 5px solid var(--color-accent); display: flex; flex-direction: column;">
+                        <span class="section-badge" style="align-self: flex-start; background-color: var(--color-accent-light); color: var(--color-accent-dark);">Administrasi Surat</span>
+                        <h2 style="font-size: 1.6rem; color: var(--color-text-main); margin-bottom: 0.75rem;">
+                            Layanan Surat Menyurat
+                        </h2>
+                        <p style="font-size: 1rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+                            Panduan persyaratan berkas untuk pengurusan Surat Keterangan Usaha (SKU), Domisili, SKTM, Surat Pengantar Nikah, dan pencatatan kependudukan lainnya secara gratis.
                         </p>
+                        <a href="/informasi/layanan/" class="btn btn-accent" style="align-self: flex-start;">
+                            Buka Layanan Surat Warga →
+                        </a>
                     </div>
-
-                    <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
-                        <div class="stat-card__icon-wrap" style="margin: 0 auto 1.25rem auto;">
-                            <span style="font-size: 1.25rem; font-weight: 800;">3</span>
-                        </div>
-                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Pemrosesan Surat</h3>
-                        <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
-                            Petugas memproses dan meminta tanda tangan/legalisasi Lurah.
-                        </p>
-                    </div>
-
-                    <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
-                        <div class="stat-card__icon-wrap" style="margin: 0 auto 1.25rem auto;">
-                            <span style="font-size: 1.25rem; font-weight: 800;">4</span>
-                        </div>
-                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Surat Selesai</h3>
-                        <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
-                            Warga menerima surat resmi tanpa dipungut biaya apapun (Gratis).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fasilitas Publik -->
-        <section class="section section--surface">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Sarana &amp; Prasarana</span>
-                    <h2 class="section-title">Fasilitas Umum Kelurahan</h2>
-                    <p class="section-subtitle">
-                        Fasilitas kesehatan, pendidikan, keagamaan, dan infrastruktur dasar penunjang aktivitas warga.
-                    </p>
-                </div>
-
-                <div class="grid grid-3" id="fasilitas-grid-container">
-                    <!-- Hydrated dynamically from src/data/fasilitas.json -->
                 </div>
             </div>
         </section>
