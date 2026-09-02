@@ -93,19 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================
     // FADE-IN ON SCROLL (Intersection Observer)
     // ============================================
-    const animatedElements = document.querySelectorAll('.animate-fade-in-up');
+    const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-on-scroll');
     if (animatedElements.length > 0 && 'IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
+                    if (entry.target.classList.contains('animate-on-scroll')) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.style.animationPlayState = 'running';
+                    }
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
         animatedElements.forEach(el => {
-            el.style.animationPlayState = 'paused';
+            if (el.classList.contains('animate-fade-in-up')) {
+                el.style.animationPlayState = 'paused';
+            }
             observer.observe(el);
         });
     }

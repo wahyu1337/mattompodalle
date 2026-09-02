@@ -142,25 +142,144 @@
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="main">
-        <section class="page-section">
-            <div class="container">
 
-                <div class="page-section__header animate-fade-in-up">
-                    <span class="page-section__badge">Selamat Datang</span>
-                    <h1 class="page-section__title">Kelurahan Mattompodalle</h1>
-                    <p class="page-section__subtitle">Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi
-                        Selatan</p>
+        <!-- ========== HERO SECTION ========== -->
+        <section class="hero" id="hero">
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <span class="hero__badge">Selamat Datang di</span>
+                <h1 class="hero__title">Kelurahan<br>Mattompodalle</h1>
+                <p class="hero__description">
+                    Pusat layanan dan informasi digital Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar. Mewujudkan tata kelola pemerintahan yang transparan, inovatif, dan melayani masyarakat.
+                </p>
+                <div class="hero__buttons">
+                    <a href="/profil/lurah/" class="btn btn--primary">Lihat Profil</a>
+                    <a href="/kontak/" class="btn btn--outline">Hubungi Kami</a>
                 </div>
-
-                <!-- Welcome Section -->
-                <div class="welcome-section animate-fade-in-up delay-2" style="max-width: 800px; margin: 2rem auto; text-align: center; color: #4b5563;">
-                    <p style="line-height: 1.7; font-size: 1.1rem;">
-                        Website resmi Kelurahan Mattompodalle hadir sebagai pusat layanan informasi digital untuk mewujudkan tata kelola pemerintahan yang transparan, inovatif, dan mudah diakses oleh seluruh lapisan masyarakat.
-                    </p>
-                </div>
-
             </div>
         </section>
+
+        <!-- ========== PREVIEW PROFIL & VISI ========== -->
+        <section class="section preview-section" id="preview-profil">
+            <div class="section__inner">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__badge">Tentang Kami</span>
+                    <h2 class="section__title">Profil &amp; Visi Kelurahan</h2>
+                    <div class="section__divider"></div>
+                </div>
+                <div class="preview-content preview-content--center animate-on-scroll">
+                    <h3 class="profil__heading">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px; color: var(--clr-primary);">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        Visi Kelurahan
+                    </h3>
+                    <p class="profil__paragraph">
+                        "Mewujudkan Kelurahan Mattompodalle yang Maju, Sejahtera, Religius, dan Berbudaya melalui Tata Kelola Pemerintahan yang Baik."
+                    </p>
+                    <a href="/visi-misi/" class="btn btn--link">Lihat Visi &amp; Misi Lengkap →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PREVIEW INFORMASI WILAYAH ========== -->
+        <section class="section preview-section" id="preview-informasi" style="background-color: var(--clr-bg);">
+            <div class="section__inner">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__badge">Informasi Wilayah</span>
+                    <h2 class="section__title">Sekilas Mattompodalle</h2>
+                    <div class="section__divider"></div>
+                </div>
+
+                <div class="preview-info__grid animate-on-scroll">
+                    <!-- Card 1: Kependudukan -->
+                    <div class="preview-info__card">
+                        <div class="preview-info__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="preview-info__title">Kependudukan</h3>
+                        <p class="preview-info__desc">Dihuni oleh <strong>3.299 Jiwa</strong> (791 KK) yang tersebar secara harmonis di <strong>5 Lingkungan</strong>.</p>
+                    </div>
+
+                    <!-- Card 2: Potensi & UMKM -->
+                    <div class="preview-info__card">
+                        <div class="preview-info__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3 class="preview-info__title">Pertanian &amp; UMKM</h3>
+                        <p class="preview-info__desc">Mayoritas bergerak di sektor pertanian unggulan dan pengembangan wirausaha UMKM berbasis lokal.</p>
+                    </div>
+
+                    <!-- Card 3: Sarana & Layanan -->
+                    <div class="preview-info__card">
+                        <div class="preview-info__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="preview-info__title">Fasilitas Lengkap</h3>
+                        <p class="preview-info__desc">Didukung oleh 2 Unit SD, TK, 5 Unit Posyandu aktif, dan Puskesmas Pembantu untuk warga.</p>
+                    </div>
+                </div>
+
+                <div class="preview-cta animate-on-scroll">
+                    <a href="/informasi/" class="btn btn--outline-dark">Lihat Data Informasi Lengkap</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PREVIEW GALERI ========== -->
+        <section class="section preview-section" id="preview-galeri">
+            <div class="section__inner">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__badge">Dokumentasi</span>
+                    <h2 class="section__title">Galeri Kegiatan</h2>
+                    <div class="section__divider"></div>
+                </div>
+
+                <div class="galeri__grid galeri__grid--preview animate-on-scroll">
+                    <div class="galeri__item">
+                        <img src="/assets/galleri/WhatsApp Image 2026-08-31 at 11.34.28.jpeg" alt="Suasana dan Aktivitas Kelurahan Mattompodalle" loading="lazy">
+                        <div class="galeri__overlay">
+                            <span class="galeri__caption">Aktivitas Kelurahan</span>
+                        </div>
+                    </div>
+                    <div class="galeri__item">
+                        <img src="/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.19.jpeg" alt="Dokumentasi Program Kerja Kelurahan" loading="lazy">
+                        <div class="galeri__overlay">
+                            <span class="galeri__caption">Program Pelayanan</span>
+                        </div>
+                    </div>
+                    <div class="galeri__item">
+                        <img src="/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.23.jpeg" alt="Pertemuan dan Koordinasi Warga" loading="lazy">
+                        <div class="galeri__overlay">
+                            <span class="galeri__caption">Koordinasi Wilayah</span>
+                        </div>
+                    </div>
+                    <div class="galeri__item">
+                        <img src="/assets/galleri/WhatsApp Image 2026-08-31 at 11.43.35.jpeg" alt="Kebersamaan Masyarakat Mattompodalle" loading="lazy">
+                        <div class="galeri__overlay">
+                            <span class="galeri__caption">Kegiatan Masyarakat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-cta animate-on-scroll">
+                    <a href="/gallery/" class="btn btn--primary">Lihat Semua Galeri</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
