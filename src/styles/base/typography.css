@@ -207,3 +207,21 @@ p:last-child {
     padding: 0.9rem 2rem;
     font-size: 1.05rem;
 }
+
+@media (max-width: 576px) {
+    .page-header {
+        padding: 2.75rem 0 2.25rem 0;
+    }
+
+    .page-header__subtitle {
+        font-size: 0.95rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        white-space: normal;
+    }
+}

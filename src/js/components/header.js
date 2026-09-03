@@ -97,30 +97,60 @@ export const renderHeader = () => {
         <div class="mobile-menu" id="mobile-menu">
             <ul class="mobile-menu__list">
                 <li>
-                    <a href="/" class="mobile-menu__link ${isActive('/') ? 'active' : ''}">Beranda</a>
+                    <a href="/" class="mobile-menu__link ${isActive('/') ? 'active' : ''}">
+                        <span class="mobile-menu__link-text">Beranda</span>
+                    </a>
                 </li>
-                <li>
-                    <div class="mobile-menu__link">Profil Kelurahan</div>
-                    <div class="mobile-menu__submenu">
-                        <a href="/profil/lurah/" class="mobile-menu__sublink ${isActive('/profil/lurah/') ? 'active' : ''}">Profil Lurah</a>
-                        <a href="/profil/struktur-organisasi/" class="mobile-menu__sublink ${isActive('/profil/struktur-organisasi/') ? 'active' : ''}">Struktur Organisasi</a>
+                <li class="mobile-dropdown ${isActive('/profil/') ? 'open' : ''}">
+                    <button type="button" class="mobile-menu__link mobile-dropdown__toggle ${isActive('/profil/') ? 'active' : ''}" aria-expanded="${isActive('/profil/') ? 'true' : 'false'}">
+                        <span class="mobile-menu__link-text">Profil Kelurahan</span>
+                        <svg class="mobile-dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown__menu">
+                        <a href="/profil/lurah/" class="mobile-menu__sublink ${isActive('/profil/lurah/') ? 'active' : ''}">
+                            <span class="mobile-menu__sublink-bullet"></span>
+                            Profil Lurah
+                        </a>
+                        <a href="/profil/struktur-organisasi/" class="mobile-menu__sublink ${isActive('/profil/struktur-organisasi/') ? 'active' : ''}">
+                            <span class="mobile-menu__sublink-bullet"></span>
+                            Struktur Organisasi
+                        </a>
                     </div>
                 </li>
                 <li>
-                    <a href="/visi-misi/" class="mobile-menu__link ${isActive('/visi-misi/') ? 'active' : ''}">Visi &amp; Misi</a>
+                    <a href="/visi-misi/" class="mobile-menu__link ${isActive('/visi-misi/') ? 'active' : ''}">
+                        <span class="mobile-menu__link-text">Visi &amp; Misi</span>
+                    </a>
                 </li>
-                <li>
-                    <div class="mobile-menu__link">Informasi</div>
-                    <div class="mobile-menu__submenu">
-                        <a href="/informasi/data-penduduk/" class="mobile-menu__sublink ${isActive('/informasi/data-penduduk/') ? 'active' : ''}">Data Penduduk</a>
-                        <a href="/informasi/layanan/" class="mobile-menu__sublink ${isActive('/informasi/layanan/') ? 'active' : ''}">Layanan</a>
+                <li class="mobile-dropdown ${isActive('/informasi/') ? 'open' : ''}">
+                    <button type="button" class="mobile-menu__link mobile-dropdown__toggle ${isActive('/informasi/') ? 'active' : ''}" aria-expanded="${isActive('/informasi/') ? 'true' : 'false'}">
+                        <span class="mobile-menu__link-text">Informasi &amp; Layanan</span>
+                        <svg class="mobile-dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown__menu">
+                        <a href="/informasi/data-penduduk/" class="mobile-menu__sublink ${isActive('/informasi/data-penduduk/') ? 'active' : ''}">
+                            <span class="mobile-menu__sublink-bullet"></span>
+                            Data Penduduk
+                        </a>
+                        <a href="/informasi/layanan/" class="mobile-menu__sublink ${isActive('/informasi/layanan/') ? 'active' : ''}">
+                            <span class="mobile-menu__sublink-bullet"></span>
+                            Layanan Surat Warga
+                        </a>
                     </div>
                 </li>
                 <li>
-                    <a href="/gallery/" class="mobile-menu__link ${isActive('/gallery/') ? 'active' : ''}">Galeri</a>
+                    <a href="/gallery/" class="mobile-menu__link ${isActive('/gallery/') ? 'active' : ''}">
+                        <span class="mobile-menu__link-text">Galeri Kegiatan</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="/kontak/" class="mobile-menu__link ${isActive('/kontak/') ? 'active' : ''}">Kontak</a>
+                    <a href="/kontak/" class="mobile-menu__link ${isActive('/kontak/') ? 'active' : ''}">
+                        <span class="mobile-menu__link-text">Kontak &amp; Lokasi</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -139,7 +169,32 @@ export const renderHeader = () => {
             document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
-        // Close when clicking nav sublinks
+        // Mobile dropdown toggles (accordion)
+        const dropdownToggles = mobileMenu.querySelectorAll('.mobile-dropdown__toggle');
+        dropdownToggles.forEach(toggleBtn => {
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const parent = toggleBtn.closest('.mobile-dropdown');
+                if (!parent) return;
+
+                const willOpen = !parent.classList.contains('open');
+
+                // Accordion behavior: close other open dropdowns
+                mobileMenu.querySelectorAll('.mobile-dropdown').forEach(other => {
+                    if (other !== parent) {
+                        other.classList.remove('open');
+                        const otherBtn = other.querySelector('.mobile-dropdown__toggle');
+                        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                parent.classList.toggle('open', willOpen);
+                toggleBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            });
+        });
+
+        // Close when clicking nav links
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {

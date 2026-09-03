@@ -8,9 +8,9 @@
     gap: 1.75rem;
 }
 
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
-.grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
-.grid-4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
 
 /* Base Card */
 .card {
@@ -313,5 +313,38 @@
     .sambutan-card__img-wrap {
         max-width: 240px;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid {
+        gap: 1.25rem;
+    }
+
+    .card {
+        padding: 1.25rem 1.1rem;
+    }
+
+    .stat-card {
+        padding: 1.25rem 1rem;
+        gap: 1rem;
+    }
+
+    .stat-card__value {
+        font-size: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .sambutan-card {
+        padding: 1.5rem 1.1rem;
+        gap: 1.5rem;
+    }
+
+    .mission-item {
+        padding: 1.1rem 1rem;
+        gap: 1rem;
     }
 }
