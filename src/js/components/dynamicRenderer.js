@@ -81,10 +81,6 @@ export const initDynamicRenderer = () => {
         galeriContainer.innerHTML = galeriData.map(g => `
             <div class="gallery-item" data-id="${g.id}">
                 <img src="${g.gambar}" alt="${g.judul}" class="gallery-item__img" loading="lazy">
-                <div class="gallery-item__overlay">
-                    <h4 class="gallery-item__title">${g.judul}</h4>
-                    <span class="gallery-item__meta">${g.kategori} • ${g.tanggal}</span>
-                </div>
             </div>
         `).join('');
     }
