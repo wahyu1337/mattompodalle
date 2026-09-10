@@ -13,14 +13,12 @@ export const initLightbox = () => {
             <div class="lightbox-modal__content">
                 <button class="lightbox-modal__close" id="lightbox-close" aria-label="Tutup Preview">&times;</button>
                 <img src="" alt="Preview Foto" class="lightbox-modal__img" id="lightbox-img">
-                <p class="lightbox-modal__caption" id="lightbox-caption"></p>
             </div>
         `;
         document.body.appendChild(modal);
     }
 
     const modalImg = document.getElementById('lightbox-img');
-    const modalCaption = document.getElementById('lightbox-caption');
     const closeBtn = document.getElementById('lightbox-close');
 
     const closeModal = () => {
@@ -28,10 +26,9 @@ export const initLightbox = () => {
         document.body.style.overflow = '';
     };
 
-    const openModal = (src, title) => {
+    const openModal = (src, alt) => {
         modalImg.src = src;
-        modalImg.alt = title || 'Preview Foto';
-        modalCaption.textContent = title || '';
+        modalImg.alt = alt || 'Preview Foto';
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     };
@@ -41,10 +38,8 @@ export const initLightbox = () => {
     triggers.forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
-            const titleEl = item.querySelector('.gallery-item__title, .galeri__title');
-            const title = titleEl ? titleEl.textContent : (img ? img.alt : '');
             if (img) {
-                openModal(img.src, title);
+                openModal(img.src, img.alt);
             }
         });
     });

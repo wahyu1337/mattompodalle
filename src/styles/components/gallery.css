@@ -73,18 +73,10 @@
 
 .lightbox-modal__img {
     max-width: 100%;
-    max-height: 75vh;
+    max-height: 85vh;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-xl);
     object-fit: contain;
-}
-
-.lightbox-modal__caption {
-    margin-top: 1rem;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
 }
 
 .lightbox-modal__close {
