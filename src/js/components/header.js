@@ -73,6 +73,9 @@ export const renderHeader = () => {
                                 <li class="dropdown__item">
                                     <a href="/informasi/layanan/" class="dropdown__link ${isActive('/informasi/layanan/') ? 'active' : ''}">Layanan</a>
                                 </li>
+                                <li class="dropdown__item">
+                                    <a href="/informasi/website-lainnya/" class="dropdown__link ${isActive('/informasi/website-lainnya/') ? 'active' : ''}">Website Terkait</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
@@ -139,6 +142,10 @@ export const renderHeader = () => {
                         <a href="/informasi/layanan/" class="mobile-menu__sublink ${isActive('/informasi/layanan/') ? 'active' : ''}">
                             <span class="mobile-menu__sublink-bullet"></span>
                             Layanan Surat Warga
+                        </a>
+                        <a href="/informasi/website-lainnya/" class="mobile-menu__sublink ${isActive('/informasi/website-lainnya/') ? 'active' : ''}">
+                            <span class="mobile-menu__sublink-bullet"></span>
+                            Website Terkait
                         </a>
                     </div>
                 </li>

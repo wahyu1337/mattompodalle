@@ -60,6 +60,10 @@ module.exports = {
             filename: 'informasi/layanan/index.html',
         }),
         new HtmlWebpackPlugin({
+            template: './src/informasi/website-lainnya/index.html',
+            filename: 'informasi/website-lainnya/index.html',
+        }),
+        new HtmlWebpackPlugin({
             template: './src/gallery/index.html',
             filename: 'gallery/index.html',
         }),

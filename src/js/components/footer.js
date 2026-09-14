@@ -44,6 +44,7 @@ export const renderFooter = () => {
                             <li><a href="/visi-misi/" class="footer__link">Visi &amp; Misi</a></li>
                             <li><a href="/informasi/data-penduduk/" class="footer__link">Data Penduduk</a></li>
                             <li><a href="/informasi/layanan/" class="footer__link">Layanan Surat Warga</a></li>
+                            <li><a href="/informasi/website-lainnya/" class="footer__link">Website Terkait</a></li>
                             <li><a href="/gallery/" class="footer__link">Galeri Kegiatan</a></li>
                             <li><a href="/kontak/" class="footer__link">Kontak &amp; Layanan</a></li>
                         </ul>

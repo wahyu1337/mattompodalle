@@ -1,0 +1,78 @@
+[
+  {
+    "id": "pkk",
+    "nama": "TP PKK Kelurahan Mattompodalle",
+    "singkatan": "PKK Mattompodalle",
+    "kategori": "Pemberdayaan Masyarakat",
+    "sektor": "pemberdayaan",
+    "url": "https://pkk-mattompodalle.vercel.app/",
+    "domain": "pkk-mattompodalle.vercel.app",
+    "deskripsi": "Portal resmi Tim Penggerak Pemberdayaan dan Kesejahteraan Keluarga (TP PKK) Kelurahan Mattompodalle. Memuat 10 Program Pokok PKK, data Dasawisma, inovasi Gelari Pelangi, profil pengurus, dan dokumentasi program kemasyarakatan.",
+    "fitur": [
+      "10 Program Pokok PKK",
+      "Data Dasawisma",
+      "Inovasi Gelari Pelangi",
+      "Galeri Kegiatan Warga"
+    ],
+    "lokasi": "Kantor Kelurahan Mattompodalle",
+    "warnaAksen": "#005f73",
+    "icon": "users"
+  },
+  {
+    "id": "pustu",
+    "nama": "Pustu Kelurahan Mattompodalle",
+    "singkatan": "Pustu Mattompodalle",
+    "kategori": "Layanan Kesehatan",
+    "sektor": "kesehatan",
+    "url": "https://pustu-mattompodalle.vercel.app/",
+    "domain": "pustu-mattompodalle.vercel.app",
+    "deskripsi": "Puskesmas Pembantu (Pustu) Kelurahan Mattompodalle di bawah naungan UPT Puskesmas Polongbangkeng Utara. Menyediakan informasi pemeriksaan umum, layanan KIA (Kesehatan Ibu dan Anak), jadwal posyandu balita & lansia, serta edukasi farmasi.",
+    "fitur": [
+      "Pemeriksaan Umum",
+      "Kesehatan Ibu & Anak (KIA)",
+      "Jadwal Imunisasi & Posyandu",
+      "Layanan Konsultasi Medis"
+    ],
+    "lokasi": "Kelurahan Mattompodalle",
+    "warnaAksen": "#10b981",
+    "icon": "heart-pulse"
+  },
+  {
+    "id": "sdn-168",
+    "nama": "SDN 168 Inpres Romangtangngaya",
+    "singkatan": "SDN 168 Romangtangngaya",
+    "kategori": "Pendidikan Dasar",
+    "sektor": "pendidikan",
+    "url": "https://sd-168-romangtangngaya.vercel.app/",
+    "domain": "sd-168-romangtangngaya.vercel.app",
+    "deskripsi": "Portal resmi SDN 168 Inpres Romangtangngaya di Lingkungan Romangtangngaya, Kelurahan Mattompodalle. Mendidik generasi penerus dengan pembentukan karakter, prestasi akademik, kepramukaan, dan lingkungan belajar ramah anak.",
+    "fitur": [
+      "Profil & Sejarah Sekolah",
+      "Profil Tenaga Pendidik & Guru",
+      "Dokumentasi Pembelajaran",
+      "Informasi Kontak & PPDB"
+    ],
+    "lokasi": "Lingk. Romangtangngaya, Mattompodalle",
+    "warnaAksen": "#8b1a1a",
+    "icon": "graduation-cap"
+  },
+  {
+    "id": "sdn-48",
+    "nama": "SDN No. 48 Manuju",
+    "singkatan": "SDN 48 Manuju",
+    "kategori": "Pendidikan Dasar",
+    "sektor": "pendidikan",
+    "url": "https://sd-48-manuju.vercel.app/",
+    "domain": "sd-48-manuju.vercel.app",
+    "deskripsi": "Website resmi Sekolah Dasar Negeri No. 48 Manuju, Kelurahan Mattompodalle. Menyiapkan generasi unggul masa depan dengan pendidikan berkualitas, fasilitas pembelajaran representatif, dan pembinaan moral religius.",
+    "fitur": [
+      "Profil Lembaga Pendidikan",
+      "Daftar Dewan Guru & Staf",
+      "Galeri Aktivitas Siswa",
+      "Informasi Pendaftaran Siswa"
+    ],
+    "lokasi": "Lingk. Manuju, Mattompodalle",
+    "warnaAksen": "#f59e0b",
+    "icon": "book-open"
+  }
+]
