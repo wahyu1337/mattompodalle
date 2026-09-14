@@ -1,61 +1,105 @@
 {
   "pimpinan": {
     "jabatan": "Lurah Mattompodalle",
-    "nama": "Indra Jaya",
+    "nama": "Indra Jaya, S.Sos",
     "nip": "197111241991031002",
     "golongan": "Penata Tk. I / III/d",
     "foto": "/assets/Profil/profil.jpeg",
-    "tugas": "Memimpin penyelenggaraan pemerintahan, pembangunan, pembinaan ketentraman dan ketertiban, serta pemberdayaan masyarakat di wilayah Kelurahan Mattompodalle."
+    "tugas": "Memimpin penyelenggaraan urusan pemerintahan umum, pembangunan infrastruktur, pembinaan ketentraman dan ketertiban, serta pemberdayaan masyarakat di wilayah Kelurahan Mattompodalle."
   },
   "sekretariat": {
     "jabatan": "Sekretaris Kelurahan",
-    "nama": "Sekretaris Kelurahan",
-    "nip": "-",
+    "nama": "Sapri, S.Sos",
+    "nip": "197805022007011020",
+    "golongan": "Penata Tk. I / III/d",
     "foto": "/assets/pak lurah.svg",
-    "tugas": "Mengkoordinasikan perencanaan, pengelolaan administrasi umum, kepegawaian, keuangan, dan perlengkapan kelurahan."
+    "tugas": "Mengoordinasikan perencanaan program, pengelolaan administrasi umum, kepegawaian, keuangan, dan perlengkapan kelurahan.",
+    "staf": [
+      {
+        "nama": "Hj. Nasdiar",
+        "jabatan": "Staf Sekretariat"
+      },
+      {
+        "nama": "Salmawati",
+        "jabatan": "Staf Sekretariat"
+      }
+    ],
+    "lpm": {
+      "jabatan": "Ketua LPM",
+      "nama": "Andi Rukman Karma",
+      "tugas": "Mitra strategis Pemerintah Kelurahan dalam menampung aspirasi dan menggerakkan partisipasi swadaya gotong royong warga."
+    }
   },
   "seksi": [
     {
-      "jabatan": "Kasi Pemerintahan, Ketentraman & Ketertiban",
-      "nama": "Kepala Seksi Pemerintahan",
-      "tugas": "Melaksanakan urusan administrasi pemerintahan, administrasi kependudukan, serta ketentraman dan ketertiban umum."
+      "jabatan": "Kasi Pemerintahan & Trantib",
+      "nama": "(Formasi Belum Terisi)",
+      "nip": "-",
+      "golongan": "-",
+      "tugas": "Melaksanakan urusan administrasi pemerintahan umum, administrasi kependudukan, serta ketentraman dan ketertiban umum.",
+      "staf": []
     },
     {
-      "jabatan": "Kasi Kesejahteraan Sosial (Kesra)",
-      "nama": "Kepala Seksi Kesra",
-      "tugas": "Melaksanakan pembinaan kemasyarakatan, bantuan sosial, penanganan kemiskinan, kesehatan, pendidikan, dan keagamaan."
+      "jabatan": "Kasi Ekonomi & Kesejahteraan Rakyat",
+      "nama": "Rusnaidi, S.Sos",
+      "nip": "198608072008011003",
+      "golongan": "Penata Tk. I / III/d",
+      "tugas": "Melaksanakan pembinaan kemasyarakatan, bantuan sosial (bansos), UMKM, pertanian, kesehatan, dan keagamaan.",
+      "staf": [
+        {
+          "nama": "Harapin, SM",
+          "jabatan": "Staf Ekonomi & Kesra",
+          "nip": "197805022007011020",
+          "golongan": "Penata Muda Tk. I"
+        }
+      ]
     },
     {
-      "jabatan": "Kasi Pelayanan Umum & Pemberdayaan Masyarakat",
-      "nama": "Kepala Seksi Pelayanan Umum",
-      "tugas": "Melaksanakan pelayanan administrasi umum, perizinan, surat keterangan warga, serta pembinaan UMKM dan kelompok tani."
+      "jabatan": "Kasi Pembangunan",
+      "nama": "Ismail, S.Pdi",
+      "nip": "198608162015041001",
+      "golongan": "Penata Muda Tk. I / III/b",
+      "tugas": "Melaksanakan perencanaan, pelaksanaan, serta pengawasan pembangunan sarana dan prasarana fisik, drainase, dan fasilitas umum.",
+      "staf": [
+        {
+          "nama": "Najamuddin, SM",
+          "jabatan": "Staf Pembangunan",
+          "nip": "197805022007011020",
+          "golongan": "Penata Muda"
+        }
+      ]
     }
   ],
   "kepalaLingkungan": [
     {
-      "namaLingkungan": "Lingkungan 1",
-      "pejabat": "Kepala Lingkungan 1",
-      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 1."
+      "namaLingkungan": "Lembang Selatan",
+      "kepalaLingkungan": "Suardi. S",
+      "imamLingkungan": "Mustar Dg Rala",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan, ketertiban, dan kemasyarakatan di wilayah Lingkungan Lembang Selatan."
     },
     {
-      "namaLingkungan": "Lingkungan 2",
-      "pejabat": "Kepala Lingkungan 2",
-      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 2."
+      "namaLingkungan": "Lembang Utara",
+      "kepalaLingkungan": "Muh. Saleh Dg Nuntung",
+      "imamLingkungan": "Drs. Syamsuddin Dg Bella",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan, ketertiban, dan kemasyarakatan di wilayah Lingkungan Lembang Utara."
     },
     {
-      "namaLingkungan": "Lingkungan 3",
-      "pejabat": "Kepala Lingkungan 3",
-      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 3."
+      "namaLingkungan": "Manuju Selatan",
+      "kepalaLingkungan": "H. Muh. Nasir Dg Naba",
+      "imamLingkungan": "H. Hamzah, S.Ag Dg Ngerang",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan, ketertiban, dan kemasyarakatan di wilayah Lingkungan Manuju Selatan."
     },
     {
-      "namaLingkungan": "Lingkungan 4",
-      "pejabat": "Kepala Lingkungan 4",
-      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 4."
+      "namaLingkungan": "Manuju Utara",
+      "kepalaLingkungan": "Muh. Yusuf Dg Tarra",
+      "imamLingkungan": "Syamsuddin Dg Sija",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan, ketertiban, dan kemasyarakatan di wilayah Lingkungan Manuju Utara."
     },
     {
-      "namaLingkungan": "Lingkungan 5",
-      "pejabat": "Kepala Lingkungan 5",
-      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan di wilayah Lingkungan 5."
+      "namaLingkungan": "Romangtangngaya",
+      "kepalaLingkungan": "Abd. Bakri Dg Bombong",
+      "imamLingkungan": "Ruslan, S.Pd Dg Lau",
+      "tugas": "Membantu Lurah dalam pelaksanaan tugas pemerintahan, ketertiban, dan kemasyarakatan di wilayah Lingkungan Romangtangngaya."
     }
   ]
 }
