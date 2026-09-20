@@ -3,6 +3,7 @@
     "id": "foto-1",
     "judul": "Koordinasi Pelayanan Masyarakat",
     "kategori": "Pemerintahan",
+    "tag": "kegiatan",
     "tanggal": "Agustus 2026",
     "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.34.28.jpeg",
     "deskripsi": "Pertemuan koordinasi dan pelayanan administrasi masyarakat di Kantor Kelurahan Mattompodalle."
@@ -11,6 +12,7 @@
     "id": "foto-2",
     "judul": "Kegiatan Posyandu & Layanan Warga",
     "kategori": "Kesehatan",
+    "tag": "kegiatan",
     "tanggal": "Agustus 2026",
     "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.19.jpeg",
     "deskripsi": "Pelaksanaan program kesehatan masyarakat dan pendataan warga di lingkungan kelurahan."
@@ -19,6 +21,7 @@
     "id": "foto-3",
     "judul": "Gotong Royong & Kebersihan Lingkungan",
     "kategori": "Kemasyarakatan",
+    "tag": "kegiatan",
     "tanggal": "Agustus 2026",
     "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.37.23.jpeg",
     "deskripsi": "Aksi gotong royong aparatur bersama warga membersihkan sarana umum dan drainase pemukiman."
@@ -27,6 +30,7 @@
     "id": "foto-4",
     "judul": "Peringatan Hari Kemerdekaan RI",
     "kategori": "Kegiatan",
+    "tag": "kegiatan",
     "tanggal": "Agustus 2026",
     "gambar": "/assets/galleri/WhatsApp Image 2026-08-31 at 11.43.35.jpeg",
     "deskripsi": "Semarak peringatan 17 Agustus dan kebersamaan aparat kelurahan bersama masyarakat."
@@ -34,7 +38,9 @@
   {
     "id": "foto-5",
     "judul": "Kantor Kelurahan Mattompodalle",
+    "caption": "Kantor Kelurahan Mattompodalle",
     "kategori": "Pemerintahan",
+    "tag": "kantor-lurah",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Kantor Lurah/IMG-20260919-WA0026.jpg",
     "deskripsi": "Gedung Kantor Kelurahan Mattompodalle sebagai pusat pelayanan administrasi publik dan tata kelola pemerintahan kelurahan."
@@ -42,7 +48,9 @@
   {
     "id": "foto-6",
     "judul": "Posko Kepala Lingkungan Lembang Selatan",
+    "caption": "Rumah Kepala Lingkungan Lembang Selatan",
     "kategori": "Pemerintahan",
+    "tag": "kepala-lingkungan",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Kepala Lingkungan/Lembang Selatan/IMG_20260918_124920_805.jpg",
     "deskripsi": "Posko pelayanan dan koordinasi wilayah Lingkungan Lembang Selatan bersama Kepala Lingkungan Suardi. S."
@@ -50,7 +58,9 @@
   {
     "id": "foto-7",
     "judul": "Posko Kepala Lingkungan Lembang Utara",
+    "caption": "Rumah Kepala Lingkungan Lembang Utara",
     "kategori": "Pemerintahan",
+    "tag": "kepala-lingkungan",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Kepala Lingkungan/Lembang Utara/IMG_20260918_130503_265.jpg",
     "deskripsi": "Posko pelayanan dan koordinasi wilayah Lingkungan Lembang Utara bersama Kepala Lingkungan Muh. Saleh Dg Nuntung."
@@ -58,7 +68,9 @@
   {
     "id": "foto-8",
     "judul": "Posko Kepala Lingkungan Manuju Selatan",
+    "caption": "Rumah Kepala Lingkungan Manuju Selatan",
     "kategori": "Pemerintahan",
+    "tag": "kepala-lingkungan",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Kepala Lingkungan/Manuju Selatan/IMG_20260918_125739_349.jpg",
     "deskripsi": "Posko pelayanan dan koordinasi wilayah Lingkungan Manuju Selatan bersama Kepala Lingkungan H. Muh. Nasir Dg Naba."
@@ -66,7 +78,9 @@
   {
     "id": "foto-9",
     "judul": "Posko Kepala Lingkungan Manuju Utara",
+    "caption": "Rumah Kepala Lingkungan Manuju Utara",
     "kategori": "Pemerintahan",
+    "tag": "kepala-lingkungan",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Kepala Lingkungan/Manuju Utara/IMG_20260918_131654_638.jpg",
     "deskripsi": "Posko pelayanan dan koordinasi wilayah Lingkungan Manuju Utara bersama Kepala Lingkungan Muh. Yusuf Dg Tarra."
@@ -74,7 +88,9 @@
   {
     "id": "foto-10",
     "judul": "Posko Kepala Lingkungan Romangtangngaya",
+    "caption": "Rumah Kepala Lingkungan Romangtangngaya",
     "kategori": "Pemerintahan",
+    "tag": "kepala-lingkungan",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Kepala Lingkungan/Romangtangngaya/IMG_20260918_131142_523.jpg",
     "deskripsi": "Posko pelayanan dan koordinasi wilayah Lingkungan Romangtangngaya bersama Kepala Lingkungan Abd. Bakri Dg Bombong."
@@ -82,7 +98,9 @@
   {
     "id": "foto-11",
     "judul": "Koperasi Merah Putih Mattompodalle",
+    "caption": "Koperasi Merah Putih",
     "kategori": "Kemasyarakatan",
+    "tag": "koperasi-merah-putih",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Koperasi-Merah-Putih/IMG-20260920-WA0011.jpg",
     "deskripsi": "Gedung Koperasi Merah Putih sebagai wadah pemberdayaan ekonomi kerakyatan dan usaha bersama warga Kelurahan Mattompodalle."
@@ -90,7 +108,9 @@
   {
     "id": "foto-12",
     "judul": "Lapangan Kelurahan Mattompodalle",
+    "caption": "Lapangan Kelurahan Mattompodalle",
     "kategori": "Kemasyarakatan",
+    "tag": "lapangan",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Lapangan/IMG-20260920-WA0029.jpg",
     "deskripsi": "Sarana lapangan terbuka untuk kegiatan olahraga, upacara, dan aktivitas kemasyarakatan warga Kelurahan Mattompodalle."
@@ -98,7 +118,9 @@
   {
     "id": "foto-13",
     "judul": "UPT SDN No. 48 Manuju",
+    "caption": "SDN No. 48 Manuju",
     "kategori": "Pendidikan",
+    "tag": "sekolah-dasar",
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Sekolah Dasar/Manuju/IMG_20260918_125907_511.jpg",
     "deskripsi": "Gedung dan sarana pembelajaran UPT SDN No. 48 Manuju di wilayah Kelurahan Mattompodalle."
@@ -106,7 +128,9 @@
   {
     "id": "foto-14",
     "judul": "UPT SDN 168 Inpres Romangtangngaya",
+    "caption": "SDN 168 Inpres Romangtangngaya",
     "kategori": "Pendidikan",
+    "tag": "sekolah-dasar",
     "tanggal": "Agustus 2026",
     "gambar": "/assets/galleri/Sekolah Dasar/Romangtangngaya/IMG-20260831-WA0011.jpg",
     "deskripsi": "Gedung dan fasilitas pendidikan UPT SDN 168 Inpres Romangtangngaya di Lingkungan Romangtangngaya."

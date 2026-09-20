@@ -79,11 +79,100 @@ export const initDynamicRenderer = () => {
     const galeriContainer = document.getElementById('galeri-grid-container');
     if (galeriContainer) {
         galeriContainer.innerHTML = galeriData.map(g => `
-            <div class="gallery-item" data-id="${g.id}">
+            <div class="gallery-item" data-id="${g.id}" data-tag="${g.tag || 'kegiatan'}">
                 <img src="${g.gambar}" alt="${g.judul}" class="gallery-item__img" loading="lazy">
+                ${g.caption ? `
+                    <div class="gallery-item__caption">
+                        <span class="gallery-item__caption-text">${g.caption}</span>
+                    </div>
+                ` : ''}
             </div>
         `).join('');
+
+        initGalleryFilter();
     }
+};
+
+/**
+ * Filter Galeri berdasarkan Kategori / Kata Kunci
+ */
+export const initGalleryFilter = () => {
+    const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+    const galeriContainer = document.getElementById('galeri-grid-container');
+    if (!filterButtons.length || !galeriContainer) return;
+
+    // Hitung dan update badge angka filter secara dinamis
+    filterButtons.forEach(btn => {
+        const filter = btn.getAttribute('data-filter');
+        const countSpan = btn.querySelector('.gallery-filter-btn__count');
+        if (countSpan) {
+            if (filter === 'all') {
+                countSpan.textContent = galeriData.length;
+            } else {
+                const matchingCount = galeriData.filter(g => g.tag === filter).length;
+                countSpan.textContent = matchingCount;
+            }
+        }
+    });
+
+    // Event listener tombol filter
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetFilter = btn.getAttribute('data-filter');
+
+            // Toggle active styling
+            filterButtons.forEach(b => {
+                const isActive = b === btn;
+                b.classList.toggle('active', isActive);
+                b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+
+            // Filter item foto
+            const items = galeriContainer.querySelectorAll('.gallery-item');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const itemTag = item.getAttribute('data-tag');
+                const isMatch = (targetFilter === 'all' || itemTag === targetFilter);
+                if (isMatch) {
+                    item.style.display = '';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Tampilkan empty state jika kategori belum memiliki foto (misal: Mesjid)
+            let emptyState = document.getElementById('gallery-empty-state');
+            if (visibleCount === 0) {
+                if (!emptyState) {
+                    emptyState = document.createElement('div');
+                    emptyState.id = 'gallery-empty-state';
+                    emptyState.className = 'gallery-empty-state';
+                    galeriContainer.parentNode.insertBefore(emptyState, galeriContainer.nextSibling);
+                }
+                const label = btn.querySelector('span:first-child')?.textContent || 'Kategori ini';
+                emptyState.innerHTML = `
+                    <div class="gallery-empty-state__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                            <circle cx="9" cy="9" r="2"/>
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                        </svg>
+                    </div>
+                    <h3 class="gallery-empty-state__title">Dokumentasi ${label} Belum Tersedia</h3>
+                    <p class="gallery-empty-state__desc">Foto dokumentasi untuk ${label.toLowerCase()} akan segera diperbarui di portal Kelurahan Mattompodalle.</p>
+                `;
+                emptyState.style.display = 'flex';
+                galeriContainer.style.display = 'none';
+            } else {
+                if (emptyState) {
+                    emptyState.style.display = 'none';
+                }
+                galeriContainer.style.display = 'grid';
+            }
+        });
+    });
 };
 
 export { profilData, aparatData, layananData, fasilitasData, galeriData, kontakData, beritaData };

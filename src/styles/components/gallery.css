@@ -2,11 +2,69 @@
    GALLERY & LIGHTBOX COMPONENT
    ========================================================================== */
 
+/* Filter Nav Buttons */
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-filter-btn {
+    appearance: none;
+    background-color: var(--color-surface);
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-xs);
+    user-select: none;
+}
+
+.gallery-filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+.gallery-filter-btn.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(13, 110, 110, 0.28);
+}
+
+.gallery-filter-btn__count {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-alt);
+    color: var(--color-text-main);
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.gallery-filter-btn.active .gallery-filter-btn__count {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .gallery-item {
@@ -37,6 +95,80 @@
     transform: scale(1.06);
 }
 
+/* Gallery Item Caption Bar (Khusus foto berketerangan) */
+.gallery-item__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.25rem 1rem 0.85rem 1rem;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.7) 40%, rgba(15, 23, 42, 0.95) 100%);
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    transition: all var(--transition-base);
+}
+
+.gallery-item:hover .gallery-item__caption {
+    padding-bottom: 1.1rem;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.8) 35%, rgba(15, 23, 42, 0.98) 100%);
+}
+
+.gallery-item__caption-text {
+    color: #ffffff;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+/* Empty State (misal: kategori Mesjid belum ada foto) */
+.gallery-empty-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-color: var(--color-surface);
+    border: 1.5px dashed var(--color-border);
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.gallery-empty-state__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-alt);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.gallery-empty-state__icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.gallery-empty-state__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+
+.gallery-empty-state__desc {
+    font-size: 0.925rem;
+    color: var(--color-text-secondary);
+    max-width: 480px;
+    line-height: 1.5;
+}
 
 /* Lightbox Modal */
 .lightbox-modal {
@@ -64,8 +196,8 @@
 
 .lightbox-modal__content {
     position: relative;
-    max-width: 900px;
-    max-height: 85vh;
+    max-width: 920px;
+    max-height: 88vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,10 +205,26 @@
 
 .lightbox-modal__img {
     max-width: 100%;
-    max-height: 85vh;
+    max-height: 80vh;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-xl);
     object-fit: contain;
+}
+
+.lightbox-modal__caption {
+    margin-top: 0.85rem;
+    color: #f8fafc;
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 0.55rem 1.35rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 90%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .lightbox-modal__close {
@@ -100,11 +248,29 @@
 }
 
 @media (max-width: 768px) {
-    .gallery-grid {
-        gap: 1rem;
+    .gallery-filters {
+        gap: 0.5rem;
         margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
+    .gallery-filter-btn {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0.95rem;
+    }
+
+    .gallery-grid {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .gallery-item__caption {
+        padding: 1.75rem 0.75rem 0.65rem 0.75rem;
+    }
+
+    .gallery-item__caption-text {
+        font-size: 0.8125rem;
+    }
 
     .lightbox-modal {
         padding: 1rem;
