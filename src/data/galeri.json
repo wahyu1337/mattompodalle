@@ -107,8 +107,8 @@
   },
   {
     "id": "foto-12",
-    "judul": "Lapangan Kelurahan Mattompodalle",
-    "caption": "Lapangan Kelurahan Mattompodalle",
+    "judul": "Lapangan Romangtangngaya Mattompodalle",
+    "caption": "Lapangan Romangtangngaya Mattompodalle",
     "kategori": "Kemasyarakatan",
     "tag": "lapangan",
     "tanggal": "September 2026",
@@ -134,5 +134,45 @@
     "tanggal": "Agustus 2026",
     "gambar": "/assets/galleri/Sekolah Dasar/Romangtangngaya/IMG-20260831-WA0011.jpg",
     "deskripsi": "Gedung dan fasilitas pendidikan UPT SDN 168 Inpres Romangtangngaya di Lingkungan Romangtangngaya."
+  },
+  {
+    "id": "foto-15",
+    "judul": "Saluran Irigasi Pertanian Kelurahan Mattompodalle",
+    "caption": "Saluran Irigasi Pertanian",
+    "kategori": "Infrastruktur",
+    "tag": "irigasi",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Irigasi/IMG-20260920-WA0014.jpg",
+    "deskripsi": "Infrastruktur saluran irigasi untuk mendukung pengairan lahan pertanian dan persawahan warga Kelurahan Mattompodalle."
+  },
+  {
+    "id": "foto-16",
+    "judul": "Pintu Pembagi Air Irigasi Persawahan",
+    "caption": "Saluran Irigasi Persawahan",
+    "kategori": "Infrastruktur",
+    "tag": "irigasi",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Irigasi/IMG-20260920-WA0019.jpg",
+    "deskripsi": "Sistem jaringan dan saluran air irigasi yang mengalirkan pasokan air ke area persawahan produktif warga."
+  },
+  {
+    "id": "foto-17",
+    "judul": "Jaringan Drainase dan Irigasi Tani",
+    "caption": "Jaringan Irigasi Tani",
+    "kategori": "Infrastruktur",
+    "tag": "irigasi",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Irigasi/IMG-20260920-WA0022.jpg",
+    "deskripsi": "Pemeliharaan dan pemantauan aliran air irigasi pertanian guna menjamin produktivitas hasil tani kelurahan."
+  },
+  {
+    "id": "foto-18",
+    "judul": "Kanal Irigasi Utama Mattompodalle",
+    "caption": "Kanal Irigasi Mattompodalle",
+    "kategori": "Infrastruktur",
+    "tag": "irigasi",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Irigasi/IMG-20260920-WA0026.jpg",
+    "deskripsi": "Aliran saluran irigasi utama yang menghubungkan sumber air ke petak persawahan di wilayah Kelurahan Mattompodalle."
   }
 ]
