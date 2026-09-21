@@ -174,5 +174,55 @@
     "tanggal": "September 2026",
     "gambar": "/assets/galleri/Irigasi/IMG-20260920-WA0026.jpg",
     "deskripsi": "Aliran saluran irigasi utama yang menghubungkan sumber air ke petak persawahan di wilayah Kelurahan Mattompodalle."
+  },
+  {
+    "id": "foto-19",
+    "judul": "Puskesmas Pembantu (Pustu) Kelurahan Mattompodalle",
+    "caption": "Pustu Kelurahan Mattompodalle",
+    "kategori": "Kesehatan",
+    "tag": "pustu",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Pustu/IMG_8435.jpg",
+    "deskripsi": "Gedung Puskesmas Pembantu (Pustu) Kelurahan Mattompodalle sebagai pusat pelayanan kesehatan dasar dan rujukan pertama warga."
+  },
+  {
+    "id": "foto-20",
+    "judul": "Gedung dan Sarana Pustu Mattompodalle",
+    "caption": "Gedung Pustu Mattompodalle",
+    "kategori": "Kesehatan",
+    "tag": "pustu",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Pustu/IMG_8436.jpg",
+    "deskripsi": "Fasilitas fisik dan area gedung pelayanan Puskesmas Pembantu Kelurahan Mattompodalle."
+  },
+  {
+    "id": "foto-21",
+    "judul": "Ruang Pelayanan Medis Pustu Mattompodalle",
+    "caption": "Ruang Pelayanan Pustu Mattompodalle",
+    "kategori": "Kesehatan",
+    "tag": "pustu",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Pustu/IMG_8438.jpg",
+    "deskripsi": "Ruang pemeriksaan medis dan konsultasi kesehatan bagi masyarakat di Pustu Mattompodalle."
+  },
+  {
+    "id": "foto-22",
+    "judul": "Fasilitas Pemeriksaan Pustu Mattompodalle",
+    "caption": "Fasilitas Medis Pustu Mattompodalle",
+    "kategori": "Kesehatan",
+    "tag": "pustu",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Pustu/IMG_8439.jpg",
+    "deskripsi": "Sarana dan perlengkapan penunjang pemeriksaan kesehatan warga di Kelurahan Mattompodalle."
+  },
+  {
+    "id": "foto-23",
+    "judul": "Pelayanan Kesehatan Masyarakat Pustu Mattompodalle",
+    "caption": "Pelayanan Pustu Mattompodalle",
+    "kategori": "Kesehatan",
+    "tag": "pustu",
+    "tanggal": "September 2026",
+    "gambar": "/assets/galleri/Pustu/IMG_8440.jpg",
+    "deskripsi": "Aktivitas pelayanan kesehatan dasar, imunisasi, dan penanganan keluhan medis warga di Pustu Mattompodalle."
   }
 ]
