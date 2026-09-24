@@ -15,8 +15,11 @@ export const initDynamicRenderer = () => {
     const layananContainer = document.getElementById('layanan-grid-container');
     if (layananContainer) {
         layananContainer.innerHTML = layananData.map(item => `
-            <div class="service-card">
-                <span class="service-card__badge">${item.kategori}</span>
+            <div class="service-card ${item.featured ? 'service-card--featured' : ''}">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="service-card__badge" style="margin-bottom: 0;">${item.kategori}</span>
+                    ${item.badge ? `<span class="service-card__priority-badge">${item.badge}</span>` : ''}
+                </div>
                 <h3 class="service-card__title">${item.nama}</h3>
                 <p class="service-card__desc">${item.deskripsi}</p>
                 <div style="margin-bottom: 1rem;">

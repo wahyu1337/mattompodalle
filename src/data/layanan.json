@@ -1,5 +1,23 @@
 [
   {
+    "id": "lunas-pbb",
+    "nama": "Surat Keterangan Lunas PBB (Pajak Bumi & Bangunan)",
+    "kategori": "Pajak & Pertanahan",
+    "badge": "Layanan Prioritas",
+    "featured": true,
+    "deskripsi": "Surat keterangan resmi yang menerangkan bahwa wajib pajak telah melunasi kewajiban Pajak Bumi dan Bangunan Perdesaan dan Perkotaan (PBB-P2) atas objek pajak terkait di wilayah Kelurahan Mattompodalle untuk keperluan administrasi pertanahan, perbankan, perizinan, maupun jual beli.",
+    "persyaratan": [
+      "Fotokopi KTP Pemohon / Wajib Pajak",
+      "Fotokopi Kartu Keluarga (KK)",
+      "Fotokopi SPPT PBB Tahun Berjalan / Terakhir",
+      "Bukti Asli / Salinan Tanda Terima Setoran (TTS) / Bukti Pembayaran Lunas PBB",
+      "Surat Pengantar dari Kepala Lingkungan setempat",
+      "Fotokopi Dokumen Hak Atas Tanah (SHM / AJB / Rincik bila pengalihan hak)"
+    ],
+    "waktu": "15 - 20 Menit",
+    "biaya": "Gratis (Rp 0)"
+  },
+  {
     "id": "sku",
     "nama": "Surat Keterangan Usaha (SKU)",
     "kategori": "Ekonomi & Usaha",
